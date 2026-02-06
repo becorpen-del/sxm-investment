@@ -1,0 +1,1231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Properties | SXM Dream Investments</title>
+    <link rel="icon" type="image/png" href="../../images/logos/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .properties-page { padding-top: 120px; }
+        .properties-header { text-align: center; margin-bottom: 3rem; }
+        .properties-header h1 { font-size: 2.5rem; color: var(--navy); margin-bottom: 1rem; }
+        .properties-header p { color: var(--gray); max-width: 600px; margin: 0 auto; }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <a href="../../en/index.html" class="logo">
+            <img src="../../images/logos/logo-black.png" alt="SXM Dream Investments">
+        </a>
+        <ul class="nav-links">
+            <li><a href="../../en/index.html">Home</a></li>
+            <li><a href="index.html">Properties</a></li>
+            <li><a href="../../en/index.html#contact">Contact</a></li>
+            <li><a href="../../en/index.html#contact" class="nav-cta">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="properties-page">
+        <div class="properties-header">
+            <span class="section-tag">SXM Dream Investments</span>
+            <h1>Our Properties</h1>
+            <p>Discover our exclusive selection of real estate in St. Martin</p>
+        </div>
+
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterProperties('all')">All</button>
+            <button class="filter-btn" onclick="filterProperties('villa')">Villas</button>
+            <button class="filter-btn" onclick="filterProperties('penthouse')">Penthouses</button>
+            <button class="filter-btn" onclick="filterProperties('condo')">Condos</button>
+            <button class="filter-btn" onclick="filterProperties('appartement')">Apartments</button>
+
+            <select class="filter-select" onchange="filterByLocation()" id="locationFilter">
+                <option value="all">Filter by location</option>
+                <option value="almond-grove">Almond Grove</option><option value="cay-hill">Cay Hill</option><option value="cole-bay">Cole Bay</option><option value="cupecoy">Cupecoy</option><option value="dawn-beach">Dawn Beach</option><option value="grand-case">Grand Case</option><option value="guana-bay">Guana Bay</option><option value="indigo-bay">Indigo Bay</option><option value="little-bay">Little Bay</option><option value="maho">Maho</option><option value="nettle-bay">Nettle Bay</option><option value="orient-bay">Orient Bay</option><option value="oyster-pond">Oyster Pond</option><option value="pelican">Pelican</option><option value="pelican-key">Pelican Key</option><option value="philipsburg">Philipsburg</option><option value="point-blanche">Point Blanche</option><option value="point-pirouette">Point Pirouette</option><option value="red-pond">Red Pond</option><option value="saunders">Saunders</option><option value="simpson-bay">Simpson Bay</option><option value="st-john">St John</option><option value="tamarind-hill-st.maarten">Tamarind Hill St.Maarten</option>
+            </select>
+        </div>
+
+        <div class="properties-grid" style="max-width: 1400px; margin: 0 auto; padding: 0 5%;">
+            
+            <a href="penthouse-investment-opportunity.html" class="property-card fade-in" data-type="penthouse" data-location="maho" data-price="550000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/penthouse-investment-opportunity-1-scaled.jpg');">
+                    <span class="property-badge">Penthouse</span>
+                    <span class="property-price">$550,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Penthouse Investment Opportunity</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> -</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="aquamarina-villa.html" class="property-card fade-in" data-type="" data-location="point-pirouette" data-price="1450000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/aquamarina-villa-1-scaled.jpg');">
+                    <span class="property-badge"></span>
+                    <span class="property-price">$1,450,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Aquamarina Villa</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Point Pirouette, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2.5 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 5300</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="villa-sophia.html" class="property-card fade-in" data-type="" data-location="almond-grove" data-price="1450000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/villa-sophia-1-scaled.jpg');">
+                    <span class="property-badge"></span>
+                    <span class="property-price">$1,450,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Villa Sophia</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Almond Grove, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 5 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 5.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 5000</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="villa-coralia-3.html" class="property-card fade-in" data-type="" data-location="orient-bay" data-price="2995000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/villa-coralia-3-1-scaled.jpg');">
+                    <span class="property-badge"></span>
+                    <span class="property-price">$2,995,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Villa Coralia</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Orient Bay, St Martin</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 8 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 8.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 4200</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="beachfront-cupecoy-condo.html" class="property-card fade-in" data-type="condo" data-location="cupecoy" data-price="775000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/beachfront-cupecoy-condo-1-scaled.jpg');">
+                    <span class="property-badge">Condo</span>
+                    <span class="property-price">$775,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Beachfront Cupecoy Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1400</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="concord-2-bedroom-condo.html" class="property-card fade-in" data-type="condo" data-location="pelican-key" data-price="650000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/concord-2-bedroom-condo-1-scaled.jpg');">
+                    <span class="property-badge">Condo</span>
+                    <span class="property-price">$650,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Concord 2-bedroom Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Pelican Key, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1200</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="bright-corner-unit-at-blue-marine-residences.html" class="property-card fade-in" data-type="apartment" data-location="maho" data-price="390000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/bright-corner-unit-at-blue-marine-residences-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$390,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Bright Corner Unit at Blue Marine Residences</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 1.5 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1200</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="condo-in-maho-beach.html" class="property-card fade-in" data-type="apartment" data-location="maho" data-price="395000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/condo-in-maho-beach-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$395,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Condo in Maho Beach</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 900</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="villa-vijoux.html" class="property-card fade-in" data-type="villa" data-location="oyster-pond" data-price="2400000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/villa-vijoux-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$2,400,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Villa Vijoux</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Oyster Pond, St Martin</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 9 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 9 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 3767</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="3-bedroom-at-blue-marine-residences.html" class="property-card fade-in" data-type="" data-location="maho" data-price="550000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/3-bedroom-at-blue-marine-residences-1-scaled.jpg');">
+                    <span class="property-badge"></span>
+                    <span class="property-price">$550,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>3-bedroom at Blue Marine Residences</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 2200</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="multi-unit-residential-building-direct-beach-access.html" class="property-card fade-in" data-type="villa" data-location="simpson-bay" data-price="1300000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/multi-unit-residential-building-direct-beach-access-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$1,300,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Multi-Unit Residential Building - Direct Beach Access</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Simpson Bay, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 7 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 7 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 4500</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="the-emerald-studio.html" class="property-card fade-in" data-type="apartment" data-location="maho" data-price="180000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/the-emerald-studio-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$180,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>The Emerald Studio</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 1 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 1 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 331</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="vielven-pinel-suite.html" class="property-card fade-in" data-type="villa" data-location="indigo-bay" data-price="875000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/vielven-pinel-suite-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$875,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>VieLVen - Pinel Suite</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Indigo Bay, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 1 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 1 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 670</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="large-terrace-blue-marine-condo.html" class="property-card fade-in" data-type="villa" data-location="maho" data-price="390000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/large-terrace-blue-marine-condo-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$390,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Large Terrace Blue Marine Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 1 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 850</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="maho-beach-1-bedroom.html" class="property-card fade-in" data-type="apartment" data-location="maho" data-price="290000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/maho-beach-1-bedroom-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$290,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Maho Beach 1-bedroom</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 1 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 1 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 800</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="modern-beachfront-condo.html" class="property-card fade-in" data-type="" data-location="cupecoy" data-price="825000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/modern-beachfront-condo-1-scaled.jpg');">
+                    <span class="property-badge"></span>
+                    <span class="property-price">$825,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Modern Beachfront Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1550</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="porto-cupecoy-penthouse.html" class="property-card fade-in" data-type="villa" data-location="cupecoy" data-price="1450000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/porto-cupecoy-penthouse-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$1,450,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Porto Cupecoy Penthouse</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> -</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="penthouse-condo-in-maho.html" class="property-card fade-in" data-type="penthouse" data-location="maho" data-price="420000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/penthouse-condo-in-maho-1-scaled.jpg');">
+                    <span class="property-badge">Penthouse</span>
+                    <span class="property-price">$420,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Penthouse Condo in Maho</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1200</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="3-bedroom-blue-marine-penthouse.html" class="property-card fade-in" data-type="penthouse" data-location="maho" data-price="690000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/3-bedroom-blue-marine-penthouse-1-scaled.jpg');">
+                    <span class="property-badge">Penthouse</span>
+                    <span class="property-price">$690,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>3-bedroom Blue Marine Penthouse</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1700</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="large-studio-with-separated-bedroom.html" class="property-card fade-in" data-type="apartment" data-location="maho" data-price="215000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/large-studio-with-separated-bedroom-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$215,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Large studio with separated bedroom</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 1 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 1 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 450</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="guana-bay-penthouse.html" class="property-card fade-in" data-type="penthouse" data-location="guana-bay" data-price="460000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/guana-bay-penthouse-1-scaled.jpg');">
+                    <span class="property-badge">Penthouse</span>
+                    <span class="property-price">$460,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Guana Bay Penthouse</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Guana Bay, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 4.5 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 2944</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="aqualina-beach-club-luxury-condo.html" class="property-card fade-in" data-type="villa" data-location="simpson-bay" data-price="1400000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/aqualina-beach-club-luxury-condo-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$1,400,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Aqualina Beach Club Luxury Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Simpson Bay, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1800</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="stunning-beachfront-3-bedroom-condo.html" class="property-card fade-in" data-type="villa" data-location="cupecoy" data-price="1100000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/stunning-beachfront-3-bedroom-condo-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$1,100,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Stunning Beachfront 3-bedroom Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1950</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="vielven-dawn-suite.html" class="property-card fade-in" data-type="villa" data-location="indigo-bay" data-price="1450000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/vielven-dawn-suite-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$1,450,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>VieLVen - Dawn Suite</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Indigo Bay, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1111</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="solea-residence.html" class="property-card fade-in" data-type="" data-location="little-bay" data-price="650000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/solea-residence-1-scaled.jpg');">
+                    <span class="property-badge"></span>
+                    <span class="property-price">$650.000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Solea Residence</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Little Bay, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1011</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="stand-alone-house-with-3-apartments.html" class="property-card fade-in" data-type="building" data-location="cay-hill" data-price="650000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/stand-alone-house-with-3-apartments-1-scaled.jpg');">
+                    <span class="property-badge">Building</span>
+                    <span class="property-price">$650,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Stand alone house with 3 Apartments</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cay Hill</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 5 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 5.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 5737</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="garden-3-bedroom-at-cupecoy-beach-club.html" class="property-card fade-in" data-type="apartment" data-location="simpson-bay" data-price="690000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/garden-3-bedroom-at-cupecoy-beach-club-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$690,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Garden 3-bedroom at Cupecoy Beach Club</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Simpson Bay, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1800</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="villa-lotus.html" class="property-card fade-in" data-type="villa" data-location="grand-case" data-price="540000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/villa-lotus-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$540,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Villa Lotus</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Grand Case, St Martin</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1100</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="beachfront-condo-at-sapphire-resort.html" class="property-card fade-in" data-type="apartment" data-location="cupecoy" data-price="595000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/beachfront-condo-at-sapphire-resort-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$595,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Beachfront Condo at Sapphire Resort</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1600</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="large-condo-with-yard.html" class="property-card fade-in" data-type="condo" data-location="cupecoy" data-price="550000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/large-condo-with-yard-1-scaled.jpg');">
+                    <span class="property-badge">Condo</span>
+                    <span class="property-price">$550,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Large Condo with Yard</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 2088</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="great-bay-villas.html" class="property-card fade-in" data-type="villa" data-location="philipsburg" data-price="650000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/great-bay-villas-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$650,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Great Bay Villas</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Philipsburg, St Martin</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 1 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 800</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="vielven-rouge-suite.html" class="property-card fade-in" data-type="villa" data-location="indigo-bay" data-price="2500000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/vielven-rouge-suite-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$2,500,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>VieLVen - Rouge Suite</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Indigo Bay, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1922</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="concord-penthouse.html" class="property-card fade-in" data-type="penthouse" data-location="pelican-key" data-price="990000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/concord-penthouse-1-scaled.jpg');">
+                    <span class="property-badge">Penthouse</span>
+                    <span class="property-price">$990,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Concord Penthouse</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Pelican Key, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1895</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="simpson-bay-beachfront-condo.html" class="property-card fade-in" data-type="apartment" data-location="simpson-bay" data-price="590000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/simpson-bay-beachfront-condo-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$590,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Simpson Bay Beachfront Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Simpson Bay, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 920</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="apartment-building-le-diamand-blanc.html" class="property-card fade-in" data-type="building" data-location="" data-price="4500000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/apartment-building-le-diamand-blanc-1-scaled.jpg');">
+                    <span class="property-badge">Building</span>
+                    <span class="property-price">4 500 000 $</span>
+                </div>
+                <div class="property-content">
+                    <h3>Apartment Building &quot;Le Diamand Blanc&quot;</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> </p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 16 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 16 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> -</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="villa-shiaou-cupecoy.html" class="property-card fade-in" data-type="" data-location="cupecoy" data-price="3750000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/villa-shiaou-cupecoy-1-scaled.jpg');">
+                    <span class="property-badge"></span>
+                    <span class="property-price">3,750,000 $</span>
+                </div>
+                <div class="property-content">
+                    <h3>Villa Shiaou</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 8 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 7 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> </span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="aquamarina-penthouse.html" class="property-card fade-in" data-type="penthouse" data-location="point-pirouette" data-price="2950000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/aquamarina-penthouse-1-scaled.jpg');">
+                    <span class="property-badge">Penthouse</span>
+                    <span class="property-price">$2,950,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Aquamarina 4-Bedroom Penthouse</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Point Pirouette, St Martin</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 4 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 4,5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 5382</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="en-tamarind-hill-luxury-villa-for-sale-modern-pool-home-ocean-view.html" class="property-card fade-in" data-type="villa" data-location="tamarind-hill-st.maarten" data-price="240000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/en-tamarind-hill-luxury-villa-for-sale-modern-pool-home-ocean-view-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$2,400,00</span>
+                </div>
+                <div class="property-content">
+                    <h3>Villa DO</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Tamarind Hill St.Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 9 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 9 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 4500</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="brand-new-villa-lagoon-en.html" class="property-card fade-in" data-type="villa" data-location="point-pirouette" data-price="2990000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/brand-new-villa-lagoon-en-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$2,990,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Brand New Villa Lagoon</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Point Pirouette, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 4 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 3500</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="villa-oceane-en.html" class="property-card fade-in" data-type="villa" data-location="pelican-key" data-price="2200000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/villa-oceane-en-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$2,200,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Villa Oceane</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Pelican Key, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 4.5 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 4.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 3971</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="villa-with-3-apartments-and-boat-slip-en-2.html" class="property-card fade-in" data-type="villa" data-location="point-pirouette" data-price="2100000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/villa-with-3-apartments-and-boat-slip-en-2-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$2,100,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Villa with 3 apartments and boat slip</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Point Pirouette, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 10 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 6 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 3995</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="le-papillon-penthouse-en.html" class="property-card fade-in" data-type="villa" data-location="simpson-bay" data-price="2200000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/le-papillon-penthouse-en-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$2,200,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Le Papillon Penthouse</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Simpson Bay, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 3390</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="4-bedroom-aqua-villa-with-boat-slip-en.html" class="property-card fade-in" data-type="villa" data-location="cupecoy" data-price="1950000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/4-bedroom-aqua-villa-with-boat-slip-en-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$1,950,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>4-bedroom Aqua Villa with Boat Slip</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 4 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 4.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 6182.66</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="3-bedroom-aqua-villa-new-en.html" class="property-card fade-in" data-type="villa" data-location="cupecoy" data-price="1650000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/3-bedroom-aqua-villa-new-en-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$1,650,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>3-bedroom Aqua Villa - New</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 6751.61</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="villa-frangipani-en-9.html" class="property-card fade-in" data-type="villa" data-location="pelican-key" data-price="1600000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/villa-frangipani-en-9-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$1,600,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Villa Frangipani</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Pelican Key, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 5 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> </span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="villa-sophia-en.html" class="property-card fade-in" data-type="villa" data-location="almond-grove" data-price="1450000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/villa-sophia-en-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$1,450,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Villa Sophia</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Almond Grove, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 5 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 5.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 5000</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="aquamarina-villa-en.html" class="property-card fade-in" data-type="villa" data-location="point-pirouette" data-price="1495000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/aquamarina-villa-en-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">1,495,000 $</span>
+                </div>
+                <div class="property-content">
+                    <h3>Aquamarina Villa</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Point Pirouette, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2.5 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 5300</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="red-pond-villa-en.html" class="property-card fade-in" data-type="villa" data-location="red-pond" data-price="1490000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/red-pond-villa-en-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$1,490,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Red Pond Villa</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Red Pond, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 4 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 4.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> </span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="exceptional-4-bedroom-penthouse-en.html" class="property-card fade-in" data-type="" data-location="maho" data-price="1150000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/exceptional-4-bedroom-penthouse-en-1-scaled.jpg');">
+                    <span class="property-badge"></span>
+                    <span class="property-price">$1,150,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Exceptional 4-bedroom Penthouse</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 4 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 4.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 3500</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="villa-twin-palms-en.html" class="property-card fade-in" data-type="villa" data-location="dawn-beach" data-price="1050000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/villa-twin-palms-en-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$1,050,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Villa Twin Palms</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Dawn Beach, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 2691</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="cupecoy-beachfront-3-bedroom-condo-en.html" class="property-card fade-in" data-type="condo" data-location="cupecoy" data-price="950000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/cupecoy-beachfront-3-bedroom-condo-en-1-scaled.jpg');">
+                    <span class="property-badge">Condo</span>
+                    <span class="property-price">$950,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Cupecoy Beachfront 3-bedroom Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1950</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="villa-lotus-en.html" class="property-card fade-in" data-type="" data-location="grand-case" data-price="920000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/villa-lotus-en-1-scaled.jpg');">
+                    <span class="property-badge"></span>
+                    <span class="property-price">$920,000 </span>
+                </div>
+                <div class="property-content">
+                    <h3>Villa Lotus</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Grand Case, Saint-Martin</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 2100</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="multifamily-home-rental-income-cole-bay-en.html" class="property-card fade-in" data-type="building" data-location="cole-bay" data-price="895000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/multifamily-home-rental-income-cole-bay-en-1-scaled.jpg');">
+                    <span class="property-badge">Building</span>
+                    <span class="property-price">$895,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Multifamily home + Rental Income – Cole Bay</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cole Bay, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 7 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 5.1 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 5625.83</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="vielven-pinel-suite-en.html" class="property-card fade-in" data-type="" data-location="indigo-bay" data-price="875000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/vielven-pinel-suite-en-1-scaled.jpg');">
+                    <span class="property-badge"></span>
+                    <span class="property-price">$875,000 </span>
+                </div>
+                <div class="property-content">
+                    <h3>VieLVen - Pinel Suite</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Indigo Bay, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 1 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 1 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 670</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="st-john-villa-en.html" class="property-card fade-in" data-type="" data-location="st-john" data-price="850000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/st-john-villa-en-1-scaled.jpg');">
+                    <span class="property-badge"></span>
+                    <span class="property-price">$850,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>St John Villa</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> St John, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 4 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 12020</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="pelican-cove-villa-en.html" class="property-card fade-in" data-type="villa" data-location="pelican-key" data-price="860000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/pelican-cove-villa-en-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">860 000 $</span>
+                </div>
+                <div class="property-content">
+                    <h3>Pelican Cove Villa</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Pelican Key, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 5 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 4 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 2900</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="beachfront-coco-beach-condo-en.html" class="property-card fade-in" data-type="apartment" data-location="simpson-bay" data-price="850000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/beachfront-coco-beach-condo-en-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$850,000 </span>
+                </div>
+                <div class="property-content">
+                    <h3>Beachfront Coco beach Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Simpson Bay, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1100</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="modern-beachfront-condo-en.html" class="property-card fade-in" data-type="apartment" data-location="cupecoy" data-price="825000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/modern-beachfront-condo-en-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$825,000 </span>
+                </div>
+                <div class="property-content">
+                    <h3>Modern Beachfront Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1550</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="top-floor-porto-cupecoy-condo-en.html" class="property-card fade-in" data-type="apartment" data-location="cupecoy" data-price="790000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/top-floor-porto-cupecoy-condo-en-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$790,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Top Floor Porto Cupecoy Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 2087</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="oceanfront-living-3-bedroom-in-cupecoy-en.html" class="property-card fade-in" data-type="condo" data-location="cupecoy" data-price="725000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/oceanfront-living-3-bedroom-in-cupecoy-en-1-scaled.jpg');">
+                    <span class="property-badge">Condo</span>
+                    <span class="property-price">$725,000 </span>
+                </div>
+                <div class="property-content">
+                    <h3>Oceanfront Living 3-Bedroom in Cupecoy</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1700</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="windgate-luxury-condo-en.html" class="property-card fade-in" data-type="villa" data-location="point-blanche" data-price="650000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/windgate-luxury-condo-en-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$650,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Windgate Luxury Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Point Blanche, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3.5 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 2100</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="sapphire-beach-club-penthouse-en.html" class="property-card fade-in" data-type="penthouse" data-location="cupecoy" data-price="650000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/sapphire-beach-club-penthouse-en-1-scaled.jpg');">
+                    <span class="property-badge">Penthouse</span>
+                    <span class="property-price">$650,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Sapphire Beach Club Penthouse</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1900</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="stand-alone-house-in-saunders-en.html" class="property-card fade-in" data-type="villa" data-location="saunders" data-price="640000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/stand-alone-house-in-saunders-en-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$640,000 </span>
+                </div>
+                <div class="property-content">
+                    <h3>Stand Alone House in Saunders</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Saunders, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 4.5 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 4 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 8300</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="solea-residence-en.html" class="property-card fade-in" data-type="apartment" data-location="little-bay" data-price="650000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/solea-residence-en-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$650,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Solea Residence</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Little Bay, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1011</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="3-bedroom-at-blue-marine-residences-en.html" class="property-card fade-in" data-type="apartment" data-location="maho" data-price="550000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/3-bedroom-at-blue-marine-residences-en-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$550,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>3-bedroom at Blue Marine Residences</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 2200</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="la-lagune-top-floor-en.html" class="property-card fade-in" data-type="apartment" data-location="nettle-bay" data-price="495000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/la-lagune-top-floor-en-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$495,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>La Lagune Top Floor</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Nettle Bay, St-Martin</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 3 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 1400</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="rainbow-beach-club-oceanview-condo-en.html" class="property-card fade-in" data-type="condo" data-location="cupecoy" data-price="495000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/rainbow-beach-club-oceanview-condo-en-1-scaled.jpg');">
+                    <span class="property-badge">Condo</span>
+                    <span class="property-price">$495,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Rainbow Beach Club Oceanview Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i>  bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i>  ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> </span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="palm-beach-1-bedroom-condo-en.html" class="property-card fade-in" data-type="condo" data-location="simpson-bay" data-price="425000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/palm-beach-1-bedroom-condo-en-1-scaled.jpg');">
+                    <span class="property-badge">Condo</span>
+                    <span class="property-price">$425,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Palm Beach 1-bedroom Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Simpson Bay, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 1 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 1.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 90</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="2-bedroom-with-dual-rental-potential-en.html" class="property-card fade-in" data-type="villa" data-location="pelican" data-price="425000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/2-bedroom-with-dual-rental-potential-en-1-scaled.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$425,000 </span>
+                </div>
+                <div class="property-content">
+                    <h3>2-Bedroom with Dual Rental Potential</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Pelican, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> </span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="yacht-club-1-bedroom-with-boat-slip-en.html" class="property-card fade-in" data-type="apartment" data-location="simpson-bay" data-price="390000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/yacht-club-1-bedroom-with-boat-slip-en-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$390,000 </span>
+                </div>
+                <div class="property-content">
+                    <h3>Yacht Club 1 bedroom with Boat Slip</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Simpson Bay, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 1 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 1 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 550</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="large-1-bedroom-with-2-terraces-in-maho-en.html" class="property-card fade-in" data-type="condo" data-location="maho" data-price="390000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/large-1-bedroom-with-2-terraces-in-maho-en-1-scaled.jpg');">
+                    <span class="property-badge">Condo</span>
+                    <span class="property-price">$390,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Large 1-bedroom with 2 terraces in Maho</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 1 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 900</span>
+                    </div>
+                </div>
+            </a>
+        
+            <a href="the-hills-residence-1-bedroom-condo-en.html" class="property-card fade-in" data-type="apartment" data-location="simpson-bay" data-price="315000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/the-hills-residence-1-bedroom-condo-en-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$315,000 </span>
+                </div>
+                <div class="property-content">
+                    <h3>The Hills Residence 1-bedroom Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Simpson Bay, St. Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 1 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 1 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 559.7</span>
+                    </div>
+                </div>
+            </a>
+        
+        </div>
+    </section>
+
+    <footer style="margin-top: 4rem;">
+        <div class="footer-bottom" style="padding: 2rem 5%;">
+            <p>&copy; 2026 SXM Dream Investments. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+    <script>
+        function filterByLocation() {
+            const select = document.getElementById('locationFilter');
+            const location = select.value;
+            const cards = document.querySelectorAll('.property-card');
+
+            cards.forEach(card => {
+                if (location === 'all' || card.dataset.location === location) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

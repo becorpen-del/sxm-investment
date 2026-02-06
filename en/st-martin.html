@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St. Martin | SXM Dream Investments</title>
+    <meta name="description" content="Discover St. Martin, a Caribbean paradise ideal for real estate investment. Tax advantages, exceptional quality of life.">
+    <link rel="icon" type="image/png" href="../images/logos/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .page-hero {
+            height: 60vh;
+            min-height: 500px;
+            background: linear-gradient(rgba(26, 42, 58, 0.6), rgba(26, 42, 58, 0.6)),
+                        url('https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .page-hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .page-hero p { font-size: 1.3rem; opacity: 0.9; max-width: 700px; }
+
+        .intro-section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .intro-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .intro-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray);
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 2rem;
+        }
+
+        .dual-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding: 4rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .dual-section.reverse { direction: rtl; }
+        .dual-section.reverse > * { direction: ltr; }
+        .dual-section img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .dual-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        .dual-content p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .advantages-section {
+            background: var(--off-white);
+            padding: 5rem 5%;
+        }
+        .advantages-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .advantage-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        .advantage-card:hover { transform: translateY(-5px); }
+        .advantage-card i {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+        .advantage-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        .advantage-card p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .locations-section {
+            padding: 5rem 5%;
+        }
+        .locations-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .location-card {
+            position: relative;
+            height: 250px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .location-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .location-card:hover img { transform: scale(1.1); }
+        .location-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 1rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+        }
+        .location-card-overlay h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+        .location-card-overlay span { font-size: 0.9rem; opacity: 0.8; }
+
+        .cta-section {
+            background: linear-gradient(rgba(26, 42, 58, 0.9), rgba(26, 42, 58, 0.9)),
+                        url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80') center/cover fixed;
+            padding: 5rem 5%;
+            text-align: center;
+            color: white;
+        }
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .cta-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .cta-section .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .cta-section .btn-primary:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 1024px) {
+            .advantages-grid { grid-template-columns: repeat(2, 1fr); }
+            .locations-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .dual-section { grid-template-columns: 1fr; gap: 2rem; }
+            .dual-section.reverse { direction: ltr; }
+            .advantages-grid { grid-template-columns: 1fr; }
+            .locations-grid { grid-template-columns: 1fr; }
+            .page-hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <img src="../images/logos/logo-white.png" alt="SXM Dream Investments" class="logo-white">
+            <img src="../images/logos/logo-black.png" alt="SXM Dream Investments" class="logo-black" style="display:none;">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="st-martin.html" class="active">St. Martin</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+            <li class="lang-switcher">
+                <a href="../saint-martin.html">FR</a>
+                <a href="st-martin.html" class="active">EN</a>
+                <a href="../nl/sint-maarten.html">NL</a>
+            </li>
+        </ul>
+        <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div>
+            <span class="hero-badge">The Treasure Island</span>
+            <h1>St. Martin</h1>
+            <p>A unique island in the heart of the Caribbean, where luxury, culture and investment opportunities meet</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+        <h2>Welcome to St. Martin</h2>
+        <p>St. Martin is a paradise island located in the Caribbean, shared between two nations: France in the north (Saint-Martin) and the Netherlands in the south (Sint Maarten). This unique duality offers the best of both worlds: European culture, refined gastronomy, and an advantageous tax environment.</p>
+        <p>With its 37 white sand beaches, crystal clear turquoise waters and idyllic tropical climate, St. Martin has become one of the most sought-after Caribbean destinations for savvy real estate investors.</p>
+    </section>
+
+    <!-- Dual Section 1 -->
+    <section class="dual-section">
+        <img src="https://images.unsplash.com/photo-1580541631950-7282082b53ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="St. Martin Beach">
+        <div class="dual-content">
+            <h3>An Exceptional Living Environment</h3>
+            <p>St. Martin offers an incomparable lifestyle. Imagine waking up every morning with a view of the Caribbean Sea, enjoying world-renowned gourmet restaurants, and exploring pristine beaches accessible within minutes.</p>
+            <p>The island enjoys a pleasant tropical climate year-round, with temperatures ranging between 25°C and 30°C (77°F-86°F). The cosmopolitan international community creates a welcoming and dynamic atmosphere.</p>
+        </div>
+    </section>
+
+    <!-- Dual Section 2 -->
+    <section class="dual-section reverse">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Luxury Villa">
+        <div class="dual-content">
+            <h3>A Dynamic Real Estate Market</h3>
+            <p>The St. Martin real estate market has experienced sustained growth for several years. Demand for luxury properties remains strong, driven by an international clientele seeking second homes or rental investments.</p>
+            <p>Rental yields are particularly attractive, especially in the vacation rental sector which benefits from a high occupancy rate throughout the year.</p>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="advantages-section">
+        <h2>Why Invest in St. Martin?</h2>
+        <div class="advantages-grid">
+            <div class="advantage-card">
+                <i class="fas fa-percentage"></i>
+                <h4>Tax Advantages</h4>
+                <p>Benefit from an advantageous tax regime with exemptions on capital gains and reduced property taxes compared to mainland France.</p>
+            </div>
+            <div class="advantage-card">
+                <i class="fas fa-chart-line"></i>
+                <h4>Attractive Returns</h4>
+                <p>Rental yields can reach 8-12% annually thanks to strong demand for vacation rentals and a wealthy international clientele.</p>
+            </div>
+            <div class="advantage-card">
+                <i class="fas fa-euro-sign"></i>
+                <h4>Monetary Stability</h4>
+                <p>On the French side, you invest in euros in a European Union territory, guaranteeing stability and legal security.</p>
+            </div>
+            <div class="advantage-card">
+                <i class="fas fa-plane"></i>
+                <h4>Accessibility</h4>
+                <p>International airport with direct flights from Paris, Amsterdam, New York and many other major cities.</p>
+            </div>
+            <div class="advantage-card">
+                <i class="fas fa-umbrella-beach"></i>
+                <h4>Quality of Life</h4>
+                <p>37 beaches, over 300 restaurants, vibrant nightlife and exceptional water activities all year round.</p>
+            </div>
+            <div class="advantage-card">
+                <i class="fas fa-handshake"></i>
+                <h4>Expert Support</h4>
+                <p>Our local team supports you through every step of your investment, from search to property management.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="locations-section">
+        <h2>Our Premium Locations</h2>
+        <div class="locations-grid">
+            <div class="location-card">
+                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Maho">
+                <div class="location-card-overlay">
+                    <h4>Maho</h4>
+                    <span>Nightlife & Beaches</span>
+                </div>
+            </div>
+            <div class="location-card">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cupecoy">
+                <div class="location-card-overlay">
+                    <h4>Cupecoy</h4>
+                    <span>Luxury & Prestige</span>
+                </div>
+            </div>
+            <div class="location-card">
+                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Simpson Bay">
+                <div class="location-card-overlay">
+                    <h4>Simpson Bay</h4>
+                    <span>Marina & Shopping</span>
+                </div>
+            </div>
+            <div class="location-card">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Orient Bay">
+                <div class="location-card-overlay">
+                    <h4>Orient Bay</h4>
+                    <span>Beaches & Activities</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Invest in Paradise?</h2>
+        <p>Contact us today to discover investment opportunities that match your goals.</p>
+        <a href="contact.html" class="btn-primary">Contact Us</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../images/logos/logo-white.png" alt="SXM Dream Investments" style="max-width: 180px; margin-bottom: 1rem;">
+                <p>Your trusted partner for real estate investment in St. Martin for over 15 years.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Properties</a></li>
+                    <li><a href="st-martin.html">St. Martin</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Property Types</h4>
+                <ul>
+                    <li><a href="properties.html">Villas</a></li>
+                    <li><a href="properties.html">Penthouses</a></li>
+                    <li><a href="properties.html">Condos</a></li>
+                    <li><a href="properties.html">Land</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Simpson Bay, St. Martin</p>
+                <p><i class="fas fa-phone"></i> +1 721 XXX XXXX</p>
+                <p><i class="fas fa-envelope"></i> info@sxmdreaminvestments.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SXM Dream Investments. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

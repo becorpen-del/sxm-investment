@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>St John Villa | SXM Dream Investments</title>
+    <link rel="icon" type="image/png" href="../../images/logos/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .property-detail { padding-top: 100px; }
+        .property-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                        url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/st-john-villa-1-scaled.jpg') center/cover;
+            display: flex;
+            align-items: flex-end;
+            padding: 3rem 5%;
+        }
+        .property-hero-content { color: white; max-width: 800px; }
+        .property-hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .property-hero .location { font-size: 1.2rem; opacity: 0.9; }
+        .property-hero .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-top: 1rem;
+        }
+        .property-info { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
+        .property-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; }
+        .property-main h2 { color: var(--navy); margin-bottom: 1.5rem; font-size: 1.5rem; }
+        .property-main p { color: var(--gray); line-height: 1.8; margin-bottom: 1rem; }
+        .property-sidebar { background: var(--off-white); padding: 2rem; border-radius: 12px; height: fit-content; }
+        .detail-item { margin-bottom: 1.5rem; }
+        .detail-item label { display: block; font-size: 0.85rem; color: var(--gray); margin-bottom: 0.25rem; }
+        .detail-item span { font-weight: 600; color: var(--navy); }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--gold); text-decoration: none; margin-bottom: 2rem; }
+        .back-link:hover { text-decoration: underline; }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
+        .feature-box { text-align: center; padding: 1.5rem; background: var(--off-white); border-radius: 8px; }
+        .feature-box i { font-size: 1.5rem; color: var(--gold); margin-bottom: 0.5rem; }
+        .feature-box .value { font-size: 1.5rem; font-weight: 600; color: var(--navy); }
+        .feature-box .label { font-size: 0.85rem; color: var(--gray); }
+        .amenities-list { list-style: none; padding: 0; }
+        .amenities-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--gray-light); display: flex; align-items: center; gap: 0.5rem; }
+        .amenities-list li:before { content: "✓"; color: var(--gold); font-weight: bold; }
+        @media (max-width: 768px) {
+            .property-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <a href="../../index.html" class="logo">
+            <img src="../../images/logos/logo-black.png" alt="SXM Dream Investments">
+        </a>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Accueil</a></li>
+            <li><a href="index.html">Propriétés</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+            <li><a href="../../index.html#contact" class="nav-cta">Nous contacter</a></li>
+        </ul>
+    </nav>
+
+    <section class="property-detail">
+        <div class="property-hero">
+            <div class="property-hero-content">
+                <h1>St John Villa</h1>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> St John, St Maarten</p>
+                <p class="price">$850,000</p>
+            </div>
+        </div>
+
+        <div class="property-info">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux propriétés</a>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-bed"></i>
+                    <div class="value">4</div>
+                    <div class="label">Chambres</div>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-bath"></i>
+                    <div class="value">2.5</div>
+                    <div class="label">Salles de bain</div>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-expand"></i>
+                    <div class="value">12020</div>
+                    <div class="label">Surface</div>
+                </div>
+            </div>
+
+            <div class="property-grid">
+                <div class="property-main">
+                    <h2>Description</h2>
+                    <div class="description">
+                        <p>Nichée dans le quartier très prisé de Cul de Sac, dans le domaine de St. John Estate, cette villa raffinée offre le mélange ultime entre luxe et commodité.</p><p>Située sur la route de St. John's Estate, cette résidence bénéficie d'un emplacement privilégié, à seulement 5 minutes en voiture des commodités essentielles telles que boulangeries, laboratoire, cabinet médical et écoles, garantissant ainsi un accès facile à tout ce dont vous avez besoin au quotidien.</p><p>Entrez pour découvrir un intérieur méticuleusement conçu, à commencer par le rez-de-chaussée qui comprend des espaces de vie spacieux, notamment une cuisine, un salon, une salle à manger et une salle de télévision. Une chambre d'amis avec un placard intégré et une salle de bains pratique offrent un confort optimal aux visiteurs, tandis que des touches pratiques telles qu'une buanderie et des toilettes pour invités ajoutent à la commodité de la vie quotidienne.</p><p>À l'étage, le luxe se poursuit avec une chambre principale somptueuse dotée d'une salle de bains attenante et d'un dressing, ainsi que deux chambres supplémentaires offrant suffisamment d'espace pour la famille ou les invités. Une salle de bains bien équipée et un vide confortable complètent les pièces à vivre à l'étage, tandis qu'un balcon vous invite à profiter d'une vue imprenable.</p><p>À l'extérieur, le charme de la vie caribéenne vous attend avec des jardins paysagers, une piscine rafraîchissante et une terrasse spacieuse, idéale pour se détendre et recevoir. Le parking et l'allée pavés offrent suffisamment d'espace pour les véhicules, tandis qu'une allée pavée mène à un charmant belvédère, idéal pour les réunions en plein air. Les murs d'enceinte garantissent intimité et sécurité, tandis que des équipements pratiques tels qu'une fosse septique et une salle des générateurs vous assurent une tranquillité d'esprit.</p><p><strong>Le quartier</strong>
+Niché dans le paysage serein de Saint-Martin, St. John Estate est un symbole de luxe. Sa proximité avec la ville garantit un accès facile à toutes les commodités tout en conservant une atmosphère idyllique. Les routes bien entretenues serpentent à travers un quartier orné de superbes maisons et villas, chacune témoignant d'un goût raffiné et d'une excellence architecturale. Réputé pour son exclusivité, ce quartier est très prisé par la communauté aisée de l'île, offrant un style de vie d'une sophistication et d'un confort inégalés.</p>
+                    </div>
+
+                    <h2 style="margin-top: 2rem;">Équipements</h2>
+                    <div class="amenities-list">
+                        <ul><li>Landscape</li><li>Front and back gardens</li><li>BBQ area</li><li>Cistern</li><li>Swimming pool with pool deck</li><li>Paved parking/ driveway</li><li>Paved walkway</li><li>Gazebo</li><li>Boundary walls</li><li>Septic system</li><li>Generator room</li><li>Garage</li><li>Aluminum windows and wooden interior & exterior doors</li><li>Electric Rolling Shutters</li><li></li></ul>
+                    </div>
+                </div>
+
+                <div class="property-sidebar">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--navy);">Détails de la propriété</h3>
+
+                    <div class="detail-item">
+                        <label>Prix</label>
+                        <span>$850,000</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Localisation</label>
+                        <span>St John, St Maarten</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Type de bien</label>
+                        <span>Villa</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Année de construction</label>
+                        <span>1995</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Agent</label>
+                        <span>Sacha Mimouni</span>
+                    </div>
+
+                    <a href="mailto:sxm.dream.investments@gmail.com?subject=Inquiry: St John Villa" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        Contacter l'agent
+                    </a>
+
+                    <a href="https://wa.me/17215237855" class="btn btn-outline-dark" style="width: 100%; margin-top: 0.5rem;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin-top: 4rem;">
+        <div class="footer-bottom" style="padding: 2rem 5%; background: var(--navy);">
+            <p style="color: rgba(255,255,255,0.6);">&copy; 2026 SXM Dream Investments. Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SXM Dream Investments | Luxe Vastgoed op Sint Maarten</title>
+    <meta name="description" content="Ontdek de mooiste luxe woningen op Sint Maarten. Villa's, penthouses, condo's - uw vastgoedpartner in het Caribisch gebied.">
+    <link rel="icon" type="image/png" href="../images/logos/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <img src="../images/logos/logo-white.png" alt="SXM Dream Investments" class="logo-white">
+            <img src="../images/logos/logo-black.png" alt="SXM Dream Investments" class="logo-black" style="display:none;">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="eigenschappen.html">Vastgoed</a></li>
+            <li><a href="sint-maarten.html">Sint Maarten</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="nav-cta">Neem Contact Op</a></li>
+            <li class="lang-switcher">
+                <a href="../index.html">FR</a>
+                <a href="../en/index.html">EN</a>
+                <a href="index.html" class="active">NL</a>
+            </li>
+        </ul>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-badge">Sint Maarten • Caribisch</span>
+            <h1>Uw <span>Investering</span> in het Paradijs</h1>
+            <p>Ontdek de mooiste luxe woningen op Sint Maarten. Uitzonderlijke villa's, penthouses met zeezicht, hoogwaardige condo's - uitstekende Caribische investeringen.</p>
+            <div class="hero-buttons">
+                <a href="eigenschappen.html" class="btn btn-primary">Ontdek Woningen</a>
+                <a href="contact.html" class="btn btn-outline">Neem Contact Op</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="waarom">
+        <div class="section-header">
+            <span class="section-tag">Waarom Sint Maarten</span>
+            <h2>Een Uitzonderlijke Investering</h2>
+            <p>Sint Maarten biedt unieke mogelijkheden voor slimme investeerders, met een uitzonderlijke levenskwaliteit en aantrekkelijke belastingvoordelen.</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-card fade-in">
+                <div class="about-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Hoog Huurrendement</h3>
+                <p>Profiteer van een sterke toeristische vraag het hele jaar door met een van de hoogste bezettingsgraden in het Caribisch gebied.</p>
+            </div>
+            <div class="about-card fade-in">
+                <div class="about-icon">
+                    <i class="fas fa-percent"></i>
+                </div>
+                <h3>Belastingvoordelen</h3>
+                <p>Geniet van aanzienlijke belastingvoordelen aan de Nederlandse kant, waardoor uw netto rendement op investering wordt gemaximaliseerd.</p>
+            </div>
+            <div class="about-card fade-in">
+                <div class="about-icon">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h3>Duurzame Waardestijging</h3>
+                <p>Vastgoed op Sint Maarten stijgt consequent in waarde dankzij constante toeristische ontwikkeling.</p>
+            </div>
+            <div class="about-card fade-in">
+                <div class="about-icon">
+                    <i class="fas fa-umbrella-beach"></i>
+                </div>
+                <h3>Idyllische Levensstijl</h3>
+                <p>37 witte zandstranden, gerenommeerde gastronomie en perfect tropisch klimaat het hele jaar door.</p>
+            </div>
+            <div class="about-card fade-in">
+                <div class="about-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <h3>Internationale Toegang</h3>
+                <p>Princess Juliana International Airport met directe verbindingen naar Europa, de VS en het Caribisch gebied.</p>
+            </div>
+            <div class="about-card fade-in">
+                <div class="about-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Deskundige Begeleiding</h3>
+                <p>Ons meertalige team begeleidt u bij elke stap in het Engels, Frans, Spaans, Nederlands, Russisch en Italiaans.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section class="properties" id="eigenschappen">
+        <div class="section-header">
+            <span class="section-tag">Onze Woningen</span>
+            <h2>Exclusieve Selectie</h2>
+            <p>Ontdek onze collectie uitzonderlijke woningen, geselecteerd op hun toplocatie en investeringspotentieel.</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterProperties('all')">Alle</button>
+            <button class="filter-btn" onclick="filterProperties('villa')">Villa's</button>
+            <button class="filter-btn" onclick="filterProperties('penthouse')">Penthouses</button>
+            <button class="filter-btn" onclick="filterProperties('condo')">Condo's</button>
+            <button class="filter-btn" onclick="filterProperties('appartement')">Appartementen</button>
+        </div>
+
+        <div class="properties-grid">
+            <!-- Property 1 -->
+            <a href="../properties/nl/penthouse-investment-opportunity.html" class="property-card fade-in" data-type="penthouse" data-location="maho" data-price="550000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/Blue-Marine-Penthouse-Investment-Opportunity-SXM-Dream-Investments-Real-Estate-St-Maarten-6-scaled.jpg');">
+                    <span class="property-badge">Penthouse</span>
+                    <span class="property-price">$550,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Penthouse Investment Opportunity</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 slpk</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3 badk</span>
+                        <span class="property-feature"><i class="fas fa-building"></i> 2 verd.</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Property 2 -->
+            <a href="../properties/nl/aquamarina-villa.html" class="property-card fade-in" data-type="villa" data-location="point-pirouette" data-price="1450000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/11/Aquamarina-Villa-Point-Pirouette-SXM-Dream-Investments-Real-Estate-St-Maarten-1.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$1,450,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Aquamarina Villa</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Point Pirouette, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2.5 slpk</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 badk</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 5300 sqft</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Property 3 -->
+            <a href="../properties/nl/beachfront-cupecoy-condo.html" class="property-card fade-in" data-type="condo" data-location="cupecoy" data-price="775000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/Beachfront-Cupecoy-Condo-SXM-Dream-Investments-Real-Estate-St-Maarten-4-scaled.jpg');">
+                    <span class="property-badge">Condo</span>
+                    <span class="property-price">$775,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Beachfront Cupecoy Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 slpk</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 badk</span>
+                        <span class="property-feature"><i class="fas fa-water"></i> Zeezicht</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Property 4 -->
+            <a href="../properties/nl/concord-2-bedroom-condo.html" class="property-card fade-in" data-type="condo" data-location="pelican-key" data-price="650000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/Concord-2-bedroom-Condo-Pelican-Key-SXM-Dream-Investments-Real-Estate-St-Maarten-4-scaled.jpg');">
+                    <span class="property-badge">Condo</span>
+                    <span class="property-price">$650,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Concord 2-bedroom Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Pelican Key, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 slpk</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 badk</span>
+                        <span class="property-feature"><i class="fas fa-swimming-pool"></i> Zwembad</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Property 5 -->
+            <a href="../properties/nl/bright-corner-unit-blue-marine.html" class="property-card fade-in" data-type="appartement" data-location="maho" data-price="390000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/Bright-Corner-Unit-Blue-Marine-SXM-Dream-Investments-Real-Estate-St-Maarten-1-scaled.jpg');">
+                    <span class="property-badge">Appartement</span>
+                    <span class="property-price">$390,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Bright Corner Unit at Blue Marine</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 1 slpk</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 1 badk</span>
+                        <span class="property-feature"><i class="fas fa-sun"></i> Licht</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Property 6 -->
+            <a href="../properties/nl/condo-maho-beach.html" class="property-card fade-in" data-type="appartement" data-location="maho" data-price="395000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/Condo-in-Maho-Beach-SXM-Dream-Investments-Real-Estate-St-Maarten-1-scaled.jpg');">
+                    <span class="property-badge">Appartement</span>
+                    <span class="property-price">$395,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Condo in Maho Beach</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 1 slpk</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 1 badk</span>
+                        <span class="property-feature"><i class="fas fa-umbrella-beach"></i> Strand</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="eigenschappen.html" class="btn btn-primary">Bekijk Alle Woningen</a>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="sint-maarten">
+        <div class="location-grid">
+            <div class="location-content">
+                <span class="section-tag">Bestemming</span>
+                <h2>Ontdek Sint Maarten, de Parel van het Caribisch Gebied</h2>
+                <p>Uniek in de wereld, Sint Maarten wordt gedeeld tussen Frankrijk en Nederland, en biedt het beste van beide culturen. Aan de Franse kant geniet u van verfijnde gastronomie en ongerepte stranden. Aan de Nederlandse kant ontdekt u een bruisend nachtleven, casino's en belastingvrij winkelen.</p>
+                <p>Met zijn ideale tropische klimaat, 37 witte zandstranden en turquoise wateren trekt het eiland het hele jaar door bezoekers van over de hele wereld aan, wat zorgt voor een winstgevende huurinvestering.</p>
+                <div class="location-features">
+                    <div class="location-feature">
+                        <i class="fas fa-sun"></i>
+                        <span>300 zonnige dagen/jaar</span>
+                    </div>
+                    <div class="location-feature">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <span>37 paradijselijke stranden</span>
+                    </div>
+                    <div class="location-feature">
+                        <i class="fas fa-utensils"></i>
+                        <span>Culinaire hoofdstad</span>
+                    </div>
+                    <div class="location-feature">
+                        <i class="fas fa-flag"></i>
+                        <span>Dubbele nationaliteit FR/NL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="location-map">
+                <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Sint Maarten Caribisch">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item fade-in">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Woningen</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Talen gesproken</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Persoonlijke service</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Beschikbaarheid</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="../images/logos/logo-white.png" alt="SXM Dream Investments">
+                </a>
+                <p>Uw betrouwbare partner voor luxe vastgoed op Sint Maarten. Lokale expertise, internationaal netwerk, uitzonderlijke meertalige service.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/sxmdreaminvestments" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sxmdreaminvestments" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/sxm-dream-investments" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/17215237855" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">Navigatie</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="eigenschappen.html">Onze Woningen</a></li>
+                    <li><a href="sint-maarten.html">Sint Maarten</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">Woningtypes</h4>
+                <ul class="footer-links">
+                    <li><a href="eigenschappen.html">Villa's</a></li>
+                    <li><a href="eigenschappen.html">Penthouses</a></li>
+                    <li><a href="eigenschappen.html">Condo's</a></li>
+                    <li><a href="eigenschappen.html">Appartementen</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">Talen</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Français</a></li>
+                    <li><a href="../en/index.html">English</a></li>
+                    <li><a href="index.html">Nederlands</a></li>
+                </ul>
+                <p style="color: rgba(255,255,255,0.7); margin-top: 1.5rem; font-size: 0.9rem;">
+                    Service beschikbaar in:<br>
+                    FR | EN | ES | NL | RU | IT
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SXM Dream Investments. Alle rechten voorbehouden.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Juridische Kennisgeving</a>
+                <a href="#">Privacybeleid</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Logo switch on scroll
+        const navbar = document.getElementById('navbar');
+        const logoWhite = document.querySelector('.logo-white');
+        const logoBlack = document.querySelector('.logo-black');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                logoWhite.style.display = 'none';
+                logoBlack.style.display = 'block';
+            } else {
+                logoWhite.style.display = 'block';
+                logoBlack.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

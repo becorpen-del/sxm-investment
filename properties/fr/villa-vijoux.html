@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Vijoux | SXM Dream Investments</title>
+    <link rel="icon" type="image/png" href="../../images/logos/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .property-detail { padding-top: 100px; }
+        .property-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                        url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/villa-vijoux-1-scaled.jpg') center/cover;
+            display: flex;
+            align-items: flex-end;
+            padding: 3rem 5%;
+        }
+        .property-hero-content { color: white; max-width: 800px; }
+        .property-hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .property-hero .location { font-size: 1.2rem; opacity: 0.9; }
+        .property-hero .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-top: 1rem;
+        }
+        .property-info { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
+        .property-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; }
+        .property-main h2 { color: var(--navy); margin-bottom: 1.5rem; font-size: 1.5rem; }
+        .property-main p { color: var(--gray); line-height: 1.8; margin-bottom: 1rem; }
+        .property-sidebar { background: var(--off-white); padding: 2rem; border-radius: 12px; height: fit-content; }
+        .detail-item { margin-bottom: 1.5rem; }
+        .detail-item label { display: block; font-size: 0.85rem; color: var(--gray); margin-bottom: 0.25rem; }
+        .detail-item span { font-weight: 600; color: var(--navy); }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--gold); text-decoration: none; margin-bottom: 2rem; }
+        .back-link:hover { text-decoration: underline; }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
+        .feature-box { text-align: center; padding: 1.5rem; background: var(--off-white); border-radius: 8px; }
+        .feature-box i { font-size: 1.5rem; color: var(--gold); margin-bottom: 0.5rem; }
+        .feature-box .value { font-size: 1.5rem; font-weight: 600; color: var(--navy); }
+        .feature-box .label { font-size: 0.85rem; color: var(--gray); }
+        .amenities-list { list-style: none; padding: 0; }
+        .amenities-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--gray-light); display: flex; align-items: center; gap: 0.5rem; }
+        .amenities-list li:before { content: "✓"; color: var(--gold); font-weight: bold; }
+        @media (max-width: 768px) {
+            .property-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <a href="../../index.html" class="logo">
+            <img src="../../images/logos/logo-black.png" alt="SXM Dream Investments">
+        </a>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Accueil</a></li>
+            <li><a href="index.html">Propriétés</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+            <li><a href="../../index.html#contact" class="nav-cta">Nous contacter</a></li>
+        </ul>
+    </nav>
+
+    <section class="property-detail">
+        <div class="property-hero">
+            <div class="property-hero-content">
+                <h1>Villa Vijoux</h1>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Oyster Pond, St Martin</p>
+                <p class="price">$2,400,000</p>
+            </div>
+        </div>
+
+        <div class="property-info">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux propriétés</a>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-bed"></i>
+                    <div class="value">9</div>
+                    <div class="label">Chambres</div>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-bath"></i>
+                    <div class="value">9</div>
+                    <div class="label">Salles de bain</div>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-expand"></i>
+                    <div class="value">3767</div>
+                    <div class="label">Surface</div>
+                </div>
+            </div>
+
+            <div class="property-grid">
+                <div class="property-main">
+                    <h2>Description</h2>
+                    <div class="description">
+                        <p>Découvrez le summum du luxe dans cette villa raffinée de 350 m² située dans le quartier paisible d'Oyster Pond, à Saint-Martin. Cette propriété haut de gamme offre une combinaison inégalée de confort, d'élégance et de vues imprenables sur la mer.</p><p><strong>Caractéristiques principales :</strong>
+- 9 chambres spacieuses : chaque chambre dispose de sa propre salle de bains et de son dressing, garantissant intimité et confort à tous les résidents et invités.</p><p><strong>- Cuisine gastronomique :</strong> entièrement équipée pour répondre aux besoins de tous les amateurs de cuisine.</p><p><strong>- Espaces de vie intérieurs et extérieurs :</strong> profitez de vastes espaces de vie à l'intérieur comme à l'extérieur, notamment des salles à manger intérieures et extérieures, idéales pour recevoir.</p><p><strong>- Magnifique piscine et terrasse :</strong> détendez-vous au bord de la superbe piscine, entourée d'une terrasse offrant une vue spectaculaire sur la mer et la marina.</p><p><strong>- Appartement supplémentaire :</strong> la propriété comprend un appartement T2 séparé, idéal pour les invités ou pour générer des revenus locatifs supplémentaires.</p><p><strong>- Magnifique jardin paysager :</strong> la villa est située dans un jardin luxuriant et bien entretenu, offrant un environnement serein et pittoresque.</p><p><strong>- Parking et sécurité :</strong> parking sécurisé pouvant accueillir jusqu'à 5 véhicules, avec un portail automatique et un terrain entièrement clos.</p><p><strong>- Équipements modernes :</strong> la climatisation dans toutes les pièces, les volets électriques et une citerne d'eau garantissent confort et commodité tout au long de l'année.</p><p><strong>Potentiel locatif exceptionnel</strong>
+Actuellement, la villa est louée avec succès sur une base saisonnière, attirant principalement une clientèle américaine et générant des revenus locatifs impressionnants. Grâce à son emplacement privilégié et à ses équipements luxueux, cette propriété offre une rentabilité locative exceptionnelle.</p><p><strong>Emplacement idéal</strong>
+Oyster Pond est un quartier paisible connu pour ses belles villas et sa proximité avec les commodités essentielles. À seulement 10 minutes des commerces et des services, cette villa offre à la fois tranquillité et commodité. Emplacement idéal pour ceux qui recherchent un environnement calme et exclusif.</p><p><strong>Le quartier</strong>
+Découvrez le summum du raffinement à Oyster Pond, Saint-Martin. Avec son accès à la marina, au ferry pour Saint-Barthélemy et son environnement paisible, c'est le summum de la commodité et de la tranquillité à proximité de la ville et du côté français.
+Idéalement situé à 15 minutes d'Orient Bay et à 10 minutes de Philipsburg.</p>
+                    </div>
+
+                    <h2 style="margin-top: 2rem;">Équipements</h2>
+                    <div class="amenities-list">
+                        <ul><li>Swimming Pool with deck</li><li>Barbecue area</li><li>Outdoor lounge area</li><li>Multiple terraces</li><li>Parking</li><li>Gated entrance</li><li>Hurricane shutters</li><li>Separate studio apartment</li><li>Camera surveillance</li><li>Paved driveway</li><li></li></ul>
+                    </div>
+                </div>
+
+                <div class="property-sidebar">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--navy);">Détails de la propriété</h3>
+
+                    <div class="detail-item">
+                        <label>Prix</label>
+                        <span>$2,400,000</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Localisation</label>
+                        <span>Oyster Pond, St Martin</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Type de bien</label>
+                        <span>Villa</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Année de construction</label>
+                        <span>-</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Agent</label>
+                        <span>Sacha Mimouni</span>
+                    </div>
+
+                    <a href="mailto:sxm.dream.investments@gmail.com?subject=Inquiry: Villa Vijoux" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        Contacter l'agent
+                    </a>
+
+                    <a href="https://wa.me/17215237855" class="btn btn-outline-dark" style="width: 100%; margin-top: 0.5rem;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin-top: 4rem;">
+        <div class="footer-bottom" style="padding: 2rem 5%; background: var(--navy);">
+            <p style="color: rgba(255,255,255,0.6);">&copy; 2026 SXM Dream Investments. Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

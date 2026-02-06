@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Villa Oceane | SXM Dream Investments</title>
+    <link rel="icon" type="image/png" href="../../images/logos/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .property-detail { padding-top: 100px; }
+        .property-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                        url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/villa-oceane-1-scaled.jpg') center/cover;
+            display: flex;
+            align-items: flex-end;
+            padding: 3rem 5%;
+        }
+        .property-hero-content { color: white; max-width: 800px; }
+        .property-hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .property-hero .location { font-size: 1.2rem; opacity: 0.9; }
+        .property-hero .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-top: 1rem;
+        }
+        .property-info { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
+        .property-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; }
+        .property-main h2 { color: var(--navy); margin-bottom: 1.5rem; font-size: 1.5rem; }
+        .property-main p { color: var(--gray); line-height: 1.8; margin-bottom: 1rem; }
+        .property-sidebar { background: var(--off-white); padding: 2rem; border-radius: 12px; height: fit-content; }
+        .detail-item { margin-bottom: 1.5rem; }
+        .detail-item label { display: block; font-size: 0.85rem; color: var(--gray); margin-bottom: 0.25rem; }
+        .detail-item span { font-weight: 600; color: var(--navy); }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--gold); text-decoration: none; margin-bottom: 2rem; }
+        .back-link:hover { text-decoration: underline; }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
+        .feature-box { text-align: center; padding: 1.5rem; background: var(--off-white); border-radius: 8px; }
+        .feature-box i { font-size: 1.5rem; color: var(--gold); margin-bottom: 0.5rem; }
+        .feature-box .value { font-size: 1.5rem; font-weight: 600; color: var(--navy); }
+        .feature-box .label { font-size: 0.85rem; color: var(--gray); }
+        .amenities-list { list-style: none; padding: 0; }
+        .amenities-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--gray-light); display: flex; align-items: center; gap: 0.5rem; }
+        .amenities-list li:before { content: "✓"; color: var(--gold); font-weight: bold; }
+        @media (max-width: 768px) {
+            .property-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <a href="../../index.html" class="logo">
+            <img src="../../images/logos/logo-black.png" alt="SXM Dream Investments">
+        </a>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Accueil</a></li>
+            <li><a href="index.html">Propriétés</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+            <li><a href="../../index.html#contact" class="nav-cta">Nous contacter</a></li>
+        </ul>
+    </nav>
+
+    <section class="property-detail">
+        <div class="property-hero">
+            <div class="property-hero-content">
+                <h1>Villa Oceane</h1>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Pelican Key, St. Maarten</p>
+                <p class="price">$2,200,000</p>
+            </div>
+        </div>
+
+        <div class="property-info">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux propriétés</a>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-bed"></i>
+                    <div class="value">4.5</div>
+                    <div class="label">Chambres</div>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-bath"></i>
+                    <div class="value">4.5</div>
+                    <div class="label">Salles de bain</div>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-expand"></i>
+                    <div class="value">3971</div>
+                    <div class="label">Surface</div>
+                </div>
+            </div>
+
+            <div class="property-grid">
+                <div class="property-main">
+                    <h2>Description</h2>
+                    <div class="description">
+                        <p ><strong>Récemment rénové avec des finitions de haute qualité, de nouveaux meubles design et une toute nouvelle salle de fitness.</strong></p>
+<p >Élégamment perchée sur les collines verdoyantes de Pelican Key, la Villa Oceane est un symbole d'opulence à Saint-Martin néerlandais. Offrant une vue imprenable à 180 degrés, ce bijou de style méditerranéen présente un panorama époustouflant de la vibrante mer des Caraïbes ainsi que des îles captivantes de Saba, Saint-Eustache, Saint-Kitts et Nevis.</p>
+<p >Intégrée harmonieusement dans le paysage luxuriant, la villa met en avant un savoir-faire exceptionnel, avec des matériaux de haute qualité et un design impeccable tout au long. Un jardin luxuriant accueille les visiteurs à l'entrée principale, les conduisant à l'intérieur impressionnant. En entrant au niveau principal, les invités sont accueillis par un espace de vie spacieux embelli par des fenêtres du sol au plafond qui capturent la vue magnifique. Au-delà de cet espace se trouve une vaste terrasse qui combine magnifiquement la vie intérieure et extérieure, menant à une terrasse de piscine immaculée.</p>
+<p >La cuisine bien équipée, dotée de comptoirs en granit et d'un garde-manger séparé, sert de paradis culinaire avec accès à une cave à vin souterraine pour les passionnés.</p>
+<p >La suite principale, havre de sophistication, comprend un grand dressing et une salle de bains attenante luxueuse avec douche et baignoire, garantissant une retraite somptueuse. En montant au niveau supérieur, deux chambres de taille égale disposent chacune de salles de bains privées, offrant confort et intimité à tous les visiteurs.</p>
+<p >À l'extérieur, une vaste terrasse vous attend, avec une piscine scintillante et un charmant pavillon à côté d'un espace barbecue entièrement équipé, parfait pour des repas en plein air et des divertissements sous le soleil ou les étoiles. En descendant au niveau inférieur, une salle de sport et un sauna face à l'océan offrent bien-être et régénération dans un cadre de vues panoramiques.</p>
+<p >Parmi les autres caractéristiques, on trouve une zone de pompe/de stockage, des installations de blanchisserie et une pièce polyvalente idéale pour un bureau, des logements pour invités ou un refuge confortable de cinéma maison.</p>
+<p >Adjacente à la villa principale se trouve un appartement séparé d'une chambre, offrant un accès indépendant et comprenant une chambre en demi-mezzanine surplombant le salon et la cuisine. Équipé de ses propres installations de blanchisserie et d'une terrasse spacieuse avec vue sur l'océan, il promet confort et commodité pour les invités cherchant un refuge privé.</p>
+<p >Découvrez le summum du luxe caribéen à la Villa Oceane, où chaque détail est conçu avec un goût exquis et une qualité inégalée.</p>
+                    </div>
+
+                    <h2 style="margin-top: 2rem;">Équipements</h2>
+                    <div class="amenities-list">
+                        
+                    </div>
+                </div>
+
+                <div class="property-sidebar">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--navy);">Détails de la propriété</h3>
+
+                    <div class="detail-item">
+                        <label>Prix</label>
+                        <span>$2,200,000</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Localisation</label>
+                        <span>Pelican Key, St. Maarten</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Type de bien</label>
+                        <span>Villa</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Année de construction</label>
+                        <span>'-</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Agent</label>
+                        <span>Sacha Mimouni</span>
+                    </div>
+
+                    <a href="mailto:?subject=Inquiry: Villa Oceane" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        Contacter l'agent
+                    </a>
+
+                    <a href="https://wa.me/17215237855" class="btn btn-outline-dark" style="width: 100%; margin-top: 0.5rem;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin-top: 4rem;">
+        <div class="footer-bottom" style="padding: 2rem 5%; background: var(--navy);">
+            <p style="color: rgba(255,255,255,0.6);">&copy; 2026 SXM Dream Investments. Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

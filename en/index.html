@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SXM Dream Investments | Luxury Real Estate in St. Martin</title>
+    <meta name="description" content="Discover the finest luxury properties in St. Martin. Villas, penthouses, condos - your Caribbean real estate partner.">
+    <link rel="icon" type="image/png" href="../images/logos/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <img src="../images/logos/logo-white.png" alt="SXM Dream Investments" class="logo-white">
+            <img src="../images/logos/logo-black.png" alt="SXM Dream Investments" class="logo-black" style="display:none;">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="st-martin.html">St. Martin</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="nav-cta">Contact Us</a></li>
+            <li class="lang-switcher">
+                <a href="../index.html">FR</a>
+                <a href="index.html" class="active">EN</a>
+                <a href="../nl/index.html">NL</a>
+            </li>
+        </ul>
+        <button class="mobile-menu-btn">
+            <i class="fas fa-bars"></i>
+        </button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="hero-badge">St. Martin • Caribbean</span>
+            <h1>Your <span>Investment</span> in Paradise</h1>
+            <p>Discover the finest luxury properties in St. Martin. Exceptional villas, ocean-view penthouses, upscale condos - outstanding Caribbean investments.</p>
+            <div class="hero-buttons">
+                <a href="properties.html" class="btn btn-primary">Explore Properties</a>
+                <a href="contact.html" class="btn btn-outline">Contact Us</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="why">
+        <div class="section-header">
+            <span class="section-tag">Why St. Martin</span>
+            <h2>An Exceptional Investment</h2>
+            <p>St. Martin offers unique opportunities for savvy investors, combining exceptional quality of life with attractive tax benefits.</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-card fade-in">
+                <div class="about-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>High Rental Yield</h3>
+                <p>Benefit from strong year-round tourist demand with some of the highest occupancy rates in the Caribbean.</p>
+            </div>
+            <div class="about-card fade-in">
+                <div class="about-icon">
+                    <i class="fas fa-percent"></i>
+                </div>
+                <h3>Tax Advantages</h3>
+                <p>Enjoy significant tax benefits on the Dutch side, maximizing your net return on investment.</p>
+            </div>
+            <div class="about-card fade-in">
+                <div class="about-icon">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <h3>Lasting Appreciation</h3>
+                <p>Real estate in St. Martin consistently appreciates in value thanks to constant tourism development.</p>
+            </div>
+            <div class="about-card fade-in">
+                <div class="about-icon">
+                    <i class="fas fa-umbrella-beach"></i>
+                </div>
+                <h3>Idyllic Lifestyle</h3>
+                <p>37 white sand beaches, renowned gastronomy, and perfect tropical climate year-round.</p>
+            </div>
+            <div class="about-card fade-in">
+                <div class="about-icon">
+                    <i class="fas fa-plane"></i>
+                </div>
+                <h3>International Access</h3>
+                <p>Princess Juliana International Airport with direct connections to Europe, the US, and the Caribbean.</p>
+            </div>
+            <div class="about-card fade-in">
+                <div class="about-icon">
+                    <i class="fas fa-handshake"></i>
+                </div>
+                <h3>Expert Guidance</h3>
+                <p>Our multilingual team guides you every step of the way in English, French, Spanish, Dutch, Russian, and Italian.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section class="properties" id="properties">
+        <div class="section-header">
+            <span class="section-tag">Our Properties</span>
+            <h2>Exclusive Selection</h2>
+            <p>Discover our collection of exceptional properties, selected for their prime location and investment potential.</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters">
+            <button class="filter-btn active" onclick="filterProperties('all')">All</button>
+            <button class="filter-btn" onclick="filterProperties('villa')">Villas</button>
+            <button class="filter-btn" onclick="filterProperties('penthouse')">Penthouses</button>
+            <button class="filter-btn" onclick="filterProperties('condo')">Condos</button>
+            <button class="filter-btn" onclick="filterProperties('appartement')">Apartments</button>
+        </div>
+
+        <div class="properties-grid">
+            <!-- Property 1 -->
+            <a href="../properties/en/penthouse-investment-opportunity.html" class="property-card fade-in" data-type="penthouse" data-location="maho" data-price="550000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/Blue-Marine-Penthouse-Investment-Opportunity-SXM-Dream-Investments-Real-Estate-St-Maarten-6-scaled.jpg');">
+                    <span class="property-badge">Penthouse</span>
+                    <span class="property-price">$550,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Penthouse Investment Opportunity</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 3 ba</span>
+                        <span class="property-feature"><i class="fas fa-building"></i> 2 floors</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Property 2 -->
+            <a href="../properties/en/aquamarina-villa.html" class="property-card fade-in" data-type="villa" data-location="point-pirouette" data-price="1450000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/11/Aquamarina-Villa-Point-Pirouette-SXM-Dream-Investments-Real-Estate-St-Maarten-1.jpg');">
+                    <span class="property-badge">Villa</span>
+                    <span class="property-price">$1,450,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Aquamarina Villa</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Point Pirouette, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2.5 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2.5 ba</span>
+                        <span class="property-feature"><i class="fas fa-expand"></i> 5300 sqft</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Property 3 -->
+            <a href="../properties/en/beachfront-cupecoy-condo.html" class="property-card fade-in" data-type="condo" data-location="cupecoy" data-price="775000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/Beachfront-Cupecoy-Condo-SXM-Dream-Investments-Real-Estate-St-Maarten-4-scaled.jpg');">
+                    <span class="property-badge">Condo</span>
+                    <span class="property-price">$775,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Beachfront Cupecoy Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 ba</span>
+                        <span class="property-feature"><i class="fas fa-water"></i> Ocean view</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Property 4 -->
+            <a href="../properties/en/concord-2-bedroom-condo.html" class="property-card fade-in" data-type="condo" data-location="pelican-key" data-price="650000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/Concord-2-bedroom-Condo-Pelican-Key-SXM-Dream-Investments-Real-Estate-St-Maarten-4-scaled.jpg');">
+                    <span class="property-badge">Condo</span>
+                    <span class="property-price">$650,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Concord 2-bedroom Condo</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Pelican Key, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 2 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 2 ba</span>
+                        <span class="property-feature"><i class="fas fa-swimming-pool"></i> Pool</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Property 5 -->
+            <a href="../properties/en/bright-corner-unit-blue-marine.html" class="property-card fade-in" data-type="appartement" data-location="maho" data-price="390000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/Bright-Corner-Unit-Blue-Marine-SXM-Dream-Investments-Real-Estate-St-Maarten-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$390,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Bright Corner Unit at Blue Marine</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 1 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 1 ba</span>
+                        <span class="property-feature"><i class="fas fa-sun"></i> Bright</span>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Property 6 -->
+            <a href="../properties/en/condo-maho-beach.html" class="property-card fade-in" data-type="appartement" data-location="maho" data-price="395000">
+                <div class="property-image" style="background-image: url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/Condo-in-Maho-Beach-SXM-Dream-Investments-Real-Estate-St-Maarten-1-scaled.jpg');">
+                    <span class="property-badge">Apartment</span>
+                    <span class="property-price">$395,000</span>
+                </div>
+                <div class="property-content">
+                    <h3>Condo in Maho Beach</h3>
+                    <p class="property-location"><i class="fas fa-map-marker-alt"></i> Maho, St Maarten</p>
+                    <div class="property-features">
+                        <span class="property-feature"><i class="fas fa-bed"></i> 1 bd</span>
+                        <span class="property-feature"><i class="fas fa-bath"></i> 1 ba</span>
+                        <span class="property-feature"><i class="fas fa-umbrella-beach"></i> Beach</span>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div style="text-align: center; margin-top: 3rem;">
+            <a href="properties.html" class="btn btn-primary">View All Properties</a>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section class="location" id="saint-martin">
+        <div class="location-grid">
+            <div class="location-content">
+                <span class="section-tag">Destination</span>
+                <h2>Discover St. Martin, the Caribbean Gem</h2>
+                <p>Unique in the world, St. Martin is shared between France and the Netherlands, offering the best of both cultures. On the French side, enjoy refined gastronomy and pristine beaches. On the Dutch side, discover vibrant nightlife, casinos, and duty-free shopping.</p>
+                <p>With its ideal tropical climate, 37 white sand beaches, and turquoise waters, the island attracts visitors from around the world year-round, ensuring profitable rental investment.</p>
+                <div class="location-features">
+                    <div class="location-feature">
+                        <i class="fas fa-sun"></i>
+                        <span>300 sunny days/year</span>
+                    </div>
+                    <div class="location-feature">
+                        <i class="fas fa-umbrella-beach"></i>
+                        <span>37 paradise beaches</span>
+                    </div>
+                    <div class="location-feature">
+                        <i class="fas fa-utensils"></i>
+                        <span>Culinary capital</span>
+                    </div>
+                    <div class="location-feature">
+                        <i class="fas fa-flag"></i>
+                        <span>Dual nationality FR/NL</span>
+                    </div>
+                </div>
+            </div>
+            <div class="location-map">
+                <img src="https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="St. Martin Caribbean">
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stats-grid">
+            <div class="stat-item fade-in">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Properties</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">6</div>
+                <div class="stat-label">Languages spoken</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Personalized service</div>
+            </div>
+            <div class="stat-item fade-in">
+                <div class="stat-number">24/7</div>
+                <div class="stat-label">Availability</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">
+                    <img src="../images/logos/logo-white.png" alt="SXM Dream Investments">
+                </a>
+                <p>Your trusted partner for luxury real estate in St. Martin. Local expertise, international network, exceptional multilingual service.</p>
+                <div class="footer-social">
+                    <a href="https://www.facebook.com/sxmdreaminvestments" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/sxmdreaminvestments" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/company/sxm-dream-investments" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/17215237855" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="properties.html">Our Properties</a></li>
+                    <li><a href="st-martin.html">St. Martin</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">Property Types</h4>
+                <ul class="footer-links">
+                    <li><a href="properties.html">Villas</a></li>
+                    <li><a href="properties.html">Penthouses</a></li>
+                    <li><a href="properties.html">Condos</a></li>
+                    <li><a href="properties.html">Apartments</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">Languages</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Français</a></li>
+                    <li><a href="index.html">English</a></li>
+                    <li><a href="../nl/index.html">Nederlands</a></li>
+                </ul>
+                <p style="color: rgba(255,255,255,0.7); margin-top: 1.5rem; font-size: 0.9rem;">
+                    Service available in:<br>
+                    FR | EN | ES | NL | RU | IT
+                </p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SXM Dream Investments. All rights reserved.</p>
+            <div class="footer-bottom-links">
+                <a href="#">Legal Notice</a>
+                <a href="#">Privacy Policy</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Logo switch on scroll
+        const navbar = document.getElementById('navbar');
+        const logoWhite = document.querySelector('.logo-white');
+        const logoBlack = document.querySelector('.logo-black');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 100) {
+                logoWhite.style.display = 'none';
+                logoBlack.style.display = 'block';
+            } else {
+                logoWhite.style.display = 'block';
+                logoBlack.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

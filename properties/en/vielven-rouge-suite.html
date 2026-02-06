@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VieLVen - Rouge Suite | SXM Dream Investments</title>
+    <link rel="icon" type="image/png" href="../../images/logos/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .property-detail { padding-top: 100px; }
+        .property-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                        url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/vielven-rouge-suite-1-scaled.jpg') center/cover;
+            display: flex;
+            align-items: flex-end;
+            padding: 3rem 5%;
+        }
+        .property-hero-content { color: white; max-width: 800px; }
+        .property-hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .property-hero .location { font-size: 1.2rem; opacity: 0.9; }
+        .property-hero .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-top: 1rem;
+        }
+        .property-info { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
+        .property-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; }
+        .property-main h2 { color: var(--navy); margin-bottom: 1.5rem; font-size: 1.5rem; }
+        .property-main p { color: var(--gray); line-height: 1.8; margin-bottom: 1rem; }
+        .property-sidebar { background: var(--off-white); padding: 2rem; border-radius: 12px; height: fit-content; }
+        .detail-item { margin-bottom: 1.5rem; }
+        .detail-item label { display: block; font-size: 0.85rem; color: var(--gray); margin-bottom: 0.25rem; }
+        .detail-item span { font-weight: 600; color: var(--navy); }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--gold); text-decoration: none; margin-bottom: 2rem; }
+        .back-link:hover { text-decoration: underline; }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
+        .feature-box { text-align: center; padding: 1.5rem; background: var(--off-white); border-radius: 8px; }
+        .feature-box i { font-size: 1.5rem; color: var(--gold); margin-bottom: 0.5rem; }
+        .feature-box .value { font-size: 1.5rem; font-weight: 600; color: var(--navy); }
+        .feature-box .label { font-size: 0.85rem; color: var(--gray); }
+        .amenities-list { list-style: none; padding: 0; }
+        .amenities-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--gray-light); display: flex; align-items: center; gap: 0.5rem; }
+        .amenities-list li:before { content: "✓"; color: var(--gold); font-weight: bold; }
+        @media (max-width: 768px) {
+            .property-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <a href="../../en/index.html" class="logo">
+            <img src="../../images/logos/logo-black.png" alt="SXM Dream Investments">
+        </a>
+        <ul class="nav-links">
+            <li><a href="../../en/index.html">Home</a></li>
+            <li><a href="index.html">Properties</a></li>
+            <li><a href="../../en/index.html#contact">Contact</a></li>
+            <li><a href="../../en/index.html#contact" class="nav-cta">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section class="property-detail">
+        <div class="property-hero">
+            <div class="property-hero-content">
+                <h1>VieLVen - Rouge Suite</h1>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Indigo Bay, St Maarten</p>
+                <p class="price">$2,500,000</p>
+            </div>
+        </div>
+
+        <div class="property-info">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to properties</a>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-bed"></i>
+                    <div class="value">3</div>
+                    <div class="label">Bedrooms</div>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-bath"></i>
+                    <div class="value">3.5</div>
+                    <div class="label">Bathrooms</div>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-expand"></i>
+                    <div class="value">1922</div>
+                    <div class="label">Square Feet</div>
+                </div>
+            </div>
+
+            <div class="property-grid">
+                <div class="property-main">
+                    <h2>Description</h2>
+                    <div class="description">
+                        <div>
+<p >Discover Vie L’Ven, a masterpiece of design and service, nestled on the pristine shores of Indigo Bay, St. Maarten.</p>
+<p >Conceived by a world-renowned team of architects and interior designers, Vie L’Ven embodies the island’s unique blend of Dutch, French, and Caribbean cultures. Every detail, from the stunning architecture to the curated interiors, is a testament to our commitment to excellence.</p>
+<p >Imagine waking up to breathtaking ocean views, the gentle lapping of waves, and the warm embrace of the Caribbean sun. Vie L’Ven offers an unparalleled living experience, where luxury and nature converge. The private cove, pristine beach, and endless sunshine provide the perfect backdrop for your dream lifestyle.</p>
+<p >Contact us for more details about the features and availability.</p></p><p></div>
+<div>
+<div>
+<p ><strong>The Neighborhood</strong></p></p><p></div>
+<div>
+<p >Indigo Bay is a secluded beachfront community nestled on the stunning shores of St. Maarten. Immerse yourself in a world of tranquility and sophistication, where pristine beaches, crystal-clear waters, and lush tropical landscapes converge.</p>
+Unparalleled Luxury and Convenience:</p><p>- Luxurious Residences: Own a piece of paradise with our exquisite villas and condos, each offering breathtaking ocean views, private pools, and world-class amenities.
+- World-Class Amenities: Indulge in a range of amenities, including a state-of-the-art fitness center, spa, gourmet restaurants, and a marina.
+- Prime Location: Enjoy easy access to St. Maarten's vibrant culture, diverse dining options, and duty-free shopping. Explore the island's stunning natural beauty, including lush rainforests, crystal-clear waters, and world-class diving and snorkeling spots.</p><p></div>
+</div>
+                    </div>
+
+                    <h2 style="margin-top: 2rem;">Amenities</h2>
+                    <div class="amenities-list">
+                        <ul><li>- Contemporary architectural design</li><li>- Expansive terraces and balconies with contemporary glass railing details</li><li>- Private garden areas for ground floor units with the option to add a private plunge pool</li><li>- An array of restaurants, including an all-day dining venue, a beachside eatery, and a fine-dining venue helmed by an award-winning chef</li><li>- A welcoming lobby bar and a relaxing poolside bar, offering places to gather and entertain</li><li>- An assortment of five-star amenities, including a world-class spa and fitness center, a kid’s club, an event lawn, a multi-purpose room, and three infinity-edge pools overlooking the bay</li><li></li></ul>
+                    </div>
+                </div>
+
+                <div class="property-sidebar">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--navy);">Property Details</h3>
+
+                    <div class="detail-item">
+                        <label>Price</label>
+                        <span>$2,500,000</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Location</label>
+                        <span>Indigo Bay, St Maarten</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Property Type</label>
+                        <span>Condominium</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Year Built</label>
+                        <span>2027</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Agent</label>
+                        <span>Sacha Mimouni</span>
+                    </div>
+
+                    <a href="mailto:sxm.dream.investments@gmail.com?subject=Inquiry: VieLVen - Rouge Suite" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        Contact Agent
+                    </a>
+
+                    <a href="https://wa.me/17215237855" class="btn btn-outline-dark" style="width: 100%; margin-top: 0.5rem;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin-top: 4rem;">
+        <div class="footer-bottom" style="padding: 2rem 5%; background: var(--navy);">
+            <p style="color: rgba(255,255,255,0.6);">&copy; 2026 SXM Dream Investments. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

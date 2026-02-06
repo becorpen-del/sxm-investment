@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sint Maarten | SXM Dream Investments</title>
+    <meta name="description" content="Ontdek Sint Maarten, een Caribisch paradijs ideaal voor vastgoedinvesteringen. Belastingvoordelen, uitzonderlijke levenskwaliteit.">
+    <link rel="icon" type="image/png" href="../images/logos/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        .page-hero {
+            height: 60vh;
+            min-height: 500px;
+            background: linear-gradient(rgba(26, 42, 58, 0.6), rgba(26, 42, 58, 0.6)),
+                        url('https://images.unsplash.com/photo-1590523741831-ab7e8b8f9c7f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2074&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        .page-hero h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .page-hero p { font-size: 1.3rem; opacity: 0.9; max-width: 700px; }
+
+        .intro-section {
+            padding: 5rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .intro-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--navy);
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .intro-section p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--gray);
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto 2rem;
+        }
+
+        .dual-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            padding: 4rem 5%;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: center;
+        }
+        .dual-section.reverse { direction: rtl; }
+        .dual-section.reverse > * { direction: ltr; }
+        .dual-section img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .dual-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        .dual-content p {
+            color: var(--gray);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .advantages-section {
+            background: var(--off-white);
+            padding: 5rem 5%;
+        }
+        .advantages-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .advantages-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .advantage-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        .advantage-card:hover { transform: translateY(-5px); }
+        .advantage-card i {
+            font-size: 3rem;
+            color: var(--gold);
+            margin-bottom: 1.5rem;
+        }
+        .advantage-card h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            color: var(--navy);
+            margin-bottom: 1rem;
+        }
+        .advantage-card p {
+            color: var(--gray);
+            line-height: 1.7;
+        }
+
+        .locations-section {
+            padding: 5rem 5%;
+        }
+        .locations-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            color: var(--navy);
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .location-card {
+            position: relative;
+            height: 250px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .location-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        .location-card:hover img { transform: scale(1.1); }
+        .location-card-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 2rem 1rem;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            color: white;
+        }
+        .location-card-overlay h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+        .location-card-overlay span { font-size: 0.9rem; opacity: 0.8; }
+
+        .cta-section {
+            background: linear-gradient(rgba(26, 42, 58, 0.9), rgba(26, 42, 58, 0.9)),
+                        url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80') center/cover fixed;
+            padding: 5rem 5%;
+            text-align: center;
+            color: white;
+        }
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .cta-section p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        .cta-section .btn-primary {
+            background: var(--gold);
+            color: var(--navy);
+            padding: 1rem 2.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        .cta-section .btn-primary:hover {
+            background: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 1024px) {
+            .advantages-grid { grid-template-columns: repeat(2, 1fr); }
+            .locations-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .dual-section { grid-template-columns: 1fr; gap: 2rem; }
+            .dual-section.reverse { direction: ltr; }
+            .advantages-grid { grid-template-columns: 1fr; }
+            .locations-grid { grid-template-columns: 1fr; }
+            .page-hero h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <a href="index.html" class="logo">
+            <img src="../images/logos/logo-white.png" alt="SXM Dream Investments" class="logo-white">
+            <img src="../images/logos/logo-black.png" alt="SXM Dream Investments" class="logo-black" style="display:none;">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="eigenschappen.html">Vastgoed</a></li>
+            <li><a href="sint-maarten.html" class="active">Sint Maarten</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" class="nav-cta">Neem Contact Op</a></li>
+            <li class="lang-switcher">
+                <a href="../saint-martin.html">FR</a>
+                <a href="../en/st-martin.html">EN</a>
+                <a href="sint-maarten.html" class="active">NL</a>
+            </li>
+        </ul>
+        <button class="mobile-menu-btn"><i class="fas fa-bars"></i></button>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div>
+            <span class="hero-badge">Het Schateiland</span>
+            <h1>Sint Maarten</h1>
+            <p>Een uniek eiland in het hart van het Caribisch gebied, waar luxe, cultuur en investeringsmogelijkheden samenkomen</p>
+        </div>
+    </section>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+        <h2>Welkom op Sint Maarten</h2>
+        <p>Sint Maarten is een paradijselijk eiland in het Caribisch gebied, verdeeld tussen twee naties: Frankrijk in het noorden (Saint-Martin) en Nederland in het zuiden (Sint Maarten). Deze unieke dualiteit biedt het beste van twee werelden: Europese cultuur, verfijnde gastronomie en een gunstig belastingklimaat.</p>
+        <p>Met zijn 37 witte zandstranden, kristalhelder turquoise water en idyllisch tropisch klimaat is Sint Maarten een van de meest gewilde Caribische bestemmingen geworden voor slimme vastgoedinvesteerders.</p>
+    </section>
+
+    <!-- Dual Section 1 -->
+    <section class="dual-section">
+        <img src="https://images.unsplash.com/photo-1580541631950-7282082b53ce?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Sint Maarten Strand">
+        <div class="dual-content">
+            <h3>Een Uitzonderlijke Leefomgeving</h3>
+            <p>Sint Maarten biedt een onvergelijkbare levensstijl. Stel je voor dat je elke ochtend wakker wordt met uitzicht op de Caribische Zee, geniet van restaurants van wereldklasse en ongerepte stranden binnen enkele minuten bereikt.</p>
+            <p>Het eiland geniet het hele jaar door van een aangenaam tropisch klimaat, met temperaturen tussen 25°C en 30°C. De kosmopolitische internationale gemeenschap creëert een gastvrije en dynamische sfeer.</p>
+        </div>
+    </section>
+
+    <!-- Dual Section 2 -->
+    <section class="dual-section reverse">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" alt="Luxe Villa">
+        <div class="dual-content">
+            <h3>Een Dynamische Vastgoedmarkt</h3>
+            <p>De vastgoedmarkt van Sint Maarten kent al jaren een gestage groei. De vraag naar luxe vastgoed blijft sterk, aangedreven door een internationale clientèle op zoek naar tweede woningen of verhuurinvesteringen.</p>
+            <p>De huurrendementen zijn bijzonder aantrekkelijk, vooral in de vakantieverhuur sector die profiteert van een hoge bezettingsgraad gedurende het hele jaar.</p>
+        </div>
+    </section>
+
+    <!-- Advantages Section -->
+    <section class="advantages-section">
+        <h2>Waarom Investeren in Sint Maarten?</h2>
+        <div class="advantages-grid">
+            <div class="advantage-card">
+                <i class="fas fa-percentage"></i>
+                <h4>Belastingvoordelen</h4>
+                <p>Profiteer van een gunstig belastingregime met vrijstellingen op vermogenswinst en lagere onroerendgoedbelasting in vergelijking met Europa.</p>
+            </div>
+            <div class="advantage-card">
+                <i class="fas fa-chart-line"></i>
+                <h4>Aantrekkelijke Rendementen</h4>
+                <p>Huurrendementen kunnen 8-12% per jaar bereiken dankzij de sterke vraag naar vakantieverhuur en een welgestelde internationale clientèle.</p>
+            </div>
+            <div class="advantage-card">
+                <i class="fas fa-euro-sign"></i>
+                <h4>Monetaire Stabiliteit</h4>
+                <p>Aan de Franse kant investeert u in euro's in een gebied van de Europese Unie, wat stabiliteit en juridische zekerheid garandeert.</p>
+            </div>
+            <div class="advantage-card">
+                <i class="fas fa-plane"></i>
+                <h4>Bereikbaarheid</h4>
+                <p>Internationale luchthaven met directe vluchten vanuit Parijs, Amsterdam, New York en vele andere grote steden.</p>
+            </div>
+            <div class="advantage-card">
+                <i class="fas fa-umbrella-beach"></i>
+                <h4>Levenskwaliteit</h4>
+                <p>37 stranden, meer dan 300 restaurants, bruisend nachtleven en uitzonderlijke wateractiviteiten het hele jaar door.</p>
+            </div>
+            <div class="advantage-card">
+                <i class="fas fa-handshake"></i>
+                <h4>Deskundige Begeleiding</h4>
+                <p>Ons lokale team begeleidt u bij elke stap van uw investering, van zoeken tot vastgoedbeheer.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations Section -->
+    <section class="locations-section">
+        <h2>Onze Toplocaties</h2>
+        <div class="locations-grid">
+            <div class="location-card">
+                <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Maho">
+                <div class="location-card-overlay">
+                    <h4>Maho</h4>
+                    <span>Nachtleven & Stranden</span>
+                </div>
+            </div>
+            <div class="location-card">
+                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cupecoy">
+                <div class="location-card-overlay">
+                    <h4>Cupecoy</h4>
+                    <span>Luxe & Prestige</span>
+                </div>
+            </div>
+            <div class="location-card">
+                <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Simpson Bay">
+                <div class="location-card-overlay">
+                    <h4>Simpson Bay</h4>
+                    <span>Marina & Winkels</span>
+                </div>
+            </div>
+            <div class="location-card">
+                <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Orient Bay">
+                <div class="location-card-overlay">
+                    <h4>Orient Bay</h4>
+                    <span>Stranden & Activiteiten</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Klaar om te Investeren in het Paradijs?</h2>
+        <p>Neem vandaag nog contact met ons op om investeringsmogelijkheden te ontdekken die bij uw doelen passen.</p>
+        <a href="contact.html" class="btn-primary">Neem Contact Op</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <img src="../images/logos/logo-white.png" alt="SXM Dream Investments" style="max-width: 180px; margin-bottom: 1rem;">
+                <p>Uw vertrouwde partner voor vastgoedinvesteringen in Sint Maarten sinds meer dan 15 jaar.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Navigatie</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="eigenschappen.html">Vastgoed</a></li>
+                    <li><a href="sint-maarten.html">Sint Maarten</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Vastgoedtypes</h4>
+                <ul>
+                    <li><a href="eigenschappen.html">Villa's</a></li>
+                    <li><a href="eigenschappen.html">Penthouses</a></li>
+                    <li><a href="eigenschappen.html">Condo's</a></li>
+                    <li><a href="eigenschappen.html">Grond</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contact</h4>
+                <p><i class="fas fa-map-marker-alt"></i> Simpson Bay, Sint Maarten</p>
+                <p><i class="fas fa-phone"></i> +1 721 XXX XXXX</p>
+                <p><i class="fas fa-envelope"></i> info@sxmdreaminvestments.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 SXM Dream Investments. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

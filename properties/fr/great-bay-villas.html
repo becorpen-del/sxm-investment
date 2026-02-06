@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Great Bay Villas | SXM Dream Investments</title>
+    <link rel="icon" type="image/png" href="../../images/logos/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .property-detail { padding-top: 100px; }
+        .property-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                        url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/great-bay-villas-1-scaled.jpg') center/cover;
+            display: flex;
+            align-items: flex-end;
+            padding: 3rem 5%;
+        }
+        .property-hero-content { color: white; max-width: 800px; }
+        .property-hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .property-hero .location { font-size: 1.2rem; opacity: 0.9; }
+        .property-hero .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-top: 1rem;
+        }
+        .property-info { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
+        .property-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; }
+        .property-main h2 { color: var(--navy); margin-bottom: 1.5rem; font-size: 1.5rem; }
+        .property-main p { color: var(--gray); line-height: 1.8; margin-bottom: 1rem; }
+        .property-sidebar { background: var(--off-white); padding: 2rem; border-radius: 12px; height: fit-content; }
+        .detail-item { margin-bottom: 1.5rem; }
+        .detail-item label { display: block; font-size: 0.85rem; color: var(--gray); margin-bottom: 0.25rem; }
+        .detail-item span { font-weight: 600; color: var(--navy); }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--gold); text-decoration: none; margin-bottom: 2rem; }
+        .back-link:hover { text-decoration: underline; }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
+        .feature-box { text-align: center; padding: 1.5rem; background: var(--off-white); border-radius: 8px; }
+        .feature-box i { font-size: 1.5rem; color: var(--gold); margin-bottom: 0.5rem; }
+        .feature-box .value { font-size: 1.5rem; font-weight: 600; color: var(--navy); }
+        .feature-box .label { font-size: 0.85rem; color: var(--gray); }
+        .amenities-list { list-style: none; padding: 0; }
+        .amenities-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--gray-light); display: flex; align-items: center; gap: 0.5rem; }
+        .amenities-list li:before { content: "✓"; color: var(--gold); font-weight: bold; }
+        @media (max-width: 768px) {
+            .property-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <a href="../../index.html" class="logo">
+            <img src="../../images/logos/logo-black.png" alt="SXM Dream Investments">
+        </a>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Accueil</a></li>
+            <li><a href="index.html">Propriétés</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+            <li><a href="../../index.html#contact" class="nav-cta">Nous contacter</a></li>
+        </ul>
+    </nav>
+
+    <section class="property-detail">
+        <div class="property-hero">
+            <div class="property-hero-content">
+                <h1>Great Bay Villas</h1>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Philipsburg, St Martin</p>
+                <p class="price">$650,000</p>
+            </div>
+        </div>
+
+        <div class="property-info">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux propriétés</a>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-bed"></i>
+                    <div class="value">2</div>
+                    <div class="label">Chambres</div>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-bath"></i>
+                    <div class="value">1</div>
+                    <div class="label">Salles de bain</div>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-expand"></i>
+                    <div class="value">800</div>
+                    <div class="label">Surface</div>
+                </div>
+            </div>
+
+            <div class="property-grid">
+                <div class="property-main">
+                    <h2>Description</h2>
+                    <div class="description">
+                        <p>Nichée sur le sable blanc et doux de Great Bay Beach, cette charmante villa de deux chambres et une salle de bain est une opportunité exceptionnelle pour ceux qui recherchent une vie en bord de mer ou un investissement rentable.</p><p><strong>Pourquoi Great Bay St. Maarten ?</strong></p><p>Great Bay est l'un des joyaux cachés de l'île, célèbre pour sa beauté sereine et ses eaux tranquilles. Dès que vous poserez le pied sur le sable, vous comprendrez pourquoi cette baie est considérée comme l'une des plus belles de Saint-Martin. Avec ses rivages immaculés et ses vagues turquoise, elle offre un cadre incomparable pour se détendre et profiter de la vie.</p><p><strong>À propos de la villa</strong></p><p>Cette villa bénéficie d'un agencement bien pensé, avec deux chambres spacieuses, une salle de bain moderne et des espaces de vie ouverts qui fusionnent harmonieusement l'intérieur et l'extérieur. Avec ses deux terrasses, vous pourrez profiter à la fois de la vue sur le jardin tropical et de l'océan, pour vous sentir en vacances à chaque instant.</p><p><strong>• Emplacement privilégié :</strong> accès direct à la plage de Great Bay, sans aucune marche entre vous et le sable.</p><p>• <strong>Équipements</strong> : piscine à débordement commune, jardins tropicaux luxuriants et gestion sur place pour faciliter la vie ou la gestion locative.</p><p>• <strong>Intimité et sécurité</strong> : située dans une communauté exclusive et sécurisée en bord de mer, composée de seulement 12 villas.</p><p>• <strong>Commodité</strong> : à quelques pas du centre de Philipsburg, avec ses restaurants, ses boutiques et ses casinos.</p><p>• <strong>Opportunité d'investissement :</strong> avec un historique de location solide, cette villa offre un équilibre parfait entre usage personnel et rendement financier.</p><p><strong>Pourquoi choisir Villas on Great Bay ?</strong></p><p>Cette communauté intime et bien entretenue offre un niveau d'exclusivité et de confort rare. Que vous recherchiez un havre de paix ou un bien immobilier dynamique à louer, cette villa répond à toutes vos attentes. La gestion sur place garantit un fonctionnement sans souci, ce qui en fait un choix idéal pour les propriétaires qui souhaitent à la fois se détendre et obtenir un retour sur investissement.</p><p><strong>Votre rêve en bord de mer vous attend</strong></p><p>Ne manquez pas cette occasion de posséder un coin de paradis dans l'une des plus belles baies de Saint-Martin. Que vous envisagiez cette villa comme votre oasis personnelle ou comme un investissement rentable, elle est prête à dépasser vos attentes.</p><p>Contactez-nous dès aujourd'hui pour organiser une visite de cette superbe villa de Great Bay.</p><p><strong>Le quartier</strong>
+Great Bay et Philipsburg sont au cœur du mode de vie dynamique de Saint-Martin, offrant un mélange parfait entre le charme de la côte et la commodité urbaine. La capitale animée, Philipsburg, est réputée pour ses boutiques hors taxes, sa promenade colorée en bord de mer et sa culture locale vivante. Great Bay Beach, avec son sable blanc et ses eaux calmes, est un lieu de prédilection pour la détente et les sports nautiques. La région regorge de restaurants, de lieux de divertissement et de sites historiques, notamment le fort Amsterdam et le palais de justice emblématique. Que vous recherchiez un centre dynamique pour investir ou une escapade sereine en bord de mer, ce quartier offre un cadre idéal pour profiter du meilleur de la vie insulaire.</p>
+                    </div>
+
+                    <h2 style="margin-top: 2rem;">Équipements</h2>
+                    <div class="amenities-list">
+                        <ul><li>- Swimming pool</li><li>- Back up generator</li><li>- Private beach access</li><li>- Garden</li><li>- Terrace</li><li>- Storage</li><li></li></ul>
+                    </div>
+                </div>
+
+                <div class="property-sidebar">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--navy);">Détails de la propriété</h3>
+
+                    <div class="detail-item">
+                        <label>Prix</label>
+                        <span>$650,000</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Localisation</label>
+                        <span>Philipsburg, St Martin</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Type de bien</label>
+                        <span>Villa</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Année de construction</label>
+                        <span>2010</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Agent</label>
+                        <span>Sacha Mimouni</span>
+                    </div>
+
+                    <a href="mailto:sxm.dream.investments@gmail.com?subject=Inquiry: Great Bay Villas" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        Contacter l'agent
+                    </a>
+
+                    <a href="https://wa.me/17215237855" class="btn btn-outline-dark" style="width: 100%; margin-top: 0.5rem;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin-top: 4rem;">
+        <div class="footer-bottom" style="padding: 2rem 5%; background: var(--navy);">
+            <p style="color: rgba(255,255,255,0.6);">&copy; 2026 SXM Dream Investments. Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>

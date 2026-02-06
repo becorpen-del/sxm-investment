@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapphire Penthouse | SXM Dream Investments</title>
+    <link rel="icon" type="image/png" href="../../images/logos/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .property-detail { padding-top: 100px; }
+        .property-hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                        url('https://www.sxm-dream-investments.com/wp-content/uploads/2025/08/sapphire-penthouse-1-scaled.jpg') center/cover;
+            display: flex;
+            align-items: flex-end;
+            padding: 3rem 5%;
+        }
+        .property-hero-content { color: white; max-width: 800px; }
+        .property-hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .property-hero .location { font-size: 1.2rem; opacity: 0.9; }
+        .property-hero .price {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-top: 1rem;
+        }
+        .property-info { padding: 4rem 5%; max-width: 1200px; margin: 0 auto; }
+        .property-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 3rem; }
+        .property-main h2 { color: var(--navy); margin-bottom: 1.5rem; font-size: 1.5rem; }
+        .property-main p { color: var(--gray); line-height: 1.8; margin-bottom: 1rem; }
+        .property-sidebar { background: var(--off-white); padding: 2rem; border-radius: 12px; height: fit-content; }
+        .detail-item { margin-bottom: 1.5rem; }
+        .detail-item label { display: block; font-size: 0.85rem; color: var(--gray); margin-bottom: 0.25rem; }
+        .detail-item span { font-weight: 600; color: var(--navy); }
+        .back-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--gold); text-decoration: none; margin-bottom: 2rem; }
+        .back-link:hover { text-decoration: underline; }
+        .features-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin: 2rem 0; }
+        .feature-box { text-align: center; padding: 1.5rem; background: var(--off-white); border-radius: 8px; }
+        .feature-box i { font-size: 1.5rem; color: var(--gold); margin-bottom: 0.5rem; }
+        .feature-box .value { font-size: 1.5rem; font-weight: 600; color: var(--navy); }
+        .feature-box .label { font-size: 0.85rem; color: var(--gray); }
+        .amenities-list { list-style: none; padding: 0; }
+        .amenities-list li { padding: 0.5rem 0; border-bottom: 1px solid var(--gray-light); display: flex; align-items: center; gap: 0.5rem; }
+        .amenities-list li:before { content: "✓"; color: var(--gold); font-weight: bold; }
+        @media (max-width: 768px) {
+            .property-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <a href="../../index.html" class="logo">
+            <img src="../../images/logos/logo-black.png" alt="SXM Dream Investments">
+        </a>
+        <ul class="nav-links">
+            <li><a href="../../index.html">Accueil</a></li>
+            <li><a href="index.html">Propriétés</a></li>
+            <li><a href="../../index.html#contact">Contact</a></li>
+            <li><a href="../../index.html#contact" class="nav-cta">Nous contacter</a></li>
+        </ul>
+    </nav>
+
+    <section class="property-detail">
+        <div class="property-hero">
+            <div class="property-hero-content">
+                <h1>Sapphire Penthouse</h1>
+                <p class="location"><i class="fas fa-map-marker-alt"></i> Cupecoy, St Maarten</p>
+                <p class="price">$495,000</p>
+            </div>
+        </div>
+
+        <div class="property-info">
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Retour aux propriétés</a>
+
+            <div class="features-grid">
+                <div class="feature-box">
+                    <i class="fas fa-bed"></i>
+                    <div class="value">1.5</div>
+                    <div class="label">Chambres</div>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-bath"></i>
+                    <div class="value">1.5</div>
+                    <div class="label">Salles de bain</div>
+                </div>
+                <div class="feature-box">
+                    <i class="fas fa-expand"></i>
+                    <div class="value">950</div>
+                    <div class="label">Surface</div>
+                </div>
+            </div>
+
+            <div class="property-grid">
+                <div class="property-main">
+                    <h2>Description</h2>
+                    <div class="description">
+                        <p>Sapphire Penthouse - Un joyau rare au Sapphire Beach Club Resort, Cupecoy</p><p>Découvrez le luxe à son apogée dans ce penthouse exceptionnel et rare situé au dernier étage du prestigieux Sapphire Beach Club Resort à Cupecoy, Saint-Martin. Ce magnifique appartement d'une chambre et d'une salle de bain et demie offre un espace spacieux et un confort sophistiqué, idéal pour ceux qui recherchent un style de vie insulaire exclusif.</p><p><strong>Le penthouse comprend :</strong>
+<ul>
+ 	<li>- Un intérieur entièrement meublé et récemment rénové</li>
+ 	<li>- Une architecture élégante avec de grands volumes</li>
+ 	<li>- Une superbe cuisine haut de gamme, équipée d'un plan de travail sur mesure</li>
+ 	<li>- Deux terrasses spacieuses offrant une vue imprenable</li>
+</ul>
+À l'origine aménagé en 2 chambres, cet espace unique peut facilement être reconverti pour répondre à vos besoins. Profitez de la vie en plein air avec une vue imprenable sur la mer des Caraïbes et les paysages environnants depuis votre terrasse privée.</p><p>Que vous recherchiez un refuge personnel ou un investissement au paradis, le Sapphire Penthouse offre une élégance et un confort inégalés dans l'un des endroits les plus convoités de Saint-Martin.</p><p>Contactez SXM Dream Investments dès aujourd'hui pour organiser une visite de cette opportunité rare !</p><p><strong>Le quartier</strong>
+Découvrez le charme de Cupecoy, le joyau de Saint-Martin, qui offre des opportunités immobilières de premier choix en bord de mer, au milieu de plages magnifiques, d'équipements haut de gamme et d'une atmosphère cosmopolite animée avec des restaurants et des casinos.
+Le Sapphire Beach Club est un complexe situé à Cupecoy. Il bénéficie d'un emplacement exceptionnel sur la plage de Cupecoy et offre des équipements de style resort. Le véritable avantage de cette résidence est la copropriété tout compris, qui inclut l'électricité, le Wi-Fi, l'eau, l'entretien et bien plus encore. L'enregistrement et le départ sont également pris en charge par la réception ouverte 24h/24 et 7j/7. Il s'agit de la seule résidence avec une gestion tout compris, ce qui en fait un investissement clé en main idéal.</p>
+                    </div>
+
+                    <h2 style="margin-top: 2rem;">Équipements</h2>
+                    <div class="amenities-list">
+                        <ul><li>Swimming pool</li><li>Fitness room</li><li>Spa</li><li>Wifi included</li><li>24/7 concierge</li><li>24/7 security</li><li>Restaurant and pool bar</li><li>Private beach access</li><li>Underground parking</li><li></li></ul>
+                    </div>
+                </div>
+
+                <div class="property-sidebar">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--navy);">Détails de la propriété</h3>
+
+                    <div class="detail-item">
+                        <label>Prix</label>
+                        <span>$495,000</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Localisation</label>
+                        <span>Cupecoy, St Maarten</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Type de bien</label>
+                        <span>Condominium</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Année de construction</label>
+                        <span>-</span>
+                    </div>
+
+                    <div class="detail-item">
+                        <label>Agent</label>
+                        <span>Sacha Mimouni</span>
+                    </div>
+
+                    <a href="mailto:sxm.dream.investments@gmail.com?subject=Inquiry: Sapphire Penthouse" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                        Contacter l'agent
+                    </a>
+
+                    <a href="https://wa.me/17215237855" class="btn btn-outline-dark" style="width: 100%; margin-top: 0.5rem;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer style="margin-top: 4rem;">
+        <div class="footer-bottom" style="padding: 2rem 5%; background: var(--navy);">
+            <p style="color: rgba(255,255,255,0.6);">&copy; 2026 SXM Dream Investments. Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <script src="../../js/main.js"></script>
+</body>
+</html>
