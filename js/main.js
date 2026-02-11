@@ -113,6 +113,31 @@ function filterByPrice() {
     });
 }
 
+// Location carousel auto-rotation
+const carouselSlides = document.querySelectorAll('.carousel-slide');
+const carouselDots = document.querySelectorAll('.carousel-dot');
+let currentSlide = 0;
+
+function showSlide(index) {
+    carouselSlides.forEach(s => s.classList.remove('active'));
+    carouselDots.forEach(d => d.classList.remove('active'));
+    carouselSlides[index].classList.add('active');
+    carouselDots[index].classList.add('active');
+    currentSlide = index;
+}
+
+if (carouselSlides.length > 0) {
+    setInterval(() => {
+        showSlide((currentSlide + 1) % carouselSlides.length);
+    }, 3000);
+
+    carouselDots.forEach(dot => {
+        dot.addEventListener('click', () => {
+            showSlide(parseInt(dot.dataset.index));
+        });
+    });
+}
+
 // Form submission
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
