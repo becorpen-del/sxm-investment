@@ -48,6 +48,21 @@ if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', function() {
         navLinks.classList.toggle('active');
     });
+
+    // Close menu with close button
+    const mobileCloseBtn = document.querySelector('.mobile-close-btn');
+    if (mobileCloseBtn) {
+        mobileCloseBtn.addEventListener('click', function() {
+            navLinks.classList.remove('active');
+        });
+    }
+
+    // Close menu when clicking a link
+    navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
 }
 
 // Property filters
