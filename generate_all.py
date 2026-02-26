@@ -163,35 +163,37 @@ def generate_page(prop, lang):
 
     lightbox_js = '''
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.lightbox-slide');
-        const totalSlides = slides.length;
-        function openLightbox(idx) {
-            currentSlide = idx;
-            showSlide();
+    (function() {{
+        var lbCurrentSlide = 0;
+        var lbSlides = document.querySelectorAll('.lightbox-slide');
+        var lbTotal = lbSlides.length;
+        function lbShow() {{
+            lbSlides.forEach(function(s, i) {{ s.style.display = i === lbCurrentSlide ? 'flex' : 'none'; }});
+            document.getElementById('lightboxCounter').textContent = lbCurrentSlide + 1;
+        }}
+        window.openLightbox = function(idx) {{
+            lbCurrentSlide = idx;
+            lbShow();
             document.getElementById('lightbox').classList.add('open');
             document.body.style.overflow = 'hidden';
-        }
-        function closeLightbox(e) {
-            if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox-close')) {
+        }};
+        window.closeLightbox = function(e) {{
+            if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox-close')) {{
                 document.getElementById('lightbox').classList.remove('open');
                 document.body.style.overflow = '';
-            }
-        }
-        function showSlide() {
-            slides.forEach((s, i) => s.style.display = i === currentSlide ? 'flex' : 'none');
-            document.getElementById('lightboxCounter').textContent = currentSlide + 1;
-        }
-        function nextSlide(e) { e.stopPropagation(); currentSlide = (currentSlide + 1) % totalSlides; showSlide(); }
-        function prevSlide(e) { e.stopPropagation(); currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; showSlide(); }
-        document.addEventListener('keydown', function(e) {
-            const lb = document.getElementById('lightbox');
+            }}
+        }};
+        window.nextSlide = function(e) {{ e.stopPropagation(); lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); }};
+        window.prevSlide = function(e) {{ e.stopPropagation(); lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); }};
+        document.addEventListener('keydown', function(e) {{
+            var lb = document.getElementById('lightbox');
             if (!lb || !lb.classList.contains('open')) return;
-            if (e.key === 'Escape') { lb.classList.remove('open'); document.body.style.overflow = ''; }
-            if (e.key === 'ArrowRight') { currentSlide = (currentSlide + 1) % totalSlides; showSlide(); }
-            if (e.key === 'ArrowLeft') { currentSlide = (currentSlide - 1 + totalSlides) % totalSlides; showSlide(); }
-        });
-        if (slides.length > 0) showSlide();
+            if (e.key === 'Escape') {{ lb.classList.remove('open'); document.body.style.overflow = ''; }}
+            if (e.key === 'ArrowRight') {{ lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); }}
+            if (e.key === 'ArrowLeft') {{ lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); }}
+        }});
+        if (lbSlides.length > 0) lbShow();
+    }})();
     </script>''' if gallery else ''
 
     # Hero slider buttons if gallery exists

@@ -16,6 +16,10 @@
     box-sizing: border-box;
 }
 
+.mobile-close-btn {
+    display: none;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -1048,6 +1052,7 @@ footer {
     }
 
     .mobile-close-btn {
+        display: block;
         position: absolute;
         top: 1.5rem;
         right: 1.5rem;
@@ -1083,6 +1088,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .hero-content {
+        padding-top: 10rem;
+    }
+
     .about-grid,
     .properties-grid,
     .stats-grid {
