@@ -403,6 +403,7 @@ def generate_listing(lang, props):
             'beds': p.get('rooms', '-'), 'baths': p.get('baths', '-'), 'sqft': p.get('sqft', '-'),
             'image': listing_image, 'link': link
         })
+    props_js.sort(key=lambda x: x['priceNum'], reverse=True)
     
     base = '' if lang == 'fr' else '../'
     img = 'images/logos/' if lang == 'fr' else '../images/logos/'
