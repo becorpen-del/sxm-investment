@@ -187,53 +187,52 @@ Ontdek ongeëvenaarde vastgoedinvesteringen in Little Bay, Sint Maarten. Dankzij
     </footer>
     <script src="../../js/main.js"></script>
     <script>
-    (function() {{
+    (function() {
         var lbCurrentSlide = 0;
         var lbSlides = document.querySelectorAll('.lightbox-slide');
         var lbTotal = lbSlides.length;
-        function lbShow() {{
-            lbSlides.forEach(function(s, i) {{ s.style.display = i === lbCurrentSlide ? 'flex' : 'none'; }});
+        function lbShow() {
+            lbSlides.forEach(function(s, i) { s.style.display = i === lbCurrentSlide ? 'flex' : 'none'; });
             document.getElementById('lightboxCounter').textContent = lbCurrentSlide + 1;
-        }}
-        window.openLightbox = function(idx) {{
+        }
+        window.openLightbox = function(idx) {
             lbCurrentSlide = idx;
             lbShow();
             document.getElementById('lightbox').classList.add('open');
             document.body.style.overflow = 'hidden';
-        }};
-        window.closeLightbox = function(e) {{
-            if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox-close')) {{
+        };
+        window.closeLightbox = function(e) {
+            if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox-close')) {
                 document.getElementById('lightbox').classList.remove('open');
                 document.body.style.overflow = '';
-            }}
-        }};
-        window.nextSlide = function(e) {{ e.stopPropagation(); lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); }};
-        window.prevSlide = function(e) {{ e.stopPropagation(); lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); }};
-        document.addEventListener('keydown', function(e) {{
+            }
+        };
+        window.nextSlide = function(e) { e.stopPropagation(); lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); };
+        window.prevSlide = function(e) { e.stopPropagation(); lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); };
+        document.addEventListener('keydown', function(e) {
             var lb = document.getElementById('lightbox');
             if (!lb || !lb.classList.contains('open')) return;
-            if (e.key === 'Escape') {{ lb.classList.remove('open'); document.body.style.overflow = ''; }}
-            if (e.key === 'ArrowRight') {{ lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); }}
-            if (e.key === 'ArrowLeft') {{ lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); }}
-        }});
-        // Swipe tactile
+            if (e.key === 'Escape') { lb.classList.remove('open'); document.body.style.overflow = ''; }
+            if (e.key === 'ArrowRight') { lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); }
+            if (e.key === 'ArrowLeft') { lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); }
+        });
         var lbTouchStartX = 0;
         var lbContainer = document.getElementById('lightbox');
-        if (lbContainer) {{
-            lbContainer.addEventListener('touchstart', function(e) {{
+        if (lbContainer) {
+            lbContainer.addEventListener('touchstart', function(e) {
                 lbTouchStartX = e.touches[0].clientX;
-            }}, {{ passive: true }});
-            lbContainer.addEventListener('touchend', function(e) {{
+            }, { passive: true });
+            lbContainer.addEventListener('touchend', function(e) {
                 var dx = e.changedTouches[0].clientX - lbTouchStartX;
-                if (Math.abs(dx) > 50) {{
-                    if (dx < 0) {{ lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; }}
-                    else {{ lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; }}
+                if (Math.abs(dx) > 50) {
+                    if (dx < 0) { lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; }
+                    else { lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; }
                     lbShow();
-                }}
-            }}, {{ passive: true }});
-        }}
+                }
+            }, { passive: true });
+        }
         if (lbSlides.length > 0) lbShow();
-    }})();
+    })();
     </script>
 </body>
 </html>
