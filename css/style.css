@@ -1088,9 +1088,30 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .hero {
+        min-height: 100vh;
+        height: auto;
+        padding-bottom: 5rem;
+    }
+
     .hero-content {
-        padding-top: 5rem;
-        padding-bottom: 3rem;
+        padding-top: 7rem;
+        padding-bottom: 1rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .hero-badge {
+        margin-bottom: 1.2rem;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+
+    .scroll-indicator {
+        display: none;
     }
 
     .about-grid,
