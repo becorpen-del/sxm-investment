@@ -1089,7 +1089,8 @@ footer {
 
 @media (max-width: 768px) {
     .hero-content {
-        padding-top: 10rem;
+        padding-top: 5rem;
+        padding-bottom: 3rem;
     }
 
     .about-grid,

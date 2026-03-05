@@ -362,8 +362,9 @@ def get_type_slug(prop):
     if 'villa' in pt: return 'villa'
     if 'penthouse' in pt: return 'penthouse'
     if 'condo' in pt: return 'condo'
-    if 'appart' in pt: return 'appartement'
-    return 'other'
+    if 'apart' in pt or 'appart' in pt: return 'appartement'
+    if 'building' in pt or 'immeuble' in pt or 'gebouw' in pt: return 'immeuble'
+    return 'villa'
 
 def generate_listing(lang, props):
     T = {

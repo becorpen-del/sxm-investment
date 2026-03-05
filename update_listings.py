@@ -259,7 +259,7 @@ def generate_listing_page(lang, props):
                 <h4>Contact</h4>
                 <p><i class="fas fa-map-marker-alt"></i> Simpson Bay, {t['location_name']}</p>
                 <p><i class="fas fa-phone"></i> +1 721 XXX XXXX</p>
-                <p><i class="fas fa-envelope"></i> info@sxmdreaminvestments.com</p>
+                <p><i class="fas fa-envelope"></i> sxm.dream.investments@gmail.com</p>
             </div>
         </div>
         <div class="footer-bottom">
