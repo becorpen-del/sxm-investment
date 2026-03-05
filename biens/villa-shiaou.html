@@ -255,6 +255,22 @@
             if (e.key === 'ArrowRight') {{ lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); }}
             if (e.key === 'ArrowLeft') {{ lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); }}
         }});
+        // Swipe tactile
+        var lbTouchStartX = 0;
+        var lbContainer = document.getElementById('lightbox');
+        if (lbContainer) {{
+            lbContainer.addEventListener('touchstart', function(e) {{
+                lbTouchStartX = e.touches[0].clientX;
+            }}, {{ passive: true }});
+            lbContainer.addEventListener('touchend', function(e) {{
+                var dx = e.changedTouches[0].clientX - lbTouchStartX;
+                if (Math.abs(dx) > 50) {{
+                    if (dx < 0) {{ lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; }}
+                    else {{ lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; }}
+                    lbShow();
+                }}
+            }}, {{ passive: true }});
+        }}
         if (lbSlides.length > 0) lbShow();
     }})();
     </script>
