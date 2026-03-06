@@ -8,3 +8,5 @@ __pycache__/
 # Environment
 *.env
 .zip
+andreu-watermark-images/
+andreu-watermark-images.zip
