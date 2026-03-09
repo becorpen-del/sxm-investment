@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../css/style.css">
     <style>
-        .property-hero { height:60vh; min-height:500px; background:linear-gradient(rgba(26,42,58,0.3),rgba(26,42,58,0.5)),url('../../images/properties_clean/multi-unit-residential-building-direct-beach-access/05.jpg') center/cover; display:flex; align-items:flex-end; padding:3rem 5%; position:relative; }
+        .property-hero { height:60vh; min-height:500px; background:linear-gradient(rgba(26,42,58,0.3),rgba(26,42,58,0.5)),url('images/properties_clean/multi-unit-residential-building-direct-beach-access/05.jpg') center/cover; display:flex; align-items:flex-end; padding:3rem 5%; position:relative; }
         .property-hero-content { max-width:1200px; width:100%; margin:0 auto; color:white; }
         .property-hero h1 { font-family:'Playfair Display',serif; font-size:3rem; margin-bottom:1rem; text-shadow:2px 2px 4px rgba(0,0,0,0.3); }
         .property-hero-meta { display:flex; gap:2rem; flex-wrap:wrap; align-items:center; }
@@ -89,9 +89,6 @@
                 <span class="property-hero-location"><i class="fas fa-map-marker-alt"></i> Simpson Bay, St Maarten</span>
             </div>
         </div>
-            <div class="hero-slider-nav">
-                <button class="hero-slider-btn" onclick="openLightbox(0)"><i class="fas fa-images"></i> 11 photos</button>
-            </div>
     </section>
     <section class="property-content">
         <div class="property-grid">
@@ -101,19 +98,6 @@
                     <div class="feature-item"><i class="fas fa-bath"></i><div class="feature-item-text"><span>Badkamers</span><strong>7</strong></div></div>
                     <div class="feature-item"><i class="fas fa-expand"></i><div class="feature-item-text"><span>Oppervlakte</span><strong>4500</strong></div></div>
                     <div class="feature-item"><i class="fas fa-home"></i><div class="feature-item-text"><span>Type</span><strong>Villa</strong></div></div>
-                </div>
-                <h2>Photos</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-thumb active" onclick="openLightbox(0)" style="background-image:url('../../images/properties_clean/multi-unit-residential-building-direct-beach-access/05.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(2)" style="background-image:url('../../images/properties_clean/multi-unit-residential-building-direct-beach-access/03.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(3)" style="background-image:url('../../images/properties_clean/multi-unit-residential-building-direct-beach-access/04.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(4)" style="background-image:url('../../images/properties_clean/multi-unit-residential-building-direct-beach-access/05.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(5)" style="background-image:url('../../images/properties_clean/multi-unit-residential-building-direct-beach-access/06.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(6)" style="background-image:url('../../images/properties_clean/multi-unit-residential-building-direct-beach-access/07.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(7)" style="background-image:url('../../images/properties_clean/multi-unit-residential-building-direct-beach-access/08.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(8)" style="background-image:url('../../images/properties_clean/multi-unit-residential-building-direct-beach-access/09.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(9)" style="background-image:url('../../images/properties_clean/multi-unit-residential-building-direct-beach-access/10.jpg')"></div>
-
                 </div>
                 <h2>Beschrijving</h2>
                 <div class="property-description"><p><strong>Residentieel gebouw aan zee – Simpson Bay, Sint-Maarten</strong></p>
@@ -148,24 +132,6 @@
             </div>
         </div>
     </section>
-    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
-        <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
-        <button class="lightbox-prev" onclick="prevSlide(event)">&#10094;</button>
-        <button class="lightbox-next" onclick="nextSlide(event)">&#10095;</button>
-        <div class="lightbox-container">
-            <div class="lightbox-slide"><img src="../../images/properties_clean/multi-unit-residential-building-direct-beach-access/05.jpg" alt="Multi-Unit Residential Building - Direct Beach Access - Photo 1"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/multi-unit-residential-building-direct-beach-access/03.jpg" alt="Multi-Unit Residential Building - Direct Beach Access - Photo 3"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/multi-unit-residential-building-direct-beach-access/04.jpg" alt="Multi-Unit Residential Building - Direct Beach Access - Photo 4"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/multi-unit-residential-building-direct-beach-access/05.jpg" alt="Multi-Unit Residential Building - Direct Beach Access - Photo 5"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/multi-unit-residential-building-direct-beach-access/06.jpg" alt="Multi-Unit Residential Building - Direct Beach Access - Photo 6"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/multi-unit-residential-building-direct-beach-access/07.jpg" alt="Multi-Unit Residential Building - Direct Beach Access - Photo 7"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/multi-unit-residential-building-direct-beach-access/08.jpg" alt="Multi-Unit Residential Building - Direct Beach Access - Photo 8"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/multi-unit-residential-building-direct-beach-access/09.jpg" alt="Multi-Unit Residential Building - Direct Beach Access - Photo 9"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/multi-unit-residential-building-direct-beach-access/10.jpg" alt="Multi-Unit Residential Building - Direct Beach Access - Photo 10"></div>
-
-        </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 11</div>
-    </div>
     <footer>
         <div class="footer-grid">
             <div class="footer-col"><img src="../../images/logos/logo-white.png" alt="SXM" style="max-width:180px;margin-bottom:1rem;"><p>Uw partner in Sint Maarten.</p></div>
@@ -174,53 +140,5 @@
         <div class="footer-bottom"><p>&copy; 2025 SXM Dream Investments. Alle rechten voorbehouden.</p></div>
     </footer>
     <script src="../../js/main.js"></script>
-    <script>
-    (function() {
-        var lbCurrentSlide = 0;
-        var lbSlides = document.querySelectorAll('.lightbox-slide');
-        var lbTotal = lbSlides.length;
-        function lbShow() {
-            lbSlides.forEach(function(s, i) { s.style.display = i === lbCurrentSlide ? 'flex' : 'none'; });
-            document.getElementById('lightboxCounter').textContent = lbCurrentSlide + 1;
-        }
-        window.openLightbox = function(idx) {
-            lbCurrentSlide = idx;
-            lbShow();
-            document.getElementById('lightbox').classList.add('open');
-            document.body.style.overflow = 'hidden';
-        };
-        window.closeLightbox = function(e) {
-            if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox-close')) {
-                document.getElementById('lightbox').classList.remove('open');
-                document.body.style.overflow = '';
-            }
-        };
-        window.nextSlide = function(e) { e.stopPropagation(); lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); };
-        window.prevSlide = function(e) { e.stopPropagation(); lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); };
-        document.addEventListener('keydown', function(e) {
-            var lb = document.getElementById('lightbox');
-            if (!lb || !lb.classList.contains('open')) return;
-            if (e.key === 'Escape') { lb.classList.remove('open'); document.body.style.overflow = ''; }
-            if (e.key === 'ArrowRight') { lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); }
-            if (e.key === 'ArrowLeft') { lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); }
-        });
-        var lbTouchStartX = 0;
-        var lbContainer = document.getElementById('lightbox');
-        if (lbContainer) {
-            lbContainer.addEventListener('touchstart', function(e) {
-                lbTouchStartX = e.touches[0].clientX;
-            }, { passive: true });
-            lbContainer.addEventListener('touchend', function(e) {
-                var dx = e.changedTouches[0].clientX - lbTouchStartX;
-                if (Math.abs(dx) > 50) {
-                    if (dx < 0) { lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; }
-                    else { lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; }
-                    lbShow();
-                }
-            }, { passive: true });
-        }
-        if (lbSlides.length > 0) lbShow();
-    })();
-    </script>
 </body>
 </html>
