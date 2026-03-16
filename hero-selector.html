@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SXM Dream Investments - Hero Image Selector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --gold: #c8a961;
+            --dark: #1a2a3a;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Montserrat', sans-serif; background: #0d1117; color: #fff; }
+
+        .header {
+            text-align: center;
+            padding: 3rem 2rem 1rem;
+        }
+        .header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: var(--gold);
+            margin-bottom: 0.5rem;
+        }
+        .header p {
+            color: #8b949e;
+            font-size: 0.95rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 2rem auto;
+            padding: 0 2rem 4rem;
+        }
+
+        .option {
+            border: 2px solid #21262d;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color 0.3s;
+            cursor: pointer;
+        }
+        .option:hover { border-color: var(--gold); }
+        .option.selected { border-color: var(--gold); box-shadow: 0 0 30px rgba(200, 169, 97, 0.3); }
+
+        .option-label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background: #161b22;
+        }
+        .option-label h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .option-label .number {
+            background: var(--gold);
+            color: #000;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        .option-label .desc {
+            color: #8b949e;
+            font-size: 0.85rem;
+            margin-top: 0.2rem;
+        }
+
+        /* Hero preview - mimics the real site */
+        .hero-preview {
+            position: relative;
+            height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .hero-preview img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(26, 42, 58, 0.7) 0%, rgba(26, 42, 58, 0.4) 100%);
+        }
+        .hero-text {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+        .hero-badge-preview {
+            display: inline-block;
+            border: 1px solid var(--gold);
+            color: var(--gold);
+            padding: 0.4rem 1.5rem;
+            font-size: 0.8rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+        .hero-text h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+        .hero-text h1 span {
+            color: var(--gold);
+            font-style: italic;
+        }
+        .hero-text p {
+            font-size: 1rem;
+            line-height: 1.7;
+            opacity: 0.9;
+            max-width: 650px;
+            margin: 0 auto 2rem;
+        }
+        .hero-buttons-preview {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-gold {
+            background: var(--gold);
+            color: #000;
+            padding: 0.9rem 2.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: none;
+            cursor: pointer;
+        }
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            padding: 0.9rem 2.5rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border: 2px solid #fff;
+            cursor: pointer;
+        }
+
+        /* Selected state */
+        .select-btn {
+            display: block;
+            width: 100%;
+            padding: 1rem;
+            background: #161b22;
+            border: none;
+            color: var(--gold);
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: background 0.3s;
+        }
+        .select-btn:hover { background: #1c2333; }
+        .option.selected .select-btn {
+            background: var(--gold);
+            color: #000;
+        }
+
+        .footer-note {
+            text-align: center;
+            padding: 2rem;
+            color: #8b949e;
+            font-size: 0.85rem;
+            border-top: 1px solid #21262d;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .hero-preview { height: 350px; }
+            .hero-text h1 { font-size: 2.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Hero Image Selector</h1>
+        <p>Cliquez sur l'option que vous preferez. Chaque prototype montre le rendu reel de la page d'accueil avec l'image de fond correspondante.</p>
+    </div>
+
+    <div class="grid">
+
+        <!-- Option 1 -->
+        <div class="option" data-img="1" onclick="selectOption(this)">
+            <div class="option-label">
+                <div>
+                    <div style="display:flex;align-items:center;gap:0.8rem;">
+                        <span class="number">1</span>
+                        <h3>Terrasse luxe - Vue mer panoramique & collines</h3>
+                    </div>
+                    <div class="desc" style="margin-left:2.8rem;">Salon exterieur elegant, piscine a debordement, vue sur les collines et l'ocean, palmier</div>
+                </div>
+            </div>
+            <div class="hero-preview">
+                <img src="images/banners/hero-options/option-1.jpg" alt="Option 1">
+                <div class="hero-overlay"></div>
+                <div class="hero-text">
+                    <div class="hero-badge-preview">St. Maarten &bull; Caribbean</div>
+                    <h1>Your <span>Investment</span> in Paradise</h1>
+                    <p>Discover the finest luxury properties in St. Maarten. Exceptional villas, ocean-view penthouses, upscale condos.</p>
+                    <div class="hero-buttons-preview">
+                        <button class="btn-gold">Explore Properties</button>
+                        <button class="btn-outline">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <button class="select-btn">Selectionner cette option</button>
+        </div>
+
+        <!-- Option 2 -->
+        <div class="option" data-img="2" onclick="selectOption(this)">
+            <div class="option-label">
+                <div>
+                    <div style="display:flex;align-items:center;gap:0.8rem;">
+                        <span class="number">2</span>
+                        <h3>Villa & piscine infinity - Coucher de soleil</h3>
+                    </div>
+                    <div class="desc" style="margin-left:2.8rem;">Piscine a debordement avec transats, villa en bois, lumiere doree du couchant</div>
+                </div>
+            </div>
+            <div class="hero-preview">
+                <img src="images/banners/hero-options/option-2.jpg" alt="Option 2">
+                <div class="hero-overlay"></div>
+                <div class="hero-text">
+                    <div class="hero-badge-preview">St. Maarten &bull; Caribbean</div>
+                    <h1>Your <span>Investment</span> in Paradise</h1>
+                    <p>Discover the finest luxury properties in St. Maarten. Exceptional villas, ocean-view penthouses, upscale condos.</p>
+                    <div class="hero-buttons-preview">
+                        <button class="btn-gold">Explore Properties</button>
+                        <button class="btn-outline">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <button class="select-btn">Selectionner cette option</button>
+        </div>
+
+        <!-- Option 3 -->
+        <div class="option" data-img="3" onclick="selectOption(this)">
+            <div class="option-label">
+                <div>
+                    <div style="display:flex;align-items:center;gap:0.8rem;">
+                        <span class="number">3</span>
+                        <h3>Terrasse ouverte - Ocean turquoise & palmier</h3>
+                    </div>
+                    <div class="desc" style="margin-left:2.8rem;">Vue encadree sur mer turquoise, transats, piscine, palmier, ambiance Caraibes</div>
+                </div>
+            </div>
+            <div class="hero-preview">
+                <img src="images/banners/hero-options/option-3.jpg" alt="Option 3">
+                <div class="hero-overlay"></div>
+                <div class="hero-text">
+                    <div class="hero-badge-preview">St. Maarten &bull; Caribbean</div>
+                    <h1>Your <span>Investment</span> in Paradise</h1>
+                    <p>Discover the finest luxury properties in St. Maarten. Exceptional villas, ocean-view penthouses, upscale condos.</p>
+                    <div class="hero-buttons-preview">
+                        <button class="btn-gold">Explore Properties</button>
+                        <button class="btn-outline">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <button class="select-btn">Selectionner cette option</button>
+        </div>
+
+        <!-- Option 4 -->
+        <div class="option" data-img="4" onclick="selectOption(this)">
+            <div class="option-label">
+                <div>
+                    <div style="display:flex;align-items:center;gap:0.8rem;">
+                        <span class="number">4</span>
+                        <h3>Piscine, parasols & palmiers - Plein soleil</h3>
+                    </div>
+                    <div class="desc" style="margin-left:2.8rem;">Piscine avec transats et parasols, palmiers, vue mer et collines, ciel bleu lumineux</div>
+                </div>
+            </div>
+            <div class="hero-preview">
+                <img src="images/banners/hero-options/option-4.jpg" alt="Option 4">
+                <div class="hero-overlay"></div>
+                <div class="hero-text">
+                    <div class="hero-badge-preview">St. Maarten &bull; Caribbean</div>
+                    <h1>Your <span>Investment</span> in Paradise</h1>
+                    <p>Discover the finest luxury properties in St. Maarten. Exceptional villas, ocean-view penthouses, upscale condos.</p>
+                    <div class="hero-buttons-preview">
+                        <button class="btn-gold">Explore Properties</button>
+                        <button class="btn-outline">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <button class="select-btn">Selectionner cette option</button>
+        </div>
+
+        <!-- Option 5 -->
+        <div class="option" data-img="5" onclick="selectOption(this)">
+            <div class="option-label">
+                <div>
+                    <div style="display:flex;align-items:center;gap:0.8rem;">
+                        <span class="number">5</span>
+                        <h3>Terrasse bord de mer - Baie & bateaux</h3>
+                    </div>
+                    <div class="desc" style="margin-left:2.8rem;">Terrasse avec piscine a debordement, vue sur la baie avec bateaux, ambiance chic</div>
+                </div>
+            </div>
+            <div class="hero-preview">
+                <img src="images/banners/hero-options/option-5.webp" alt="Option 5">
+                <div class="hero-overlay"></div>
+                <div class="hero-text">
+                    <div class="hero-badge-preview">St. Maarten &bull; Caribbean</div>
+                    <h1>Your <span>Investment</span> in Paradise</h1>
+                    <p>Discover the finest luxury properties in St. Maarten. Exceptional villas, ocean-view penthouses, upscale condos.</p>
+                    <div class="hero-buttons-preview">
+                        <button class="btn-gold">Explore Properties</button>
+                        <button class="btn-outline">Contact Us</button>
+                    </div>
+                </div>
+            </div>
+            <button class="select-btn">Selectionner cette option</button>
+        </div>
+
+    </div>
+
+    <div class="footer-note">
+        <p>Une fois votre choix fait, dites-moi le numero et j'appliquerai l'image sur les 3 versions du site (FR / EN / NL).</p>
+    </div>
+
+    <script>
+        function selectOption(el) {
+            document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+            el.classList.add('selected');
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
