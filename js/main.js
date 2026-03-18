@@ -153,13 +153,49 @@ if (carouselSlides.length > 0) {
     });
 }
 
-// Form submission
+// --- Google Ads Conversion Tracking ---
+const CONVERSION_IDS = {
+    formulaire: 'AW-958059324/emHGCNz__YocELym68gD',
+    whatsapp:   'AW-958059324/M8VZCN___YocELym68gD',
+    telephone:  'AW-958059324/YHGECOL__YocELym68gD'
+};
+
+function gtagReportConversion(sendTo, url) {
+    if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+            'send_to': sendTo,
+            'event_callback': function() {
+                if (url) window.location.href = url;
+            }
+        });
+    } else if (url) {
+        window.location.href = url;
+    }
+}
+
+// Conversion 1 — Form submission
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        // Here you would normally send the form data
+        gtagReportConversion(CONVERSION_IDS.formulaire);
         alert('Merci pour votre message! Nous vous contacterons bientôt.');
         this.reset();
     });
 }
+
+// Conversion 2 — WhatsApp clicks
+document.querySelectorAll('a[href*="wa.me"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        gtagReportConversion(CONVERSION_IDS.whatsapp, this.href);
+    });
+});
+
+// Conversion 3 — Phone clicks
+document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        gtagReportConversion(CONVERSION_IDS.telephone, this.href);
+    });
+});
