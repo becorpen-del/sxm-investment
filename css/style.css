@@ -1092,6 +1092,8 @@ footer {
         min-height: 100vh;
         height: auto;
         padding-bottom: 5rem;
+        background-size: auto 100%;
+        background-position: 65% center;
     }
 
     .hero-content {
