@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocean View Condo for Sale – Princess Heights | SXM Dream Investments</title>
+    <link rel="icon" type="image/png" href="../../images/logos/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .property-hero { height:60vh; min-height:500px; background:linear-gradient(rgba(26,42,58,0.3),rgba(26,42,58,0.5)),url('../../images/properties/ocean-view-condo-for-sale-princess-heights/01.jpg') center/cover; display:flex; align-items:flex-end; padding:3rem 5%; position:relative; }
+        .property-hero-content { max-width:1200px; width:100%; margin:0 auto; color:white; }
+        .property-hero h1 { font-family:'Playfair Display',serif; font-size:3rem; margin-bottom:1rem; text-shadow:2px 2px 4px rgba(0,0,0,0.3); }
+        .property-hero-meta { display:flex; gap:2rem; flex-wrap:wrap; align-items:center; }
+        .property-hero-price { font-size:2rem; font-weight:700; color:var(--gold); }
+        .property-hero-location { display:flex; align-items:center; gap:0.5rem; font-size:1.1rem; }
+        .back-link { display:inline-flex; align-items:center; gap:0.5rem; color:white; text-decoration:none; margin-bottom:1rem; opacity:0.9; }
+        .hero-slider-nav { position:absolute; bottom:2rem; right:5%; }
+        .hero-slider-btn { background:rgba(255,255,255,0.9); color:var(--navy); border:none; padding:0.7rem 1.2rem; border-radius:6px; cursor:pointer; font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.9rem; display:flex; align-items:center; gap:0.5rem; transition:background 0.3s; }
+        .hero-slider-btn:hover { background:white; }
+        .property-content { padding:4rem 5%; max-width:1200px; margin:0 auto; }
+        .property-grid { display:grid; grid-template-columns:2fr 1fr; gap:3rem; }
+        .property-main h2 { font-family:'Playfair Display',serif; font-size:1.8rem; color:var(--navy); margin-bottom:1.5rem; }
+        .property-description { line-height:1.8; color:var(--gray); }
+        .property-description p { margin-bottom:1rem; }
+        .property-features { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin:2rem 0; padding:2rem; background:var(--off-white); border-radius:12px; }
+        .feature-item { display:flex; align-items:center; gap:1rem; }
+        .feature-item i { width:40px; height:40px; background:white; border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--gold); }
+        .feature-item-text span { display:block; font-size:0.85rem; color:var(--gray); }
+        .feature-item-text strong { color:var(--navy); font-size:1.1rem; }
+        .amenities-list { list-style:none; padding:0; display:grid; grid-template-columns:repeat(2,1fr); gap:0.75rem; }
+        .amenities-list li { display:flex; align-items:center; gap:0.75rem; color:var(--gray); }
+        .amenities-list i { color:var(--gold); }
+        .property-sidebar { position:sticky; top:100px; }
+        .contact-card { background:white; border-radius:12px; padding:2rem; box-shadow:0 10px 40px rgba(0,0,0,0.1); }
+        .contact-card h3 { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--navy); margin-bottom:1rem; }
+        .contact-card p { color:var(--gray); margin-bottom:1.5rem; }
+        .agent-info { display:flex; align-items:center; gap:1rem; padding:1rem; background:var(--off-white); border-radius:8px; margin-bottom:1.5rem; }
+        .agent-avatar { width:60px; height:60px; background:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:1.5rem; }
+        .agent-details h4 { color:var(--navy); }
+        .agent-details span { font-size:0.9rem; color:var(--gray); }
+        .contact-btn { display:block; width:100%; padding:1rem; border:none; border-radius:6px; font-family:'Montserrat',sans-serif; font-size:1rem; font-weight:600; text-align:center; text-decoration:none; margin-bottom:0.75rem; }
+        .contact-btn-primary { background:var(--gold); color:var(--navy); }
+        .contact-btn-secondary { background:var(--navy); color:white; }
+        .details-table { width:100%; margin-top:2rem; border-collapse:collapse; }
+        .details-table th,.details-table td { padding:0.75rem; text-align:left; border-bottom:1px solid var(--gray-light); }
+        .details-table th { color:var(--gray); width:40%; }
+        .details-table td { color:var(--navy); font-weight:500; }
+        /* Gallery grid */
+        .gallery-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:0.75rem; margin-bottom:2rem; }
+        .gallery-thumb { height:150px; background-size:cover; background-position:center; border-radius:8px; cursor:pointer; transition:transform 0.3s, opacity 0.3s; }
+        .gallery-thumb:hover { transform:scale(1.03); opacity:0.9; }
+        /* Lightbox */
+        .lightbox { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:10000; align-items:center; justify-content:center; }
+        .lightbox.open { display:flex; }
+        .lightbox-container { width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
+        .lightbox-slide { display:none; align-items:center; justify-content:center; width:100%; height:100%; padding:60px; box-sizing:border-box; }
+        .lightbox-slide img { max-width:100%; max-height:100%; object-fit:contain; border-radius:4px; }
+        .lightbox-close { position:absolute; top:20px; right:30px; color:white; font-size:2.5rem; background:none; border:none; cursor:pointer; z-index:10001; line-height:1; }
+        .lightbox-prev,.lightbox-next { position:absolute; top:50%; transform:translateY(-50%); color:white; font-size:2rem; background:rgba(255,255,255,0.15); border:none; cursor:pointer; z-index:10001; padding:1rem 1.2rem; border-radius:50%; transition:background 0.3s; }
+        .lightbox-prev:hover,.lightbox-next:hover { background:rgba(255,255,255,0.3); }
+        .lightbox-prev { left:20px; }
+        .lightbox-next { right:20px; }
+        .lightbox-counter { position:absolute; bottom:20px; left:50%; transform:translateX(-50%); color:white; font-size:1rem; font-family:'Montserrat',sans-serif; }
+        @media(max-width:1024px) { .property-grid { grid-template-columns:1fr; } .gallery-grid { grid-template-columns:repeat(3,1fr); } }
+        @media(max-width:768px) { .property-hero h1 { font-size:2rem; } .property-features,.amenities-list { grid-template-columns:1fr; } .gallery-grid { grid-template-columns:repeat(2,1fr); } .gallery-thumb { height:120px; } .lightbox-slide { padding:20px; } .property-hero-meta { flex-direction:column; align-items:flex-start; gap:0.4rem; } .property-hero-location { font-size:1rem; } .hero-slider-nav { bottom:auto; top:1rem; right:1rem; } }
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../../images/logos/logo-black.png" alt="SXM Dream Investments" class="logo-black">
+        </a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../properties.html">Properties</a></li>
+            <li><a href="../st-martin.html">St. Martin</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../contact.html" class="nav-cta">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section class="property-hero">
+        <div class="property-hero-content">
+            <a href="../properties.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to properties</a>
+            <h1>Ocean View Condo for Sale – Princess Heights</h1>
+            <div class="property-hero-meta">
+                <span class="property-hero-price">$299,000</span>
+                <span class="property-hero-location"><i class="fas fa-map-marker-alt"></i> Cupecoy</span>
+            </div>
+        </div>
+            <div class="hero-slider-nav">
+                <button class="hero-slider-btn" onclick="openLightbox(0)"><i class="fas fa-images"></i> 10 photos</button>
+            </div>
+    </section>
+    <section class="property-content">
+        <div class="property-grid">
+            <div class="property-main">
+                <div class="property-features">
+                    <div class="feature-item"><i class="fas fa-bed"></i><div class="feature-item-text"><span>Bedrooms</span><strong>1</strong></div></div>
+                    <div class="feature-item"><i class="fas fa-bath"></i><div class="feature-item-text"><span>Bathrooms</span><strong>5</strong></div></div>
+                    <div class="feature-item"><i class="fas fa-expand"></i><div class="feature-item-text"><span>Surface</span><strong>750</strong></div></div>
+                    <div class="feature-item"><i class="fas fa-home"></i><div class="feature-item-text"><span>Type</span><strong>Condo</strong></div></div>
+                </div>
+                <h2>Photos</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-thumb active" onclick="openLightbox(0)" style="background-image:url('../../images/properties/ocean-view-condo-for-sale-princess-heights/01.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(1)" style="background-image:url('../../images/properties/ocean-view-condo-for-sale-princess-heights/02.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(2)" style="background-image:url('../../images/properties/ocean-view-condo-for-sale-princess-heights/03.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(3)" style="background-image:url('../../images/properties/ocean-view-condo-for-sale-princess-heights/04.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(4)" style="background-image:url('../../images/properties/ocean-view-condo-for-sale-princess-heights/05.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(5)" style="background-image:url('../../images/properties/ocean-view-condo-for-sale-princess-heights/06.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(6)" style="background-image:url('../../images/properties/ocean-view-condo-for-sale-princess-heights/07.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(7)" style="background-image:url('../../images/properties/ocean-view-condo-for-sale-princess-heights/08.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(8)" style="background-image:url('../../images/properties/ocean-view-condo-for-sale-princess-heights/09.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(9)" style="background-image:url('../../images/properties/ocean-view-condo-for-sale-princess-heights/10.jpg')"></div>
+
+                </div>
+                <h2>Description</h2>
+                <div class="property-description">Located within the boutique residence of Princess Heights in Oyster Pond, Sint Maarten, this beautifully renovated one-bedroom condo presents a rare opportunity in the Sint Maarten real estate market. Overlooking Dawn Beach and offering panoramic views of St. Barths, this ocean view condo for sale in Sint Maarten combines tranquility, modern comfort, and strong investment potential in one of the island’s most scenic coastal areas.
+
+This bright and thoughtfully designed residence offers approximately 750 sq. ft. of interior living space, featuring an open-concept layout that maximizes both natural light and views. The kitchen flows seamlessly into the living area, framed by large windows showcasing stunning ocean views in Oyster Pond Sint Maarten. The one-bedroom, 1.5-bathroom layout provides both comfort and functionality, while the elevated position captures breathtaking sunrise views over St. Barths and the Caribbean Sea. Sold fully furnished and turnkey, this luxury condo in Oyster Pond Sint Maarten is ready for immediate enjoyment or rental use.
+
+Princess Heights is widely recognized as one of the most established boutique condo-hotel residences in the Sint Maarten real estate market, known for its consistent rental performance and peaceful setting. Located near Dawn Beach and the French border, the area attracts international visitors seeking a quieter, upscale Caribbean experience. With strong demand for vacation rentals in Oyster Pond Sint Maarten, this property represents a highly attractive investment property in Sint Maarten, offering excellent potential for short-term rental income and long-term appreciation. Its turnkey condition and panoramic views make it a standout choice for investors and second-home buyers alike.
+
+This property is represented by Andreu Realty, a leading brokerage specializing in luxury Sint Maarten real estate, waterfront villas, and condos for sale across Simpson Bay, Cupecoy, Indigo Bay, and Saint Martin.</div>
+                
+                <h2>Features</h2>
+                <table class="details-table">
+                    <tr><th>Location</th><td>Cupecoy</td></tr>
+                    <tr><th>Type</th><td>Condo</td></tr>
+                    <tr><th>Year</th><td></td></tr>
+                    <tr><th>View</th><td></td></tr>
+                    <tr><th>Cooling</th><td></td></tr>
+                    <tr><th>Pool</th><td></td></tr>
+                </table>
+            </div>
+            <div class="property-sidebar">
+                <div class="contact-card">
+                    <h3>Interested?</h3>
+                    <p>Our team is available to help.</p>
+                    <div class="agent-info">
+                        <div class="agent-avatar"><i class="fas fa-user"></i></div>
+                        <div class="agent-details"><h4>Sacha Mimouni</h4><span>SXM Dream Investments</span></div>
+                    </div>
+                    <a href="mailto:sxm.dream.investments@gmail.com" class="contact-btn contact-btn-primary"><i class="fas fa-envelope"></i> Contact</a>
+                    <a href="tel:+17215237855" class="contact-btn contact-btn-secondary"><i class="fas fa-phone"></i> +1 (721) 523 7855</a>
+                    <a href="https://wa.me/17215237855" class="contact-btn contact-btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+        <button class="lightbox-prev" onclick="prevSlide(event)">&#10094;</button>
+        <button class="lightbox-next" onclick="nextSlide(event)">&#10095;</button>
+        <div class="lightbox-container">
+            <div class="lightbox-slide"><img src="../../images/properties/ocean-view-condo-for-sale-princess-heights/01.jpg" alt="Ocean View Condo for Sale – Princess Heights - Photo 1"></div>
+<div class="lightbox-slide"><img src="../../images/properties/ocean-view-condo-for-sale-princess-heights/02.jpg" alt="Ocean View Condo for Sale – Princess Heights - Photo 2"></div>
+<div class="lightbox-slide"><img src="../../images/properties/ocean-view-condo-for-sale-princess-heights/03.jpg" alt="Ocean View Condo for Sale – Princess Heights - Photo 3"></div>
+<div class="lightbox-slide"><img src="../../images/properties/ocean-view-condo-for-sale-princess-heights/04.jpg" alt="Ocean View Condo for Sale – Princess Heights - Photo 4"></div>
+<div class="lightbox-slide"><img src="../../images/properties/ocean-view-condo-for-sale-princess-heights/05.jpg" alt="Ocean View Condo for Sale – Princess Heights - Photo 5"></div>
+<div class="lightbox-slide"><img src="../../images/properties/ocean-view-condo-for-sale-princess-heights/06.jpg" alt="Ocean View Condo for Sale – Princess Heights - Photo 6"></div>
+<div class="lightbox-slide"><img src="../../images/properties/ocean-view-condo-for-sale-princess-heights/07.jpg" alt="Ocean View Condo for Sale – Princess Heights - Photo 7"></div>
+<div class="lightbox-slide"><img src="../../images/properties/ocean-view-condo-for-sale-princess-heights/08.jpg" alt="Ocean View Condo for Sale – Princess Heights - Photo 8"></div>
+<div class="lightbox-slide"><img src="../../images/properties/ocean-view-condo-for-sale-princess-heights/09.jpg" alt="Ocean View Condo for Sale – Princess Heights - Photo 9"></div>
+<div class="lightbox-slide"><img src="../../images/properties/ocean-view-condo-for-sale-princess-heights/10.jpg" alt="Ocean View Condo for Sale – Princess Heights - Photo 10"></div>
+
+        </div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 10</div>
+    </div>
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col"><img src="../../images/logos/logo-white.png" alt="SXM" style="max-width:180px;margin-bottom:1rem;"><p>Your trusted partner in St. Martin.</p></div>
+            <div class="footer-col"><h4>Contact</h4><p><i class="fas fa-phone"></i> +1 (721) 523 7855</p><p><i class="fas fa-envelope"></i> sxm.dream.investments@gmail.com</p></div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2025 SXM Dream Investments. All rights reserved.</p></div>
+    </footer>
+    <script src="../../js/main.js"></script>
+    <script>
+    (function() {
+        var lbCurrentSlide = 0;
+        var lbSlides = document.querySelectorAll('.lightbox-slide');
+        var lbTotal = lbSlides.length;
+        function lbShow() {
+            lbSlides.forEach(function(s, i) { s.style.display = i === lbCurrentSlide ? 'flex' : 'none'; });
+            document.getElementById('lightboxCounter').textContent = lbCurrentSlide + 1;
+        }
+        window.openLightbox = function(idx) {
+            lbCurrentSlide = idx;
+            lbShow();
+            document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        };
+        window.closeLightbox = function(e) {
+            if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox-close')) {
+                document.getElementById('lightbox').classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        };
+        window.nextSlide = function(e) { e.stopPropagation(); lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); };
+        window.prevSlide = function(e) { e.stopPropagation(); lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); };
+        document.addEventListener('keydown', function(e) {
+            var lb = document.getElementById('lightbox');
+            if (!lb || !lb.classList.contains('open')) return;
+            if (e.key === 'Escape') { lb.classList.remove('open'); document.body.style.overflow = ''; }
+            if (e.key === 'ArrowRight') { lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); }
+            if (e.key === 'ArrowLeft') { lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); }
+        });
+        var lbTouchStartX = 0;
+        var lbContainer = document.getElementById('lightbox');
+        if (lbContainer) {
+            lbContainer.addEventListener('touchstart', function(e) {
+                lbTouchStartX = e.touches[0].clientX;
+            }, { passive: true });
+            lbContainer.addEventListener('touchend', function(e) {
+                var dx = e.changedTouches[0].clientX - lbTouchStartX;
+                if (Math.abs(dx) > 50) {
+                    if (dx < 0) { lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; }
+                    else { lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; }
+                    lbShow();
+                }
+            }, { passive: true });
+        }
+        if (lbSlides.length > 0) lbShow();
+    })();
+    </script>
+</body>
+</html>
