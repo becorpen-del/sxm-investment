@@ -57,7 +57,6 @@ ALLOWED_SLUGS = {
     'aquamarina-villa',
     'beachfront-2-bedroom-condo-at-the-cliff',
     'beachfront-multi-unit-residence',
-    'blue-door-villa-ocean-view-living',
     'brand-new-villa-lagoon',
     'commercial-retail-space-belair-plaza-type-b',
     'concord-2-bedroom-condo',
