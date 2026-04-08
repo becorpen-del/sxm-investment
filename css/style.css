@@ -997,6 +997,47 @@ footer {
     color: var(--gold);
 }
 
+/* WhatsApp Floating Button */
+.whatsapp-float {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    z-index: 999;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
+}
+
+.whatsapp-float i {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+    .whatsapp-float {
+        bottom: 1.2rem;
+        right: 1.2rem;
+        width: 52px;
+        height: 52px;
+    }
+
+    .whatsapp-float i {
+        font-size: 1.5rem;
+    }
+}
+
 /* Animations */
 .fade-in {
     opacity: 0;
