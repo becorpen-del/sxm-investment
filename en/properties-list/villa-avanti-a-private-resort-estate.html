@@ -12,7 +12,7 @@
         .property-hero { height:60vh; min-height:500px; background:linear-gradient(rgba(26,42,58,0.3),rgba(26,42,58,0.5)),url('../../images/properties_clean/villa-avanti-a-private-resort-estate/01.jpg') center/cover; display:flex; align-items:flex-end; padding:3rem 5%; position:relative; }
         .property-hero-content { max-width:1200px; width:100%; margin:0 auto; color:white; }
         .property-hero h1 { font-family:'Playfair Display',serif; font-size:3rem; margin-bottom:1rem; text-shadow:2px 2px 4px rgba(0,0,0,0.3); }
-        .property-hero-meta { display:flex; gap:2rem; flex-wrap:wrap; align-items:center; }
+        .property-hero-meta { display:flex; gap:2rem; flex-wrap:nowrap; align-items:center; } .property-hero-price { flex-shrink:0; white-space:nowrap; }
         .property-hero-price { font-size:2rem; font-weight:700; color:var(--gold); }
         .property-hero-location { display:flex; align-items:center; gap:0.5rem; font-size:1.1rem; }
         .back-link { display:inline-flex; align-items:center; gap:0.5rem; color:white; text-decoration:none; margin-bottom:1rem; opacity:0.9; }
@@ -90,7 +90,7 @@
             </div>
         </div>
             <div class="hero-slider-nav">
-                <button class="hero-slider-btn" onclick="openLightbox(0)"><i class="fas fa-images"></i> 25 photos</button>
+                <button class="hero-slider-btn" onclick="openLightbox(0)"><i class="fas fa-images"></i> 21 photos</button>
             </div>
     </section>
     <section class="property-content">
@@ -107,28 +107,24 @@
                     <div class="gallery-thumb active" onclick="openLightbox(0)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/01.jpg')"></div>
 <div class="gallery-thumb" onclick="openLightbox(1)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/02.jpg')"></div>
 <div class="gallery-thumb" onclick="openLightbox(2)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/03.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(3)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/04.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(4)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/05.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(5)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/06.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(6)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/07.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(7)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/08.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(8)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/09.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(9)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/10.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(10)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/11.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(11)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/12.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(12)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/13.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(13)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/14.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(14)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/15.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(15)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/16.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(16)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/17.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(17)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/18.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(18)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/19.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(19)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/20.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(20)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/21.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(21)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/22.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(22)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/23.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(23)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/24.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(24)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/25.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(3)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/05.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(4)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/06.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(5)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/07.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(6)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/08.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(7)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/09.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(8)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/10.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(9)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/11.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(10)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/12.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(11)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/13.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(12)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/14.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(13)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/16.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(14)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/18.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(15)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/19.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(16)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/20.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(17)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/21.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(18)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/22.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(19)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/23.jpg')"></div>
+<div class="gallery-thumb" onclick="openLightbox(20)" style="background-image:url('../../images/properties_clean/villa-avanti-a-private-resort-estate/25.jpg')"></div>
 
                 </div>
                 <h2>Description</h2>
@@ -169,31 +165,27 @@
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/01.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 1"></div>
 <div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/02.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 2"></div>
 <div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/03.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 3"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/04.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 4"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/05.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 5"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/06.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 6"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/07.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 7"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/08.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 8"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/09.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 9"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/10.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 10"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/11.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 11"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/12.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 12"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/13.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 13"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/14.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 14"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/15.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 15"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/16.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 16"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/17.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 17"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/18.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 18"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/19.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 19"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/20.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 20"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/21.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 21"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/22.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 22"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/23.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 23"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/24.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 24"></div>
-<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/25.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 25"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/05.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 4"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/06.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 5"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/07.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 6"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/08.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 7"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/09.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 8"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/10.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 9"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/11.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 10"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/12.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 11"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/13.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 12"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/14.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 13"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/16.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 14"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/18.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 15"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/19.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 16"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/20.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 17"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/21.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 18"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/22.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 19"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/23.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 20"></div>
+<div class="lightbox-slide"><img src="../../images/properties_clean/villa-avanti-a-private-resort-estate/25.jpg" alt="Villa Avanti – A Private Resort Estate - Photo 21"></div>
 
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 25</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 21</div>
     </div>
     <!-- Footer -->
     <footer>
