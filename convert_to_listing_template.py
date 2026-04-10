@@ -1,0 +1,742 @@
+#!/usr/bin/env python3
+"""Convert EN/NL property pages from property-hero template to listing-page template."""
+import re
+import os
+import glob
+from html import unescape
+
+def extract_data(html, lang):
+    """Extract property data from existing EN/NL template."""
+    data = {}
+
+    # Title
+    m = re.search(r'<title>(.*?)\|', html)
+    data['page_title'] = m.group(0).rstrip('|').strip() if m else ''
+
+    m = re.search(r'<h1>(.*?)</h1>', html)
+    data['title'] = m.group(1) if m else ''
+
+    # Price
+    m = re.search(r'property-hero-price[^>]*>(.*?)</span>', html)
+    data['price'] = m.group(1) if m else ''
+
+    # Location
+    m = re.search(r'property-hero-location.*?</i>\s*(.*?)</span>', html, re.DOTALL)
+    data['location'] = m.group(1).strip() if m else ''
+
+    # Features (bedrooms, bathrooms, surface, type)
+    features = re.findall(r'<span>(.*?)</span>\s*<strong>(.*?)</strong>', html)
+    data['features'] = features  # list of (label, value)
+
+    # Find bedrooms, baths, surface from features
+    data['beds'] = ''
+    data['baths'] = ''
+    data['surface'] = ''
+    data['type'] = ''
+    for label, val in features:
+        ll = label.lower()
+        if 'bed' in ll or 'slaapkamer' in ll or 'chambre' in ll:
+            data['beds'] = val
+        elif 'bath' in ll or 'badkamer' in ll or 'salle' in ll:
+            data['baths'] = val
+        elif 'surface' in ll or 'oppervlakte' in ll:
+            data['surface'] = val
+        elif 'type' in ll:
+            data['type'] = val
+
+    # Description
+    m = re.search(r'property-description[^>]*>(.*?)</div>', html, re.DOTALL)
+    data['description'] = m.group(1).strip() if m else ''
+
+    # Details table
+    details = re.findall(r'<th>(.*?)</th>\s*<td>(.*?)</td>', html)
+    data['details'] = details
+
+    # Gallery images - from lightbox slides
+    imgs = re.findall(r'lightbox-slide.*?src="(.*?)"', html)
+    data['images'] = imgs
+
+    # Image count
+    data['img_count'] = len(imgs)
+
+    # Slug (from first image path)
+    if imgs:
+        m2 = re.search(r'properties_clean/(.*?)/', imgs[0])
+        data['slug'] = m2.group(1) if m2 else ''
+    else:
+        data['slug'] = ''
+
+    # Photo count from button
+    m = re.search(r'(\d+)\s*photos', html)
+    data['photo_btn_count'] = m.group(1) if m else str(len(imgs))
+
+    return data
+
+
+def generate_en(data):
+    """Generate EN page with listing template."""
+    slug = data['slug']
+    imgs = data['images']
+    img_count = len(imgs)
+
+    # Build lightbox slides
+    lightbox_html = '\n'.join(
+        f'            <div class="lightbox-slide"><img src="{img}" alt="Photo {i+1}"></div>'
+        for i, img in enumerate(imgs)
+    )
+
+    # Build hero images JS array
+    img_filenames = []
+    for img in imgs:
+        m = re.search(r'/(\d+\.jpg)', img)
+        if m:
+            img_filenames.append(m.group(1).replace('.jpg',''))
+
+    hero_js = f"var heroImages = {img_filenames}.map(function(n) {{ return '../../images/properties_clean/{slug}/' + n + '.jpg'; }});"
+    # Actually simpler: use the full list
+    hero_js_items = ','.join(f"'{img}'" for img in imgs)
+
+    # Surface display
+    surface_display = data['surface']
+    if surface_display and not any(c.isalpha() for c in surface_display):
+        surface_display += ' sqft'
+
+    return f'''<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{data['title']} | SXM Dream Investments</title>
+    <link rel="icon" type="image/png" href="../../images/logos/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .listing-page {{ max-width:1200px; margin:0 auto; padding:2rem 5%; padding-top:100px; }}
+        .breadcrumb {{ padding:1rem 0; font-size:0.85rem; }}
+        .breadcrumb a {{ color:var(--navy); text-decoration:none; }}
+        .breadcrumb a:hover {{ text-decoration:underline; }}
+        .breadcrumb i {{ color:#c0392b; margin-right:0.3rem; }}
+        .listing-header {{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.5rem; gap:2rem; flex-wrap:nowrap; }}
+        .listing-header-left {{ flex:1; min-width:0; max-width:65%; }} .listing-header-left h1 {{ font-family:'Playfair Display',serif; font-size:2rem; color:var(--navy); margin-bottom:0.75rem; font-weight:600; }}
+        .listing-badges {{ display:flex; gap:0.6rem; flex-wrap:wrap; }}
+        .listing-badge {{ background:var(--navy); color:white; padding:0.35rem 0.9rem; border-radius:4px; font-size:0.8rem; font-weight:500; }}
+        .listing-header-right {{ text-align:right; flex-shrink:0; white-space:nowrap; }}
+        .listing-header-right .asking {{ font-size:0.85rem; color:var(--gray); margin-bottom:0.25rem; }}
+        .listing-header-right .price {{ font-size:2rem; font-weight:700; color:var(--navy); }}
+        .listing-hero {{ position:relative; width:100%; margin-bottom:2.5rem; border-radius:12px; overflow:hidden; }}
+        .listing-hero img {{ width:100%; height:500px; object-fit:cover; display:block; cursor:pointer; }}
+        .hero-nav {{ position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.85); border:none; cursor:pointer; padding:0.8rem 1rem; border-radius:50%; font-size:1.2rem; color:var(--navy); transition:background 0.3s; }}
+        .hero-nav:hover {{ background:white; }}
+        .hero-nav-prev {{ left:1rem; }}
+        .hero-nav-next {{ right:1rem; }}
+        .hero-counter {{ position:absolute; bottom:1rem; right:1rem; background:rgba(0,0,0,0.6); color:white; padding:0.4rem 0.8rem; border-radius:4px; font-size:0.8rem; }}
+        .listing-grid {{ display:grid; grid-template-columns:1fr 380px; gap:3rem; }}
+        .listing-section-title {{ font-family:'Playfair Display',serif; font-style:italic; font-size:1.5rem; color:var(--navy); margin:2.5rem 0 1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--gray-light, #e0e0e0); }}
+        .listing-section-title:first-child {{ margin-top:0; }}
+        .listing-description {{ line-height:1.8; color:#444; font-size:0.95rem; }}
+        .listing-description p {{ margin-bottom:1rem; }}
+        .listing-info-grid {{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; }}
+        .listing-info-item {{ display:flex; justify-content:space-between; padding:0.75rem 1rem; border-bottom:1px solid #eee; }}
+        .listing-info-item .label {{ color:var(--gray); font-size:0.9rem; }}
+        .listing-info-item .value {{ color:var(--navy); font-weight:600; font-size:0.9rem; }}
+        .listing-sidebar {{ position:sticky; top:100px; align-self:start; }}
+        .showing-card {{ background:white; border-radius:12px; padding:2rem; box-shadow:0 5px 30px rgba(0,0,0,0.08); border:1px solid #eee; }}
+        .showing-card h3 {{ font-family:'Playfair Display',serif; font-style:italic; font-size:1.3rem; color:var(--navy); margin-bottom:0.5rem; }}
+        .showing-card .subtitle {{ color:var(--gray); font-size:0.85rem; margin-bottom:1.5rem; }}
+        .form-row {{ display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem; }}
+        .form-field {{ display:flex; flex-direction:column; }}
+        .form-field label {{ font-size:0.75rem; color:var(--gray); margin-bottom:0.3rem; font-weight:500; }}
+        .form-field input, .form-field textarea {{ padding:0.7rem; border:1px solid #ddd; border-radius:6px; font-family:'Montserrat',sans-serif; font-size:0.85rem; width:100%; box-sizing:border-box; }}
+        .form-field textarea {{ resize:vertical; min-height:80px; }}
+        .form-field-full {{ margin-bottom:0.75rem; }}
+        .form-field-full label {{ font-size:0.75rem; color:var(--gray); margin-bottom:0.3rem; font-weight:500; display:block; }}
+        .form-field-full input, .form-field-full textarea {{ width:100%; padding:0.7rem; border:1px solid #ddd; border-radius:6px; font-family:'Montserrat',sans-serif; font-size:0.85rem; box-sizing:border-box; }}
+        .showing-btn {{ width:100%; padding:1rem; background:var(--navy); color:white; border:none; border-radius:6px; font-family:'Montserrat',sans-serif; font-size:0.95rem; font-weight:600; cursor:pointer; margin-top:0.5rem; transition:opacity 0.3s; }}
+        .showing-btn:hover {{ opacity:0.9; }}
+        .agent-card {{ display:flex; align-items:center; gap:1rem; padding:1.2rem; margin-top:1.5rem; border-top:1px solid #eee; }}
+        .agent-photo {{ width:55px; height:55px; min-width:55px; min-height:55px; border-radius:50%; background:var(--navy); display:flex; align-items:center; justify-content:center; color:white; font-size:1.3rem; flex-shrink:0; }}
+        .agent-card-info h4 {{ color:var(--navy); font-size:0.95rem; margin-bottom:0.2rem; }}
+        .agent-card-info a {{ color:var(--gray); font-size:0.8rem; text-decoration:none; display:block; }}
+        .agent-card-info a:hover {{ color:var(--navy); }}
+        @media(max-width:1024px) {{ .listing-grid {{ grid-template-columns:1fr; }} .listing-info-grid {{ grid-template-columns:1fr 1fr; }} }}
+        @media(max-width:768px) {{ .listing-header {{ flex-direction:column; }} .listing-header-right {{ text-align:left; }} .listing-hero img {{ height:300px; }} .listing-info-grid {{ grid-template-columns:1fr; }} .form-row {{ grid-template-columns:1fr; }} }}
+        .lightbox {{ display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:10000; align-items:center; justify-content:center; }}
+        .lightbox.open {{ display:flex; }}
+        .lightbox-container {{ width:100%; height:100%; display:flex; align-items:center; justify-content:center; }}
+        .lightbox-slide {{ display:none; align-items:center; justify-content:center; width:100%; height:100%; padding:60px; box-sizing:border-box; }}
+        .lightbox-slide img {{ max-width:100%; max-height:100%; object-fit:contain; border-radius:4px; }}
+        .lightbox-close {{ position:absolute; top:20px; right:30px; color:white; font-size:2.5rem; background:none; border:none; cursor:pointer; z-index:10001; line-height:1; }}
+        .lightbox-prev,.lightbox-next {{ position:absolute; top:50%; transform:translateY(-50%); color:white; font-size:2rem; background:rgba(255,255,255,0.15); border:none; cursor:pointer; z-index:10001; padding:1rem 1.2rem; border-radius:50%; transition:background 0.3s; }}
+        .lightbox-prev:hover,.lightbox-next:hover {{ background:rgba(255,255,255,0.3); }}
+        .lightbox-prev {{ left:20px; }}
+        .lightbox-next {{ right:20px; }}
+        .lightbox-counter {{ position:absolute; bottom:20px; left:50%; transform:translateX(-50%); color:white; font-size:1rem; font-family:'Montserrat',sans-serif; }}
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../../images/logos/logo-black.png" alt="SXM Dream Investments" class="logo-black">
+        </a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../properties.html">Properties</a></li>
+            <li><a href="../st-martin.html">St. Martin</a></li>
+            <li><a href="../sell.html">Sell</a></li>
+            <li><a href="../contact.html" class="nav-cta">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <div class="listing-page">
+        <div class="breadcrumb">
+            <a href="../properties.html"><i class="fas fa-home"></i> For Sale</a>
+        </div>
+
+        <div class="listing-header">
+            <div class="listing-header-left">
+                <h1>{data['title']}</h1>
+                <div class="listing-badges">
+                    <span class="listing-badge">{data['beds']} Bed.</span>
+                    <span class="listing-badge">{data['baths']} Bath.</span>
+                    <span class="listing-badge">{surface_display}</span>
+                </div>
+            </div>
+            <div class="listing-header-right">
+                <div class="asking">Asking Price</div>
+                <div class="price">{data['price']}</div>
+            </div>
+        </div>
+
+        <div class="listing-hero">
+            <img id="heroImg" src="{imgs[0] if imgs else ''}" alt="{data['title']}">
+            <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
+            <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
+            <div class="hero-counter"><span id="heroCounter">1</span> / {img_count}</div>
+        </div>
+
+        <div class="listing-grid">
+            <div class="listing-main">
+                <h2 class="listing-section-title">Description</h2>
+                <div class="listing-description">{data['description']}</div>
+
+                <h2 class="listing-section-title">Details</h2>
+                <div class="listing-info-grid">
+                    <div class="listing-info-item"><span class="label">Price</span><span class="value">{data['price']}</span></div>
+                    <div class="listing-info-item"><span class="label">Bedrooms</span><span class="value">{data['beds']}</span></div>
+                    <div class="listing-info-item"><span class="label">Bathrooms</span><span class="value">{data['baths']}</span></div>
+                    <div class="listing-info-item"><span class="label">Surface</span><span class="value">{surface_display}</span></div>
+                    <div class="listing-info-item"><span class="label">Type</span><span class="value">{data['type']}</span></div>
+                    <div class="listing-info-item"><span class="label">Location</span><span class="value">{data['location']}</span></div>
+                    <div class="listing-info-item"><span class="label">Status</span><span class="value">Active</span></div>
+                </div>
+
+            </div>
+
+            <div class="listing-sidebar">
+                <div class="showing-card">
+                    <h3>Request a Viewing</h3>
+                    <p class="subtitle">Contact the listing agent directly</p>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>First Name</label>
+                            <input type="text" placeholder="Your first name">
+                        </div>
+                        <div class="form-field">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Your last name">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>Phone</label>
+                            <input type="tel" placeholder="+1 (xxx) xxx-xxxx">
+                        </div>
+                        <div class="form-field">
+                            <label>Email</label>
+                            <input type="email" placeholder="your@email.com">
+                        </div>
+                    </div>
+                    <div class="form-field-full">
+                        <label>Message</label>
+                        <textarea placeholder="I would like to learn more about this property..."></textarea>
+                    </div>
+                    <button class="showing-btn">Request a Viewing</button>
+                    <div class="agent-card">
+                        <div class="agent-photo"><i class="fas fa-user"></i></div>
+                        <div class="agent-card-info">
+                            <h4>Sacha Mimouni</h4>
+                            <a href="mailto:sxm.dream.investments@gmail.com">sxm.dream.investments@gmail.com</a>
+                            <a href="tel:+17215237855">+1 (721) 523 7855</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+        <button class="lightbox-prev" onclick="prevSlide(event)">&#10094;</button>
+        <button class="lightbox-next" onclick="nextSlide(event)">&#10095;</button>
+        <div class="lightbox-container">
+{lightbox_html}
+        </div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / {img_count}</div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><img src="../../images/logos/logo-white.png" alt="SXM Dream Investments"></a>
+                <p>Your trusted partner for luxury real estate in St. Martin.</p>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">Navigation</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../properties.html">Our Properties</a></li>
+                    <li><a href="../st-martin.html">St. Martin</a></li>
+                    <li><a href="../sell.html">Sell Your Property</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="tel:+17215237855"><i class="fas fa-phone"></i> +1 (721) 523 7855</a></li>
+                    <li><a href="mailto:sxm.dream.investments@gmail.com"><i class="fas fa-envelope"></i> sxm.dream.investments@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">Languages</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Fran\\u00e7ais</a></li>
+                    <li><a href="../index.html">English</a></li>
+                    <li><a href="../../nl/index.html">Nederlands</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SXM Dream Investments. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="../../js/main.js"></script>
+    <script>
+    var nb = document.getElementById('navbar');
+    nb.classList.add('scrolled');
+    window.addEventListener('scroll', function() {{ nb.classList.add('scrolled'); }});
+    (function() {{
+        var heroImages = [{hero_js_items}];
+        var heroIdx = 0;
+        window.heroNav = function(dir) {{
+            heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;
+            document.getElementById('heroImg').src = heroImages[heroIdx];
+            document.getElementById('heroCounter').textContent = heroIdx + 1;
+        }};
+        document.getElementById('heroImg').addEventListener('click', function() {{ openLightbox(heroIdx); }});
+        var lbCurrentSlide = 0;
+        var lbSlides = document.querySelectorAll('.lightbox-slide');
+        var lbTotal = lbSlides.length;
+        function lbShow() {{
+            lbSlides.forEach(function(s, i) {{ s.style.display = i === lbCurrentSlide ? 'flex' : 'none'; }});
+            document.getElementById('lightboxCounter').textContent = lbCurrentSlide + 1;
+        }}
+        window.openLightbox = function(idx) {{
+            lbCurrentSlide = idx;
+            lbShow();
+            document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }};
+        window.closeLightbox = function(e) {{
+            if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox-close')) {{
+                document.getElementById('lightbox').classList.remove('open');
+                document.body.style.overflow = '';
+            }}
+        }};
+        window.nextSlide = function(e) {{ e.stopPropagation(); lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); }};
+        window.prevSlide = function(e) {{ e.stopPropagation(); lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); }};
+        document.addEventListener('keydown', function(e) {{
+            var lb = document.getElementById('lightbox');
+            if (!lb || !lb.classList.contains('open')) return;
+            if (e.key === 'Escape') {{ lb.classList.remove('open'); document.body.style.overflow = ''; }}
+            if (e.key === 'ArrowRight') {{ lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); }}
+            if (e.key === 'ArrowLeft') {{ lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); }}
+        }});
+        var lbTouchStartX = 0;
+        var lbContainer = document.getElementById('lightbox');
+        if (lbContainer) {{
+            lbContainer.addEventListener('touchstart', function(e) {{ lbTouchStartX = e.touches[0].clientX; }}, {{ passive: true }});
+            lbContainer.addEventListener('touchend', function(e) {{
+                var dx = e.changedTouches[0].clientX - lbTouchStartX;
+                if (Math.abs(dx) > 50) {{
+                    if (dx < 0) {{ lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; }}
+                    else {{ lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; }}
+                    lbShow();
+                }}
+            }}, {{ passive: true }});
+        }}
+        if (lbSlides.length > 0) lbShow();
+    }})();
+    </script>
+    <a href="https://wa.me/17215237855" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>'''
+
+
+def generate_nl(data):
+    """Generate NL page with listing template."""
+    slug = data['slug']
+    imgs = data['images']
+    img_count = len(imgs)
+
+    lightbox_html = '\n'.join(
+        f'            <div class="lightbox-slide"><img src="{img}" alt="Photo {i+1}"></div>'
+        for i, img in enumerate(imgs)
+    )
+
+    hero_js_items = ','.join(f"'{img}'" for img in imgs)
+
+    surface_display = data['surface']
+    if surface_display and not any(c.isalpha() for c in surface_display):
+        surface_display += ' sqft'
+
+    return f'''<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{data['title']} | SXM Dream Investments</title>
+    <link rel="icon" type="image/png" href="../../images/logos/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .listing-page {{ max-width:1200px; margin:0 auto; padding:2rem 5%; padding-top:100px; }}
+        .breadcrumb {{ padding:1rem 0; font-size:0.85rem; }}
+        .breadcrumb a {{ color:var(--navy); text-decoration:none; }}
+        .breadcrumb a:hover {{ text-decoration:underline; }}
+        .breadcrumb i {{ color:#c0392b; margin-right:0.3rem; }}
+        .listing-header {{ display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.5rem; gap:2rem; flex-wrap:nowrap; }}
+        .listing-header-left {{ flex:1; min-width:0; max-width:65%; }} .listing-header-left h1 {{ font-family:'Playfair Display',serif; font-size:2rem; color:var(--navy); margin-bottom:0.75rem; font-weight:600; }}
+        .listing-badges {{ display:flex; gap:0.6rem; flex-wrap:wrap; }}
+        .listing-badge {{ background:var(--navy); color:white; padding:0.35rem 0.9rem; border-radius:4px; font-size:0.8rem; font-weight:500; }}
+        .listing-header-right {{ text-align:right; flex-shrink:0; white-space:nowrap; }}
+        .listing-header-right .asking {{ font-size:0.85rem; color:var(--gray); margin-bottom:0.25rem; }}
+        .listing-header-right .price {{ font-size:2rem; font-weight:700; color:var(--navy); }}
+        .listing-hero {{ position:relative; width:100%; margin-bottom:2.5rem; border-radius:12px; overflow:hidden; }}
+        .listing-hero img {{ width:100%; height:500px; object-fit:cover; display:block; cursor:pointer; }}
+        .hero-nav {{ position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.85); border:none; cursor:pointer; padding:0.8rem 1rem; border-radius:50%; font-size:1.2rem; color:var(--navy); transition:background 0.3s; }}
+        .hero-nav:hover {{ background:white; }}
+        .hero-nav-prev {{ left:1rem; }}
+        .hero-nav-next {{ right:1rem; }}
+        .hero-counter {{ position:absolute; bottom:1rem; right:1rem; background:rgba(0,0,0,0.6); color:white; padding:0.4rem 0.8rem; border-radius:4px; font-size:0.8rem; }}
+        .listing-grid {{ display:grid; grid-template-columns:1fr 380px; gap:3rem; }}
+        .listing-section-title {{ font-family:'Playfair Display',serif; font-style:italic; font-size:1.5rem; color:var(--navy); margin:2.5rem 0 1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--gray-light, #e0e0e0); }}
+        .listing-section-title:first-child {{ margin-top:0; }}
+        .listing-description {{ line-height:1.8; color:#444; font-size:0.95rem; }}
+        .listing-description p {{ margin-bottom:1rem; }}
+        .listing-info-grid {{ display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; }}
+        .listing-info-item {{ display:flex; justify-content:space-between; padding:0.75rem 1rem; border-bottom:1px solid #eee; }}
+        .listing-info-item .label {{ color:var(--gray); font-size:0.9rem; }}
+        .listing-info-item .value {{ color:var(--navy); font-weight:600; font-size:0.9rem; }}
+        .listing-sidebar {{ position:sticky; top:100px; align-self:start; }}
+        .showing-card {{ background:white; border-radius:12px; padding:2rem; box-shadow:0 5px 30px rgba(0,0,0,0.08); border:1px solid #eee; }}
+        .showing-card h3 {{ font-family:'Playfair Display',serif; font-style:italic; font-size:1.3rem; color:var(--navy); margin-bottom:0.5rem; }}
+        .showing-card .subtitle {{ color:var(--gray); font-size:0.85rem; margin-bottom:1.5rem; }}
+        .form-row {{ display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem; }}
+        .form-field {{ display:flex; flex-direction:column; }}
+        .form-field label {{ font-size:0.75rem; color:var(--gray); margin-bottom:0.3rem; font-weight:500; }}
+        .form-field input, .form-field textarea {{ padding:0.7rem; border:1px solid #ddd; border-radius:6px; font-family:'Montserrat',sans-serif; font-size:0.85rem; width:100%; box-sizing:border-box; }}
+        .form-field textarea {{ resize:vertical; min-height:80px; }}
+        .form-field-full {{ margin-bottom:0.75rem; }}
+        .form-field-full label {{ font-size:0.75rem; color:var(--gray); margin-bottom:0.3rem; font-weight:500; display:block; }}
+        .form-field-full input, .form-field-full textarea {{ width:100%; padding:0.7rem; border:1px solid #ddd; border-radius:6px; font-family:'Montserrat',sans-serif; font-size:0.85rem; box-sizing:border-box; }}
+        .showing-btn {{ width:100%; padding:1rem; background:var(--navy); color:white; border:none; border-radius:6px; font-family:'Montserrat',sans-serif; font-size:0.95rem; font-weight:600; cursor:pointer; margin-top:0.5rem; transition:opacity 0.3s; }}
+        .showing-btn:hover {{ opacity:0.9; }}
+        .agent-card {{ display:flex; align-items:center; gap:1rem; padding:1.2rem; margin-top:1.5rem; border-top:1px solid #eee; }}
+        .agent-photo {{ width:55px; height:55px; min-width:55px; min-height:55px; border-radius:50%; background:var(--navy); display:flex; align-items:center; justify-content:center; color:white; font-size:1.3rem; flex-shrink:0; }}
+        .agent-card-info h4 {{ color:var(--navy); font-size:0.95rem; margin-bottom:0.2rem; }}
+        .agent-card-info a {{ color:var(--gray); font-size:0.8rem; text-decoration:none; display:block; }}
+        .agent-card-info a:hover {{ color:var(--navy); }}
+        @media(max-width:1024px) {{ .listing-grid {{ grid-template-columns:1fr; }} .listing-info-grid {{ grid-template-columns:1fr 1fr; }} }}
+        @media(max-width:768px) {{ .listing-header {{ flex-direction:column; }} .listing-header-right {{ text-align:left; }} .listing-hero img {{ height:300px; }} .listing-info-grid {{ grid-template-columns:1fr; }} .form-row {{ grid-template-columns:1fr; }} }}
+        .lightbox {{ display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:10000; align-items:center; justify-content:center; }}
+        .lightbox.open {{ display:flex; }}
+        .lightbox-container {{ width:100%; height:100%; display:flex; align-items:center; justify-content:center; }}
+        .lightbox-slide {{ display:none; align-items:center; justify-content:center; width:100%; height:100%; padding:60px; box-sizing:border-box; }}
+        .lightbox-slide img {{ max-width:100%; max-height:100%; object-fit:contain; border-radius:4px; }}
+        .lightbox-close {{ position:absolute; top:20px; right:30px; color:white; font-size:2.5rem; background:none; border:none; cursor:pointer; z-index:10001; line-height:1; }}
+        .lightbox-prev,.lightbox-next {{ position:absolute; top:50%; transform:translateY(-50%); color:white; font-size:2rem; background:rgba(255,255,255,0.15); border:none; cursor:pointer; z-index:10001; padding:1rem 1.2rem; border-radius:50%; transition:background 0.3s; }}
+        .lightbox-prev:hover,.lightbox-next:hover {{ background:rgba(255,255,255,0.3); }}
+        .lightbox-prev {{ left:20px; }}
+        .lightbox-next {{ right:20px; }}
+        .lightbox-counter {{ position:absolute; bottom:20px; left:50%; transform:translateX(-50%); color:white; font-size:1rem; font-family:'Montserrat',sans-serif; }}
+    </style>
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../../images/logos/logo-black.png" alt="SXM Dream Investments" class="logo-black">
+        </a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../eigenschappen.html">Vastgoed</a></li>
+            <li><a href="../sint-maarten.html">Sint Maarten</a></li>
+            <li><a href="../verkopen.html">Verkopen</a></li>
+            <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="listing-page">
+        <div class="breadcrumb">
+            <a href="../eigenschappen.html"><i class="fas fa-home"></i> Te Koop</a>
+        </div>
+
+        <div class="listing-header">
+            <div class="listing-header-left">
+                <h1>{data['title']}</h1>
+                <div class="listing-badges">
+                    <span class="listing-badge">{data['beds']} Slpk.</span>
+                    <span class="listing-badge">{data['baths']} Badk.</span>
+                    <span class="listing-badge">{surface_display}</span>
+                </div>
+            </div>
+            <div class="listing-header-right">
+                <div class="asking">Vraagprijs</div>
+                <div class="price">{data['price']}</div>
+            </div>
+        </div>
+
+        <div class="listing-hero">
+            <img id="heroImg" src="{imgs[0] if imgs else ''}" alt="{data['title']}">
+            <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
+            <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
+            <div class="hero-counter"><span id="heroCounter">1</span> / {img_count}</div>
+        </div>
+
+        <div class="listing-grid">
+            <div class="listing-main">
+                <h2 class="listing-section-title">Beschrijving</h2>
+                <div class="listing-description">{data['description']}</div>
+
+                <h2 class="listing-section-title">Informatie</h2>
+                <div class="listing-info-grid">
+                    <div class="listing-info-item"><span class="label">Prijs</span><span class="value">{data['price']}</span></div>
+                    <div class="listing-info-item"><span class="label">Slaapkamers</span><span class="value">{data['beds']}</span></div>
+                    <div class="listing-info-item"><span class="label">Badkamers</span><span class="value">{data['baths']}</span></div>
+                    <div class="listing-info-item"><span class="label">Oppervlakte</span><span class="value">{surface_display}</span></div>
+                    <div class="listing-info-item"><span class="label">Type</span><span class="value">{data['type']}</span></div>
+                    <div class="listing-info-item"><span class="label">Locatie</span><span class="value">{data['location']}</span></div>
+                    <div class="listing-info-item"><span class="label">Status</span><span class="value">Actief</span></div>
+                </div>
+
+            </div>
+
+            <div class="listing-sidebar">
+                <div class="showing-card">
+                    <h3>Bezichtiging Aanvragen</h3>
+                    <p class="subtitle">Neem rechtstreeks contact op met de makelaar</p>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>Voornaam</label>
+                            <input type="text" placeholder="Uw voornaam">
+                        </div>
+                        <div class="form-field">
+                            <label>Achternaam</label>
+                            <input type="text" placeholder="Uw achternaam">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>Telefoon</label>
+                            <input type="tel" placeholder="+1 (xxx) xxx-xxxx">
+                        </div>
+                        <div class="form-field">
+                            <label>Email</label>
+                            <input type="email" placeholder="uw@email.com">
+                        </div>
+                    </div>
+                    <div class="form-field-full">
+                        <label>Bericht</label>
+                        <textarea placeholder="Ik wil graag meer weten over dit vastgoed..."></textarea>
+                    </div>
+                    <button class="showing-btn">Bezichtiging Aanvragen</button>
+                    <div class="agent-card">
+                        <div class="agent-photo"><i class="fas fa-user"></i></div>
+                        <div class="agent-card-info">
+                            <h4>Sacha Mimouni</h4>
+                            <a href="mailto:sxm.dream.investments@gmail.com">sxm.dream.investments@gmail.com</a>
+                            <a href="tel:+17215237855">+1 (721) 523 7855</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+        <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
+        <button class="lightbox-prev" onclick="prevSlide(event)">&#10094;</button>
+        <button class="lightbox-next" onclick="nextSlide(event)">&#10095;</button>
+        <div class="lightbox-container">
+{lightbox_html}
+        </div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / {img_count}</div>
+    </div>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo"><img src="../../images/logos/logo-white.png" alt="SXM Dream Investments"></a>
+                <p>Uw betrouwbare partner voor luxe vastgoed op Sint Maarten.</p>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">Navigatie</h4>
+                <ul class="footer-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../eigenschappen.html">Ons Vastgoed</a></li>
+                    <li><a href="../sint-maarten.html">Sint Maarten</a></li>
+                    <li><a href="../verkopen.html">Uw Woning Verkopen</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">Contact</h4>
+                <ul class="footer-links">
+                    <li><a href="tel:+17215237855"><i class="fas fa-phone"></i> +1 (721) 523 7855</a></li>
+                    <li><a href="mailto:sxm.dream.investments@gmail.com"><i class="fas fa-envelope"></i> sxm.dream.investments@gmail.com</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4 class="footer-title">Talen</h4>
+                <ul class="footer-links">
+                    <li><a href="../../index.html">Fran\\u00e7ais</a></li>
+                    <li><a href="../../en/index.html">English</a></li>
+                    <li><a href="../index.html">Nederlands</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 SXM Dream Investments. Alle rechten voorbehouden.</p>
+        </div>
+    </footer>
+    <script src="../../js/main.js"></script>
+    <script>
+    var nb = document.getElementById('navbar');
+    nb.classList.add('scrolled');
+    window.addEventListener('scroll', function() {{ nb.classList.add('scrolled'); }});
+    (function() {{
+        var heroImages = [{hero_js_items}];
+        var heroIdx = 0;
+        window.heroNav = function(dir) {{
+            heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;
+            document.getElementById('heroImg').src = heroImages[heroIdx];
+            document.getElementById('heroCounter').textContent = heroIdx + 1;
+        }};
+        document.getElementById('heroImg').addEventListener('click', function() {{ openLightbox(heroIdx); }});
+        var lbCurrentSlide = 0;
+        var lbSlides = document.querySelectorAll('.lightbox-slide');
+        var lbTotal = lbSlides.length;
+        function lbShow() {{
+            lbSlides.forEach(function(s, i) {{ s.style.display = i === lbCurrentSlide ? 'flex' : 'none'; }});
+            document.getElementById('lightboxCounter').textContent = lbCurrentSlide + 1;
+        }}
+        window.openLightbox = function(idx) {{
+            lbCurrentSlide = idx;
+            lbShow();
+            document.getElementById('lightbox').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }};
+        window.closeLightbox = function(e) {{
+            if (e.target.classList.contains('lightbox') || e.target.classList.contains('lightbox-close')) {{
+                document.getElementById('lightbox').classList.remove('open');
+                document.body.style.overflow = '';
+            }}
+        }};
+        window.nextSlide = function(e) {{ e.stopPropagation(); lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); }};
+        window.prevSlide = function(e) {{ e.stopPropagation(); lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); }};
+        document.addEventListener('keydown', function(e) {{
+            var lb = document.getElementById('lightbox');
+            if (!lb || !lb.classList.contains('open')) return;
+            if (e.key === 'Escape') {{ lb.classList.remove('open'); document.body.style.overflow = ''; }}
+            if (e.key === 'ArrowRight') {{ lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; lbShow(); }}
+            if (e.key === 'ArrowLeft') {{ lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; lbShow(); }}
+        }});
+        var lbTouchStartX = 0;
+        var lbContainer = document.getElementById('lightbox');
+        if (lbContainer) {{
+            lbContainer.addEventListener('touchstart', function(e) {{ lbTouchStartX = e.touches[0].clientX; }}, {{ passive: true }});
+            lbContainer.addEventListener('touchend', function(e) {{
+                var dx = e.changedTouches[0].clientX - lbTouchStartX;
+                if (Math.abs(dx) > 50) {{
+                    if (dx < 0) {{ lbCurrentSlide = (lbCurrentSlide + 1) % lbTotal; }}
+                    else {{ lbCurrentSlide = (lbCurrentSlide - 1 + lbTotal) % lbTotal; }}
+                    lbShow();
+                }}
+            }}, {{ passive: true }});
+        }}
+        if (lbSlides.length > 0) lbShow();
+    }})();
+    </script>
+    <a href="https://wa.me/17215237855" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+</body>
+</html>'''
+
+
+def process_file(filepath, lang):
+    """Process a single file."""
+    with open(filepath, 'r', encoding='utf-8') as f:
+        html = f.read()
+
+    # Skip if already converted (has listing-page template)
+    if 'listing-page' in html:
+        return False
+
+    # Skip if no property-hero (not the right template)
+    if 'property-hero' not in html:
+        return False
+
+    data = extract_data(html, lang)
+
+    if not data['title'] or not data['images']:
+        print(f"  SKIP (no title/images): {filepath}")
+        return False
+
+    if lang == 'en':
+        new_html = generate_en(data)
+    else:
+        new_html = generate_nl(data)
+
+    # Fix unicode escapes
+    new_html = new_html.replace('\\u00e7', '\u00e7')
+
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(new_html)
+
+    return True
+
+
+def main():
+    en_count = 0
+    nl_count = 0
+
+    print("Converting EN pages...")
+    for filepath in sorted(glob.glob('en/properties-list/*.html')):
+        if process_file(filepath, 'en'):
+            en_count += 1
+            print(f"  Converted: {filepath}")
+
+    print(f"\nConverting NL pages...")
+    for filepath in sorted(glob.glob('nl/vastgoed/*.html')):
+        if process_file(filepath, 'nl'):
+            nl_count += 1
+            print(f"  Converted: {filepath}")
+
+    print(f"\nDone! Converted {en_count} EN pages and {nl_count} NL pages.")
+
+
+if __name__ == '__main__':
+    main()

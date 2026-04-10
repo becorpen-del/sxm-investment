@@ -1,65 +1,63 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-958059324"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'AW-958059324');
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Pond Villa | Luxe Vastgoed Sint Maarten</title>
+    <title>Red Pond Villa | SXM Dream Investments</title>
     <link rel="icon" type="image/png" href="../../images/logos/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../../css/style.css">
     <style>
-        .property-hero { height:60vh; min-height:500px; background:linear-gradient(rgba(26,42,58,0.3),rgba(26,42,58,0.5)),url('../../images/properties_clean/red-pond-villa/27.webp') center/cover; display:flex; align-items:flex-end; padding:3rem 5%; position:relative; }
-        .property-hero-content { max-width:1200px; width:100%; margin:0 auto; color:white; }
-        .property-hero h1 { font-family:'Playfair Display',serif; font-size:3rem; margin-bottom:1rem; text-shadow:2px 2px 4px rgba(0,0,0,0.3); }
-        .property-hero-meta { display:flex; gap:2rem; flex-wrap:nowrap; align-items:center; } .property-hero-price { flex-shrink:0; white-space:nowrap; }
-        .property-hero-price { font-size:2rem; font-weight:700; color:var(--gold); }
-        .property-hero-location { display:flex; align-items:center; gap:0.5rem; font-size:1.1rem; }
-        .back-link { display:inline-flex; align-items:center; gap:0.5rem; color:white; text-decoration:none; margin-bottom:1rem; opacity:0.9; }
-        .hero-slider-nav { position:absolute; bottom:2rem; right:5%; }
-        .hero-slider-btn { background:rgba(255,255,255,0.9); color:var(--navy); border:none; padding:0.7rem 1.2rem; border-radius:6px; cursor:pointer; font-family:'Montserrat',sans-serif; font-weight:600; font-size:0.9rem; display:flex; align-items:center; gap:0.5rem; transition:background 0.3s; }
-        .hero-slider-btn:hover { background:white; }
-        .property-content { padding:4rem 5%; max-width:1200px; margin:0 auto; }
-        .property-grid { display:grid; grid-template-columns:2fr 1fr; gap:3rem; }
-        .property-main h2 { font-family:'Playfair Display',serif; font-size:1.8rem; color:var(--navy); margin-bottom:1.5rem; }
-        .property-description { line-height:1.8; color:var(--gray); }
-        .property-description p { margin-bottom:1rem; }
-        .property-features { display:grid; grid-template-columns:repeat(2,1fr); gap:1rem; margin:2rem 0; padding:2rem; background:var(--off-white); border-radius:12px; }
-        .feature-item { display:flex; align-items:center; gap:1rem; }
-        .feature-item i { width:40px; height:40px; background:white; border-radius:50%; display:flex; align-items:center; justify-content:center; color:var(--gold); }
-        .feature-item-text span { display:block; font-size:0.85rem; color:var(--gray); }
-        .feature-item-text strong { color:var(--navy); font-size:1.1rem; }
-        .amenities-list { list-style:none; padding:0; display:grid; grid-template-columns:repeat(2,1fr); gap:0.75rem; }
-        .amenities-list li { display:flex; align-items:center; gap:0.75rem; color:var(--gray); }
-        .amenities-list i { color:var(--gold); }
-        .property-sidebar { position:sticky; top:100px; }
-        .contact-card { background:white; border-radius:12px; padding:2rem; box-shadow:0 10px 40px rgba(0,0,0,0.1); }
-        .contact-card h3 { font-family:'Playfair Display',serif; font-size:1.5rem; color:var(--navy); margin-bottom:1rem; }
-        .contact-card p { color:var(--gray); margin-bottom:1.5rem; }
-        .agent-info { display:flex; align-items:center; gap:1rem; padding:1rem; background:var(--off-white); border-radius:8px; margin-bottom:1.5rem; }
-        .agent-avatar { width:60px; height:60px; background:var(--gold); border-radius:50%; display:flex; align-items:center; justify-content:center; color:white; font-size:1.5rem; }
-        .agent-details h4 { color:var(--navy); }
-        .agent-details span { font-size:0.9rem; color:var(--gray); }
-        .contact-btn { display:block; width:100%; padding:1rem; border:none; border-radius:6px; font-family:'Montserrat',sans-serif; font-size:1rem; font-weight:600; text-align:center; text-decoration:none; margin-bottom:0.75rem; }
-        .contact-btn-primary { background:var(--gold); color:var(--navy); }
-        .contact-btn-secondary { background:var(--navy); color:white; }
-        .details-table { width:100%; margin-top:2rem; border-collapse:collapse; }
-        .details-table th,.details-table td { padding:0.75rem; text-align:left; border-bottom:1px solid var(--gray-light); }
-        .details-table th { color:var(--gray); width:40%; }
-        .details-table td { color:var(--navy); font-weight:500; }
-        /* Gallery grid */
-        .gallery-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:0.75rem; margin-bottom:2rem; }
-        .gallery-thumb { height:150px; background-size:cover; background-position:center; border-radius:8px; cursor:pointer; transition:transform 0.3s, opacity 0.3s; }
-        .gallery-thumb:hover { transform:scale(1.03); opacity:0.9; }
-        /* Lightbox */
+        .listing-page { max-width:1200px; margin:0 auto; padding:2rem 5%; padding-top:100px; }
+        .breadcrumb { padding:1rem 0; font-size:0.85rem; }
+        .breadcrumb a { color:var(--navy); text-decoration:none; }
+        .breadcrumb a:hover { text-decoration:underline; }
+        .breadcrumb i { color:#c0392b; margin-right:0.3rem; }
+        .listing-header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:1.5rem; gap:2rem; flex-wrap:nowrap; }
+        .listing-header-left { flex:1; min-width:0; max-width:65%; } .listing-header-left h1 { font-family:'Playfair Display',serif; font-size:2rem; color:var(--navy); margin-bottom:0.75rem; font-weight:600; }
+        .listing-badges { display:flex; gap:0.6rem; flex-wrap:wrap; }
+        .listing-badge { background:var(--navy); color:white; padding:0.35rem 0.9rem; border-radius:4px; font-size:0.8rem; font-weight:500; }
+        .listing-header-right { text-align:right; flex-shrink:0; white-space:nowrap; }
+        .listing-header-right .asking { font-size:0.85rem; color:var(--gray); margin-bottom:0.25rem; }
+        .listing-header-right .price { font-size:2rem; font-weight:700; color:var(--navy); }
+        .listing-hero { position:relative; width:100%; margin-bottom:2.5rem; border-radius:12px; overflow:hidden; }
+        .listing-hero img { width:100%; height:500px; object-fit:cover; display:block; cursor:pointer; }
+        .hero-nav { position:absolute; top:50%; transform:translateY(-50%); background:rgba(255,255,255,0.85); border:none; cursor:pointer; padding:0.8rem 1rem; border-radius:50%; font-size:1.2rem; color:var(--navy); transition:background 0.3s; }
+        .hero-nav:hover { background:white; }
+        .hero-nav-prev { left:1rem; }
+        .hero-nav-next { right:1rem; }
+        .hero-counter { position:absolute; bottom:1rem; right:1rem; background:rgba(0,0,0,0.6); color:white; padding:0.4rem 0.8rem; border-radius:4px; font-size:0.8rem; }
+        .listing-grid { display:grid; grid-template-columns:1fr 380px; gap:3rem; }
+        .listing-section-title { font-family:'Playfair Display',serif; font-style:italic; font-size:1.5rem; color:var(--navy); margin:2.5rem 0 1rem; padding-bottom:0.5rem; border-bottom:1px solid var(--gray-light, #e0e0e0); }
+        .listing-section-title:first-child { margin-top:0; }
+        .listing-description { line-height:1.8; color:#444; font-size:0.95rem; }
+        .listing-description p { margin-bottom:1rem; }
+        .listing-info-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; }
+        .listing-info-item { display:flex; justify-content:space-between; padding:0.75rem 1rem; border-bottom:1px solid #eee; }
+        .listing-info-item .label { color:var(--gray); font-size:0.9rem; }
+        .listing-info-item .value { color:var(--navy); font-weight:600; font-size:0.9rem; }
+        .listing-sidebar { position:sticky; top:100px; align-self:start; }
+        .showing-card { background:white; border-radius:12px; padding:2rem; box-shadow:0 5px 30px rgba(0,0,0,0.08); border:1px solid #eee; }
+        .showing-card h3 { font-family:'Playfair Display',serif; font-style:italic; font-size:1.3rem; color:var(--navy); margin-bottom:0.5rem; }
+        .showing-card .subtitle { color:var(--gray); font-size:0.85rem; margin-bottom:1.5rem; }
+        .form-row { display:grid; grid-template-columns:1fr 1fr; gap:0.75rem; margin-bottom:0.75rem; }
+        .form-field { display:flex; flex-direction:column; }
+        .form-field label { font-size:0.75rem; color:var(--gray); margin-bottom:0.3rem; font-weight:500; }
+        .form-field input, .form-field textarea { padding:0.7rem; border:1px solid #ddd; border-radius:6px; font-family:'Montserrat',sans-serif; font-size:0.85rem; width:100%; box-sizing:border-box; }
+        .form-field textarea { resize:vertical; min-height:80px; }
+        .form-field-full { margin-bottom:0.75rem; }
+        .form-field-full label { font-size:0.75rem; color:var(--gray); margin-bottom:0.3rem; font-weight:500; display:block; }
+        .form-field-full input, .form-field-full textarea { width:100%; padding:0.7rem; border:1px solid #ddd; border-radius:6px; font-family:'Montserrat',sans-serif; font-size:0.85rem; box-sizing:border-box; }
+        .showing-btn { width:100%; padding:1rem; background:var(--navy); color:white; border:none; border-radius:6px; font-family:'Montserrat',sans-serif; font-size:0.95rem; font-weight:600; cursor:pointer; margin-top:0.5rem; transition:opacity 0.3s; }
+        .showing-btn:hover { opacity:0.9; }
+        .agent-card { display:flex; align-items:center; gap:1rem; padding:1.2rem; margin-top:1.5rem; border-top:1px solid #eee; }
+        .agent-photo { width:55px; height:55px; min-width:55px; min-height:55px; border-radius:50%; background:var(--navy); display:flex; align-items:center; justify-content:center; color:white; font-size:1.3rem; flex-shrink:0; }
+        .agent-card-info h4 { color:var(--navy); font-size:0.95rem; margin-bottom:0.2rem; }
+        .agent-card-info a { color:var(--gray); font-size:0.8rem; text-decoration:none; display:block; }
+        .agent-card-info a:hover { color:var(--navy); }
+        @media(max-width:1024px) { .listing-grid { grid-template-columns:1fr; } .listing-info-grid { grid-template-columns:1fr 1fr; } }
+        @media(max-width:768px) { .listing-header { flex-direction:column; } .listing-header-right { text-align:left; } .listing-hero img { height:300px; } .listing-info-grid { grid-template-columns:1fr; } .form-row { grid-template-columns:1fr; } }
         .lightbox { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.95); z-index:10000; align-items:center; justify-content:center; }
         .lightbox.open { display:flex; }
         .lightbox-container { width:100%; height:100%; display:flex; align-items:center; justify-content:center; }
@@ -71,10 +69,53 @@
         .lightbox-prev { left:20px; }
         .lightbox-next { right:20px; }
         .lightbox-counter { position:absolute; bottom:20px; left:50%; transform:translateX(-50%); color:white; font-size:1rem; font-family:'Montserrat',sans-serif; }
-        @media(max-width:1024px) { .property-grid { grid-template-columns:1fr; } .gallery-grid { grid-template-columns:repeat(3,1fr); } }
-        @media(max-width:768px) { .property-hero h1 { font-size:2rem; } .property-features,.amenities-list { grid-template-columns:1fr; } .gallery-grid { grid-template-columns:repeat(2,1fr); } .gallery-thumb { height:120px; } .lightbox-slide { padding:20px; } .property-hero-meta { flex-direction:column; align-items:flex-start; gap:0.4rem; } .property-hero-location { font-size:1rem; } .hero-slider-nav { bottom:auto; top:1rem; right:1rem; } }
     </style>
-    <link rel="alternate" hreflang="fr" href="https://sxmdreaminvestments.com/proprietes.html" />
+</head>
+<body>
+    <nav class="navbar scrolled" id="navbar">
+        <a href="../index.html" class="logo">
+            <img src="../../images/logos/logo-black.png" alt="SXM Dream Investments" class="logo-black">
+        </a>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../eigenschappen.html">Vastgoed</a></li>
+            <li><a href="../sint-maarten.html">Sint Maarten</a></li>
+            <li><a href="../verkopen.html">Verkopen</a></li>
+            <li><a href="../contact.html" class="nav-cta">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="listing-page">
+        <div class="breadcrumb">
+            <a href="../eigenschappen.html"><i class="fas fa-home"></i> Te Koop</a>
+        </div>
+
+        <div class="listing-header">
+            <div class="listing-header-left">
+                <h1>Red Pond Villa</h1>
+                <div class="listing-badges">
+                    <span class="listing-badge">4 Slpk.</span>
+                    <span class="listing-badge">4.5 Badk.</span>
+                    <span class="listing-badge"></span>
+                </div>
+            </div>
+            <div class="listing-header-right">
+                <div class="asking">Vraagprijs</div>
+                <div class="price">$1,490,000</div>
+            </div>
+        </div>
+
+        <div class="listing-hero">
+            <img id="heroImg" src="../../images/properties/red-pond-villa/01.jpg" alt="Red Pond Villa">
+            <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
+            <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 27</div>
+        </div>
+
+        <div class="listing-grid">
+            <div class="listing-main">
+                <h2 class="listing-section-title">Beschrijving</h2>
+                <div class="listing-description"><link rel="alternate" hreflang="fr" href="https://sxmdreaminvestments.com/proprietes.html" />
     <link rel="alternate" hreflang="en" href="https://sxmdreaminvestments.com/en/properties.html" />
     <link rel="alternate" hreflang="nl" href="https://sxmdreaminvestments.com/nl/eigenschappen.html" />
     <link rel="canonical" href="https://sxmdreaminvestments.com/nl/vastgoed/red-pond-villa-nl.html" />
@@ -162,148 +203,115 @@
             <h1>Red Pond Villa</h1>
             <div class="property-hero-meta">
                 <span class="property-hero-price">$1,490,000</span>
-                <span class="property-hero-location"><i class="fas fa-map-marker-alt"></i> Red Pond, St. Maarten</span>
-            </div>
-        </div>
-            <div class="hero-slider-nav">
-                <button class="hero-slider-btn" onclick="openLightbox(0)"><i class="fas fa-images"></i> 27 photos</button>
-            </div>
-    </section>
-    <section class="property-content">
-        <div class="property-grid">
-            <div class="property-main">
-                <div class="property-features">
-                    <div class="feature-item"><i class="fas fa-bed"></i><div class="feature-item-text"><span>Slaapkamers</span><strong>4</strong></div></div>
-                    <div class="feature-item"><i class="fas fa-bath"></i><div class="feature-item-text"><span>Badkamers</span><strong>4.5</strong></div></div>
-                    <div class="feature-item"><i class="fas fa-expand"></i><div class="feature-item-text"><span>Oppervlakte</span><strong></strong></div></div>
-                    <div class="feature-item"><i class="fas fa-home"></i><div class="feature-item-text"><span>Type</span><strong>Villa</strong></div></div>
-                </div>
-                                <h2>Photos</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-thumb active" onclick="openLightbox(0)" style="background-image:url('../../images/properties/red-pond-villa/01.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(1)" style="background-image:url('../../images/properties/red-pond-villa/02.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(2)" style="background-image:url('../../images/properties/red-pond-villa/03.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(3)" style="background-image:url('../../images/properties/red-pond-villa/04.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(4)" style="background-image:url('../../images/properties/red-pond-villa/05.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(5)" style="background-image:url('../../images/properties/red-pond-villa/06.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(6)" style="background-image:url('../../images/properties/red-pond-villa/07.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(7)" style="background-image:url('../../images/properties/red-pond-villa/08.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(8)" style="background-image:url('../../images/properties/red-pond-villa/09.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(9)" style="background-image:url('../../images/properties/red-pond-villa/10.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(10)" style="background-image:url('../../images/properties/red-pond-villa/11.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(11)" style="background-image:url('../../images/properties/red-pond-villa/12.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(12)" style="background-image:url('../../images/properties/red-pond-villa/13.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(13)" style="background-image:url('../../images/properties/red-pond-villa/14.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(14)" style="background-image:url('../../images/properties/red-pond-villa/15.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(15)" style="background-image:url('../../images/properties/red-pond-villa/17.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(16)" style="background-image:url('../../images/properties/red-pond-villa/18.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(17)" style="background-image:url('../../images/properties/red-pond-villa/19.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(18)" style="background-image:url('../../images/properties/red-pond-villa/20.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(19)" style="background-image:url('../../images/properties/red-pond-villa/21.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(20)" style="background-image:url('../../images/properties/red-pond-villa/23.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(21)" style="background-image:url('../../images/properties/red-pond-villa/24.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(22)" style="background-image:url('../../images/properties/red-pond-villa/25.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(23)" style="background-image:url('../../images/properties/red-pond-villa/26.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(24)" style="background-image:url('../../images/properties/red-pond-villa/27.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(25)" style="background-image:url('../../images/properties/red-pond-villa/28.jpg')"></div>
-<div class="gallery-thumb" onclick="openLightbox(26)" style="background-image:url('../../images/properties/red-pond-villa/30.jpg')"></div>
+                <span class="property-hero-location"><i class="fas fa-map-marker-alt"></i> Red Pond, St. Maarten</span></div>
 
+                <h2 class="listing-section-title">Informatie</h2>
+                <div class="listing-info-grid">
+                    <div class="listing-info-item"><span class="label">Prijs</span><span class="value">$1,490,000</span></div>
+                    <div class="listing-info-item"><span class="label">Slaapkamers</span><span class="value">4</span></div>
+                    <div class="listing-info-item"><span class="label">Badkamers</span><span class="value">4.5</span></div>
+                    <div class="listing-info-item"><span class="label">Oppervlakte</span><span class="value"></span></div>
+                    <div class="listing-info-item"><span class="label">Type</span><span class="value">Villa</span></div>
+                    <div class="listing-info-item"><span class="label">Locatie</span><span class="value">Terug naar vastgoed</a>
+            <h1>Red Pond Villa</h1>
+            <div class="property-hero-meta">
+                <span class="property-hero-price">$1,490,000</span></div>
+                    <div class="listing-info-item"><span class="label">Status</span><span class="value">Actief</span></div>
                 </div>
-                <h2>Beschrijving</h2>
-                <div class="property-description">
-<p><strong>Uitzonderlijke villa met zeezicht -- Red Pond Estates, Sint Maarten</strong></p>
-<p>Ontdek deze prachtige villa in de <strong>24/7 beveiligde en afgesloten gemeenschap van Red Pond Estates</strong>. Bereikbaar via een privéoprit en omgeven door <strong>weelderige tropische tuinen</strong>, biedt deze woning een uitzonderlijke leefomgeving die privacy, veiligheid en Caribische elegantie combineert.</p>
-<p><strong>Kenmerken</strong>: <strong>3 slaapkamers</strong> met en-suite badkamers die uitkomen op het zwembadterras. <strong>Mahonie keuken met granieten werkbladen</strong>. Lichte woonkamer met doorloop naar een overdekt terras. <strong>Onafhankelijk gastenverblijf</strong> (4e slaapkamer) -- ideaal voor verhuur of familie.</p>
-<p><strong>Voorzieningen</strong>: <strong>Zoutwaterzwembad</strong> met automatische vulling, garage, elektrische poort, twee watertanks, <strong>automatische dieselgenerator</strong>, <strong>orkaanbestendige ramen</strong>. <strong>Recente renovaties</strong>: versterkt aluminium dak, volledige elektrische installatie, impactbestendige ramen, nieuwe tegels, uitgeruste keuken.</p>
-<p><strong>Instapklaar</strong>: Verkocht <strong>volledig gemeubileerd en uitgerust</strong>. De wijk <strong>Red Pond</strong> biedt privacy, verfrissende briesjes en <strong>spectaculair uitzicht over de Atlantische Oceaan en St. Barths</strong>. Op slechts 10-15 minuten van <strong>Philipsburg</strong> en <strong>Orient Bay</strong>.</p>
-                </div>
-                
-                <h2>Kenmerken</h2>
-                <table class="details-table">
-                    <tr><th>Locatie</th><td>Red Pond, St. Maarten</td></tr>
-                    <tr><th>Type</th><td>Villa</td></tr>
-                    <tr><th>Bouwjaar</th><td></td></tr>
-                    <tr><th>Uitzicht</th><td>Oceaan, heuvels, naburige eilanden</td></tr>
-                    <tr><th>Airco</th><td>Splits</td></tr>
-                    <tr><th>Zwembad</th><td>Ja</td></tr>
-                </table>
+
             </div>
-            <div class="property-sidebar">
-                <div class="contact-card">
-                    <h3>Geïnteresseerd?</h3>
-                    <p>Ons team staat klaar om u te helpen.</p>
-                    <div class="agent-info">
-                        <div class="agent-avatar"><i class="fas fa-user"></i></div>
-                        <div class="agent-details"><h4>Sacha Mimouni</h4><span>SXM Dream Investments</span></div>
+
+            <div class="listing-sidebar">
+                <div class="showing-card">
+                    <h3>Bezichtiging Aanvragen</h3>
+                    <p class="subtitle">Neem rechtstreeks contact op met de makelaar</p>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>Voornaam</label>
+                            <input type="text" placeholder="Uw voornaam">
+                        </div>
+                        <div class="form-field">
+                            <label>Achternaam</label>
+                            <input type="text" placeholder="Uw achternaam">
+                        </div>
                     </div>
-                    <a href="mailto:sxm.dream.investments@gmail.com" class="contact-btn contact-btn-primary"><i class="fas fa-envelope"></i> Contact</a>
-                    <a href="tel:+17215237855" class="contact-btn contact-btn-secondary"><i class="fas fa-phone"></i> +1 (721) 523 7855</a>
-                    <a href="https://wa.me/17215237855" class="contact-btn contact-btn-secondary" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label>Telefoon</label>
+                            <input type="tel" placeholder="+1 (xxx) xxx-xxxx">
+                        </div>
+                        <div class="form-field">
+                            <label>Email</label>
+                            <input type="email" placeholder="uw@email.com">
+                        </div>
+                    </div>
+                    <div class="form-field-full">
+                        <label>Bericht</label>
+                        <textarea placeholder="Ik wil graag meer weten over dit vastgoed..."></textarea>
+                    </div>
+                    <button class="showing-btn">Bezichtiging Aanvragen</button>
+                    <div class="agent-card">
+                        <div class="agent-photo"><i class="fas fa-user"></i></div>
+                        <div class="agent-card-info">
+                            <h4>Sacha Mimouni</h4>
+                            <a href="mailto:sxm.dream.investments@gmail.com">sxm.dream.investments@gmail.com</a>
+                            <a href="tel:+17215237855">+1 (721) 523 7855</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
     <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
         <button class="lightbox-close" onclick="closeLightbox(event)">&times;</button>
         <button class="lightbox-prev" onclick="prevSlide(event)">&#10094;</button>
         <button class="lightbox-next" onclick="nextSlide(event)">&#10095;</button>
         <div class="lightbox-container">
-            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/01.jpg" alt="Red Pond Villa - Photo 1"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/02.jpg" alt="Red Pond Villa - Photo 2"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/03.jpg" alt="Red Pond Villa - Photo 3"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/04.jpg" alt="Red Pond Villa - Photo 4"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/05.jpg" alt="Red Pond Villa - Photo 5"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/06.jpg" alt="Red Pond Villa - Photo 6"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/07.jpg" alt="Red Pond Villa - Photo 7"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/08.jpg" alt="Red Pond Villa - Photo 8"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/09.jpg" alt="Red Pond Villa - Photo 9"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/10.jpg" alt="Red Pond Villa - Photo 10"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/11.jpg" alt="Red Pond Villa - Photo 11"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/12.jpg" alt="Red Pond Villa - Photo 12"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/13.jpg" alt="Red Pond Villa - Photo 13"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/14.jpg" alt="Red Pond Villa - Photo 14"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/15.jpg" alt="Red Pond Villa - Photo 15"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/17.jpg" alt="Red Pond Villa - Photo 16"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/18.jpg" alt="Red Pond Villa - Photo 17"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/19.jpg" alt="Red Pond Villa - Photo 18"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/20.jpg" alt="Red Pond Villa - Photo 19"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/21.jpg" alt="Red Pond Villa - Photo 20"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/23.jpg" alt="Red Pond Villa - Photo 21"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/24.jpg" alt="Red Pond Villa - Photo 22"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/25.jpg" alt="Red Pond Villa - Photo 23"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/26.jpg" alt="Red Pond Villa - Photo 24"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/27.jpg" alt="Red Pond Villa - Photo 25"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/28.jpg" alt="Red Pond Villa - Photo 26"></div>
-<div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/30.jpg" alt="Red Pond Villa - Photo 27"></div>
-
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/01.jpg" alt="Photo 1"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/02.jpg" alt="Photo 2"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/03.jpg" alt="Photo 3"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/04.jpg" alt="Photo 4"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/05.jpg" alt="Photo 5"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/06.jpg" alt="Photo 6"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/07.jpg" alt="Photo 7"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/08.jpg" alt="Photo 8"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/09.jpg" alt="Photo 9"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/10.jpg" alt="Photo 10"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/11.jpg" alt="Photo 11"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/12.jpg" alt="Photo 12"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/13.jpg" alt="Photo 13"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/14.jpg" alt="Photo 14"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/15.jpg" alt="Photo 15"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/17.jpg" alt="Photo 16"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/18.jpg" alt="Photo 17"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/19.jpg" alt="Photo 18"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/20.jpg" alt="Photo 19"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/21.jpg" alt="Photo 20"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/23.jpg" alt="Photo 21"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/24.jpg" alt="Photo 22"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/25.jpg" alt="Photo 23"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/26.jpg" alt="Photo 24"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/27.jpg" alt="Photo 25"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/28.jpg" alt="Photo 26"></div>
+            <div class="lightbox-slide"><img src="../../images/properties/red-pond-villa/30.jpg" alt="Photo 27"></div>
         </div>
         <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 27</div>
     </div>
-    <!-- Footer -->
+
     <footer>
         <div class="footer-grid">
             <div class="footer-brand">
-                <a href="../index.html" class="logo">
-                    <img src="../../images/logos/logo-white.png" alt="SXM Dream Investments">
-                </a>
-                <p>Uw betrouwbare partner voor luxe vastgoed op Sint Maarten. Lokale expertise, internationaal netwerk, uitzonderlijke meertalige service.</p>
+                <a href="../index.html" class="logo"><img src="../../images/logos/logo-white.png" alt="SXM Dream Investments"></a>
+                <p>Uw betrouwbare partner voor luxe vastgoed op Sint Maarten.</p>
             </div>
             <div class="footer-column">
                 <h4 class="footer-title">Navigatie</h4>
                 <ul class="footer-links">
                     <li><a href="../index.html">Home</a></li>
-                    <li><a href="../eigenschappen.html">Onze Woningen</a></li>
+                    <li><a href="../eigenschappen.html">Ons Vastgoed</a></li>
                     <li><a href="../sint-maarten.html">Sint Maarten</a></li>
-                    <li><a href="../verkopen.html">Verkoop uw woning</a></li>
-                </ul>
-            </div>
-            <div class="footer-column">
-                <h4 class="footer-title">Woningtypes</h4>
-                <ul class="footer-links">
-                    <li><a href="../eigenschappen.html">Villa's</a></li>
-                    <li><a href="../eigenschappen.html">Penthouses</a></li>
-                    <li><a href="../eigenschappen.html">Condo's</a></li>
-                    <li><a href="../eigenschappen.html">Appartementen</a></li>
+                    <li><a href="../verkopen.html">Uw Woning Verkopen</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -320,23 +328,26 @@
                     <li><a href="../../en/index.html">English</a></li>
                     <li><a href="../index.html">Nederlands</a></li>
                 </ul>
-                <p style="color: rgba(255,255,255,0.7); margin-top: 1.5rem; font-size: 0.9rem;">
-                    Service beschikbaar in:<br>
-                    FR | EN | ES | NL | RU | IT
-                </p>
             </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2026 SXM Dream Investments. Alle rechten voorbehouden.</p>
-            <div class="footer-bottom-links">
-                <a href="#">Juridische Kennisgeving</a>
-                <a href="#">Privacybeleid</a>
-            </div>
         </div>
     </footer>
     <script src="../../js/main.js"></script>
     <script>
+    var nb = document.getElementById('navbar');
+    nb.classList.add('scrolled');
+    window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
+        var heroImages = ['../../images/properties/red-pond-villa/01.jpg','../../images/properties/red-pond-villa/02.jpg','../../images/properties/red-pond-villa/03.jpg','../../images/properties/red-pond-villa/04.jpg','../../images/properties/red-pond-villa/05.jpg','../../images/properties/red-pond-villa/06.jpg','../../images/properties/red-pond-villa/07.jpg','../../images/properties/red-pond-villa/08.jpg','../../images/properties/red-pond-villa/09.jpg','../../images/properties/red-pond-villa/10.jpg','../../images/properties/red-pond-villa/11.jpg','../../images/properties/red-pond-villa/12.jpg','../../images/properties/red-pond-villa/13.jpg','../../images/properties/red-pond-villa/14.jpg','../../images/properties/red-pond-villa/15.jpg','../../images/properties/red-pond-villa/17.jpg','../../images/properties/red-pond-villa/18.jpg','../../images/properties/red-pond-villa/19.jpg','../../images/properties/red-pond-villa/20.jpg','../../images/properties/red-pond-villa/21.jpg','../../images/properties/red-pond-villa/23.jpg','../../images/properties/red-pond-villa/24.jpg','../../images/properties/red-pond-villa/25.jpg','../../images/properties/red-pond-villa/26.jpg','../../images/properties/red-pond-villa/27.jpg','../../images/properties/red-pond-villa/28.jpg','../../images/properties/red-pond-villa/30.jpg'];
+        var heroIdx = 0;
+        window.heroNav = function(dir) {
+            heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;
+            document.getElementById('heroImg').src = heroImages[heroIdx];
+            document.getElementById('heroCounter').textContent = heroIdx + 1;
+        };
+        document.getElementById('heroImg').addEventListener('click', function() { openLightbox(heroIdx); });
         var lbCurrentSlide = 0;
         var lbSlides = document.querySelectorAll('.lightbox-slide');
         var lbTotal = lbSlides.length;
@@ -368,9 +379,7 @@
         var lbTouchStartX = 0;
         var lbContainer = document.getElementById('lightbox');
         if (lbContainer) {
-            lbContainer.addEventListener('touchstart', function(e) {
-                lbTouchStartX = e.touches[0].clientX;
-            }, { passive: true });
+            lbContainer.addEventListener('touchstart', function(e) { lbTouchStartX = e.touches[0].clientX; }, { passive: true });
             lbContainer.addEventListener('touchend', function(e) {
                 var dx = e.changedTouches[0].clientX - lbTouchStartX;
                 if (Math.abs(dx) > 50) {
@@ -383,8 +392,6 @@
         if (lbSlides.length > 0) lbShow();
     })();
     </script>
-
-    <!-- WhatsApp Float -->
     <a href="https://wa.me/17215237855" target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
