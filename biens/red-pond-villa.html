@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/red-pond-villa/01.jpg" alt="Villa Red Pond">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 27</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 25</div>
         </div>
 
         <div class="listing-grid">
@@ -187,11 +187,8 @@
         <button class="lightbox-next" onclick="nextSlide(event)">&#10095;</button>
         <div class="lightbox-container">
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/01.jpg" alt="Photo 1"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/02.jpg" alt="Photo 2"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/03.jpg" alt="Photo 3"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/04.jpg" alt="Photo 4"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/05.jpg" alt="Photo 5"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/06.jpg" alt="Photo 6"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/07.jpg" alt="Photo 7"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/08.jpg" alt="Photo 8"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/09.jpg" alt="Photo 9"></div>
@@ -201,20 +198,18 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/13.jpg" alt="Photo 13"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/14.jpg" alt="Photo 14"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/15.jpg" alt="Photo 15"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/16.jpg" alt="Photo 16"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/17.jpg" alt="Photo 17"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/18.jpg" alt="Photo 18"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/19.jpg" alt="Photo 19"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/20.jpg" alt="Photo 20"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/21.jpg" alt="Photo 21"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/22.jpg" alt="Photo 22"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/23.jpg" alt="Photo 23"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/24.jpg" alt="Photo 24"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/25.jpg" alt="Photo 25"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/26.jpg" alt="Photo 26"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/red-pond-villa/27.jpg" alt="Photo 27"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 27</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 25</div>
     </div>
 
     <footer>
@@ -259,8 +254,9 @@
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
         var heroImages = [];
+        var removed = [2, 5, 6];
         for (var i = 1; i <= 27; i++) {
-            heroImages.push('../images/properties_clean/red-pond-villa/' + String(i).padStart(2,'0') + '.jpg');
+            if (removed.indexOf(i) === -1) heroImages.push('../images/properties_clean/red-pond-villa/' + String(i).padStart(2,'0') + '.jpg');
         }
         var heroIdx = 0;
         window.heroNav = function(dir) {

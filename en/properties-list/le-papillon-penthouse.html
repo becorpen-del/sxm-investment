@@ -109,7 +109,7 @@
             <img id="heroImg" src="../../images/properties_clean/le-papillon-penthouse/01.jpg" alt="Le Papillon Penthouse">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 30</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 32</div>
         </div>
 
         <div class="listing-grid">
@@ -229,9 +229,8 @@
             <div class="lightbox-slide"><img src="../../images/properties_clean/le-papillon-penthouse/27.jpg" alt="Photo 27"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/le-papillon-penthouse/28.jpg" alt="Photo 28"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/le-papillon-penthouse/29.jpg" alt="Photo 29"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/le-papillon-penthouse/30.jpg" alt="Photo 30"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 30</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 32</div>
     </div>
 
     <footer>
@@ -275,7 +274,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = ['../../images/properties_clean/le-papillon-penthouse/01.jpg','../../images/properties_clean/le-papillon-penthouse/02.jpg','../../images/properties_clean/le-papillon-penthouse/03.jpg','../../images/properties_clean/le-papillon-penthouse/04.jpg','../../images/properties_clean/le-papillon-penthouse/05.jpg','../../images/properties_clean/le-papillon-penthouse/06.jpg','../../images/properties_clean/le-papillon-penthouse/07.jpg','../../images/properties_clean/le-papillon-penthouse/08.jpg','../../images/properties_clean/le-papillon-penthouse/09.jpg','../../images/properties_clean/le-papillon-penthouse/10.jpg','../../images/properties_clean/le-papillon-penthouse/11.jpg','../../images/properties_clean/le-papillon-penthouse/12.jpg','../../images/properties_clean/le-papillon-penthouse/13.jpg','../../images/properties_clean/le-papillon-penthouse/14.jpg','../../images/properties_clean/le-papillon-penthouse/15.jpg','../../images/properties_clean/le-papillon-penthouse/16.jpg','../../images/properties_clean/le-papillon-penthouse/17.jpg','../../images/properties_clean/le-papillon-penthouse/18.jpg','../../images/properties_clean/le-papillon-penthouse/19.jpg','../../images/properties_clean/le-papillon-penthouse/20.jpg','../../images/properties_clean/le-papillon-penthouse/21.jpg','../../images/properties_clean/le-papillon-penthouse/22.jpg','../../images/properties_clean/le-papillon-penthouse/23.jpg','../../images/properties_clean/le-papillon-penthouse/24.jpg','../../images/properties_clean/le-papillon-penthouse/25.jpg','../../images/properties_clean/le-papillon-penthouse/26.jpg','../../images/properties_clean/le-papillon-penthouse/27.jpg','../../images/properties_clean/le-papillon-penthouse/28.jpg','../../images/properties_clean/le-papillon-penthouse/29.jpg','../../images/properties_clean/le-papillon-penthouse/30.jpg'];
+        var heroImages = ['../../images/properties_clean/le-papillon-penthouse/01.jpg','../../images/properties_clean/le-papillon-penthouse/02.jpg','../../images/properties_clean/le-papillon-penthouse/03.jpg','../../images/properties_clean/le-papillon-penthouse/04.jpg','../../images/properties_clean/le-papillon-penthouse/05.jpg','../../images/properties_clean/le-papillon-penthouse/06.jpg','../../images/properties_clean/le-papillon-penthouse/07.jpg','../../images/properties_clean/le-papillon-penthouse/08.jpg','../../images/properties_clean/le-papillon-penthouse/09.jpg','../../images/properties_clean/le-papillon-penthouse/10.jpg','../../images/properties_clean/le-papillon-penthouse/11.jpg','../../images/properties_clean/le-papillon-penthouse/12.jpg','../../images/properties_clean/le-papillon-penthouse/13.jpg','../../images/properties_clean/le-papillon-penthouse/14.jpg','../../images/properties_clean/le-papillon-penthouse/15.jpg','../../images/properties_clean/le-papillon-penthouse/16.jpg','../../images/properties_clean/le-papillon-penthouse/17.jpg','../../images/properties_clean/le-papillon-penthouse/18.jpg','../../images/properties_clean/le-papillon-penthouse/19.jpg','../../images/properties_clean/le-papillon-penthouse/20.jpg','../../images/properties_clean/le-papillon-penthouse/21.jpg','../../images/properties_clean/le-papillon-penthouse/22.jpg','../../images/properties_clean/le-papillon-penthouse/23.jpg','../../images/properties_clean/le-papillon-penthouse/24.jpg','../../images/properties_clean/le-papillon-penthouse/25.jpg','../../images/properties_clean/le-papillon-penthouse/26.jpg','../../images/properties_clean/le-papillon-penthouse/27.jpg','../../images/properties_clean/le-papillon-penthouse/28.jpg','../../images/properties_clean/le-papillon-penthouse/29.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

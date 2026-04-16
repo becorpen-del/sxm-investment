@@ -184,9 +184,7 @@
         <div class="lightbox-container">
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/01.jpg" alt="Photo 1"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/02.jpg" alt="Photo 2"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/03.jpg" alt="Photo 3"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/04.jpg" alt="Photo 4"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/05.jpg" alt="Photo 5"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/06.jpg" alt="Photo 6"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/07.jpg" alt="Photo 7"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/08.jpg" alt="Photo 8"></div>
@@ -195,11 +193,9 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/11.jpg" alt="Photo 11"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/12.jpg" alt="Photo 12"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/13.jpg" alt="Photo 13"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/14.jpg" alt="Photo 14"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/15.jpg" alt="Photo 15"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/16.jpg" alt="Photo 16"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/17.jpg" alt="Photo 17"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/18.jpg" alt="Photo 18"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/19.jpg" alt="Photo 19"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/20.jpg" alt="Photo 20"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/21.jpg" alt="Photo 21"></div>
@@ -208,7 +204,7 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/24.jpg" alt="Photo 24"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/aquamarina-villa/25.jpg" alt="Photo 25"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 25</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 21</div>
     </div>
 
     <footer>
@@ -253,8 +249,9 @@
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
         var heroImages = [];
+        var removed = [3, 5, 14, 18];
         for (var i = 1; i <= 25; i++) {
-            heroImages.push('../images/properties_clean/aquamarina-villa/' + String(i).padStart(2,'0') + '.jpg');
+            if (removed.indexOf(i) === -1) heroImages.push('../images/properties_clean/aquamarina-villa/' + String(i).padStart(2,'0') + '.jpg');
         }
         var heroIdx = 0;
         window.heroNav = function(dir) {

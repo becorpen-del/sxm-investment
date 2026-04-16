@@ -190,10 +190,8 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/beachfront-multi-unit-residence/06.jpg" alt="Photo 6"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/beachfront-multi-unit-residence/07.jpg" alt="Photo 7"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/beachfront-multi-unit-residence/08.jpg" alt="Photo 8"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/beachfront-multi-unit-residence/09.jpg" alt="Photo 9"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/beachfront-multi-unit-residence/10.jpg" alt="Photo 10"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 10</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 8</div>
     </div>
 
     <footer>
@@ -238,8 +236,9 @@
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
         var heroImages = [];
+        var removed = [9, 10];
         for (var i = 1; i <= 10; i++) {
-            heroImages.push('../images/properties_clean/beachfront-multi-unit-residence/' + String(i).padStart(2,'0') + '.jpg');
+            if (removed.indexOf(i) === -1) heroImages.push('../images/properties_clean/beachfront-multi-unit-residence/' + String(i).padStart(2,'0') + '.jpg');
         }
         var heroIdx = 0;
         window.heroNav = function(dir) {

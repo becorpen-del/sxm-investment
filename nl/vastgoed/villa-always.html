@@ -109,7 +109,7 @@
             <img id="heroImg" src="../../images/properties_clean/villa-always/01.jpg" alt="Villa Always">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 25</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 27</div>
         </div>
 
         <div class="listing-grid">
@@ -210,7 +210,6 @@
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-always/08.jpg" alt="Photo 8"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-always/09.jpg" alt="Photo 9"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-always/10.jpg" alt="Photo 10"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/villa-always/11.jpg" alt="Photo 11"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-always/12.jpg" alt="Photo 12"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-always/13.jpg" alt="Photo 13"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-always/14.jpg" alt="Photo 14"></div>
@@ -226,7 +225,7 @@
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-always/24.jpg" alt="Photo 24"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-always/25.jpg" alt="Photo 25"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 25</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 27</div>
     </div>
 
     <footer>
@@ -270,7 +269,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = ['../../images/properties_clean/villa-always/01.jpg','../../images/properties_clean/villa-always/02.jpg','../../images/properties_clean/villa-always/03.jpg','../../images/properties_clean/villa-always/04.jpg','../../images/properties_clean/villa-always/05.jpg','../../images/properties_clean/villa-always/06.jpg','../../images/properties_clean/villa-always/07.jpg','../../images/properties_clean/villa-always/08.jpg','../../images/properties_clean/villa-always/09.jpg','../../images/properties_clean/villa-always/10.jpg','../../images/properties_clean/villa-always/11.jpg','../../images/properties_clean/villa-always/12.jpg','../../images/properties_clean/villa-always/13.jpg','../../images/properties_clean/villa-always/14.jpg','../../images/properties_clean/villa-always/15.jpg','../../images/properties_clean/villa-always/16.jpg','../../images/properties_clean/villa-always/17.jpg','../../images/properties_clean/villa-always/18.jpg','../../images/properties_clean/villa-always/19.jpg','../../images/properties_clean/villa-always/20.jpg','../../images/properties_clean/villa-always/21.jpg','../../images/properties_clean/villa-always/22.jpg','../../images/properties_clean/villa-always/23.jpg','../../images/properties_clean/villa-always/24.jpg','../../images/properties_clean/villa-always/25.jpg'];
+        var heroImages = ['../../images/properties_clean/villa-always/01.jpg','../../images/properties_clean/villa-always/02.jpg','../../images/properties_clean/villa-always/03.jpg','../../images/properties_clean/villa-always/04.jpg','../../images/properties_clean/villa-always/05.jpg','../../images/properties_clean/villa-always/06.jpg','../../images/properties_clean/villa-always/07.jpg','../../images/properties_clean/villa-always/08.jpg','../../images/properties_clean/villa-always/09.jpg','../../images/properties_clean/villa-always/10.jpg','../../images/properties_clean/villa-always/12.jpg','../../images/properties_clean/villa-always/13.jpg','../../images/properties_clean/villa-always/14.jpg','../../images/properties_clean/villa-always/15.jpg','../../images/properties_clean/villa-always/16.jpg','../../images/properties_clean/villa-always/17.jpg','../../images/properties_clean/villa-always/18.jpg','../../images/properties_clean/villa-always/19.jpg','../../images/properties_clean/villa-always/20.jpg','../../images/properties_clean/villa-always/21.jpg','../../images/properties_clean/villa-always/22.jpg','../../images/properties_clean/villa-always/23.jpg','../../images/properties_clean/villa-always/24.jpg','../../images/properties_clean/villa-always/25.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;
