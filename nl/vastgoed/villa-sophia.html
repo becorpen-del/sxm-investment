@@ -109,7 +109,7 @@
         </div>
 
         <div class="listing-hero">
-            <img id="heroImg" src="../../images/properties_clean/villa-sophia/10.jpg" alt="Villa Sophia">
+            <img id="heroImg" src="../../images/properties_clean/villa-sophia/05.jpg" alt="Villa Sophia">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
             <div class="hero-counter"><span id="heroCounter">1</span> / 26</div>
@@ -183,11 +183,11 @@
         <button class="lightbox-prev" onclick="prevSlide(event)">&#10094;</button>
         <button class="lightbox-next" onclick="nextSlide(event)">&#10095;</button>
         <div class="lightbox-container">
+            <div class="lightbox-slide"><img src="../../images/properties_clean/villa-sophia/05.jpg" alt="Photo 4"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/villa-sophia/03.jpg" alt="Photo 2"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-sophia/10.jpg" alt="Photo 9"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-sophia/02.jpg" alt="Photo 1"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/villa-sophia/03.jpg" alt="Photo 2"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-sophia/04.jpg" alt="Photo 3"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/villa-sophia/05.jpg" alt="Photo 4"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-sophia/06.jpg" alt="Photo 5"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-sophia/07.jpg" alt="Photo 6"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/villa-sophia/08.jpg" alt="Photo 7"></div>
@@ -254,7 +254,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = ['../../images/properties_clean/villa-sophia/10.jpg','../../images/properties_clean/villa-sophia/02.jpg','../../images/properties_clean/villa-sophia/03.jpg','../../images/properties_clean/villa-sophia/04.jpg','../../images/properties_clean/villa-sophia/05.jpg','../../images/properties_clean/villa-sophia/06.jpg','../../images/properties_clean/villa-sophia/07.jpg','../../images/properties_clean/villa-sophia/08.jpg','../../images/properties_clean/villa-sophia/09.jpg','../../images/properties_clean/villa-sophia/11.jpg','../../images/properties_clean/villa-sophia/12.jpg','../../images/properties_clean/villa-sophia/13.jpg','../../images/properties_clean/villa-sophia/14.jpg','../../images/properties_clean/villa-sophia/15.jpg','../../images/properties_clean/villa-sophia/16.jpg','../../images/properties_clean/villa-sophia/17.jpg','../../images/properties_clean/villa-sophia/19.jpg','../../images/properties_clean/villa-sophia/20.jpg','../../images/properties_clean/villa-sophia/21.jpg','../../images/properties_clean/villa-sophia/22.jpg','../../images/properties_clean/villa-sophia/23.jpg','../../images/properties_clean/villa-sophia/24.jpg','../../images/properties_clean/villa-sophia/25.jpg','../../images/properties_clean/villa-sophia/27.jpg','../../images/properties_clean/villa-sophia/28.jpg','../../images/properties_clean/villa-sophia/30.jpg'];
+        var heroImages = ['../../images/properties_clean/villa-sophia/05.jpg','../../images/properties_clean/villa-sophia/03.jpg','../../images/properties_clean/villa-sophia/10.jpg','../../images/properties_clean/villa-sophia/02.jpg','../../images/properties_clean/villa-sophia/04.jpg','../../images/properties_clean/villa-sophia/06.jpg','../../images/properties_clean/villa-sophia/07.jpg','../../images/properties_clean/villa-sophia/08.jpg','../../images/properties_clean/villa-sophia/09.jpg','../../images/properties_clean/villa-sophia/11.jpg','../../images/properties_clean/villa-sophia/12.jpg','../../images/properties_clean/villa-sophia/13.jpg','../../images/properties_clean/villa-sophia/14.jpg','../../images/properties_clean/villa-sophia/15.jpg','../../images/properties_clean/villa-sophia/16.jpg','../../images/properties_clean/villa-sophia/17.jpg','../../images/properties_clean/villa-sophia/19.jpg','../../images/properties_clean/villa-sophia/20.jpg','../../images/properties_clean/villa-sophia/21.jpg','../../images/properties_clean/villa-sophia/22.jpg','../../images/properties_clean/villa-sophia/23.jpg','../../images/properties_clean/villa-sophia/24.jpg','../../images/properties_clean/villa-sophia/25.jpg','../../images/properties_clean/villa-sophia/27.jpg','../../images/properties_clean/villa-sophia/28.jpg','../../images/properties_clean/villa-sophia/30.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;
