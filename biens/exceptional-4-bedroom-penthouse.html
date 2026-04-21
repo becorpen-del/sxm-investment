@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/exceptional-4-bedroom-penthouse/01.jpg" alt="Penthouse exceptionnel 4 chambres">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 30</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 29</div>
         </div>
 
         <div class="listing-grid">
@@ -195,7 +195,6 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/exceptional-4-bedroom-penthouse/06.jpg" alt="Photo 6"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/exceptional-4-bedroom-penthouse/07.jpg" alt="Photo 7"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/exceptional-4-bedroom-penthouse/08.jpg" alt="Photo 8"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/exceptional-4-bedroom-penthouse/09.jpg" alt="Photo 9"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/exceptional-4-bedroom-penthouse/10.jpg" alt="Photo 10"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/exceptional-4-bedroom-penthouse/11.jpg" alt="Photo 11"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/exceptional-4-bedroom-penthouse/12.jpg" alt="Photo 12"></div>
@@ -218,7 +217,7 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/exceptional-4-bedroom-penthouse/29.jpg" alt="Photo 29"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/exceptional-4-bedroom-penthouse/30.jpg" alt="Photo 30"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 30</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 29</div>
     </div>
 
     <footer>
@@ -262,10 +261,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 30; i++) {
-            heroImages.push('../images/properties_clean/exceptional-4-bedroom-penthouse/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/exceptional-4-bedroom-penthouse/01.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/02.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/03.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/04.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/05.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/06.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/07.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/08.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/10.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/11.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/12.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/13.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/14.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/15.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/16.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/17.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/18.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/19.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/20.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/21.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/22.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/23.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/24.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/25.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/26.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/27.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/28.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/29.jpg','../images/properties_clean/exceptional-4-bedroom-penthouse/30.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

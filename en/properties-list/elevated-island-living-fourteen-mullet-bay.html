@@ -33,10 +33,13 @@
         .listing-section-title:first-child { margin-top:0; }
         .listing-description { line-height:1.8; color:#444; font-size:0.95rem; }
         .listing-description p { margin-bottom:1rem; }
+        .listing-description h3 { font-family:'Playfair Display',serif; font-style:italic; font-size:1.1rem; color:var(--navy); margin:1.5rem 0 0.5rem; }
         .listing-info-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; }
         .listing-info-item { display:flex; justify-content:space-between; padding:0.75rem 1rem; border-bottom:1px solid #eee; }
         .listing-info-item .label { color:var(--gray); font-size:0.9rem; }
         .listing-info-item .value { color:var(--navy); font-weight:600; font-size:0.9rem; }
+        .listing-features { display:flex; flex-wrap:wrap; gap:0.6rem; }
+        .feature-pill { border:1.5px solid var(--navy); color:var(--navy); padding:0.4rem 1rem; border-radius:20px; font-size:0.8rem; font-weight:500; }
         .listing-sidebar { position:sticky; top:100px; align-self:start; }
         .showing-card { background:white; border-radius:12px; padding:2rem; box-shadow:0 5px 30px rgba(0,0,0,0.08); border:1px solid #eee; }
         .showing-card h3 { font-family:'Playfair Display',serif; font-style:italic; font-size:1.3rem; color:var(--navy); margin-bottom:0.5rem; }
@@ -106,36 +109,19 @@
         </div>
 
         <div class="listing-hero">
-            <img id="heroImg" src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/01.jpg" alt="Elevated Island Living - Fourteen Mullet Bay">
+            <img id="heroImg" src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/02.jpg" alt="Elevated Island Living - Fourteen Mullet Bay">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 25</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 20</div>
         </div>
 
         <div class="listing-grid">
             <div class="listing-main">
                 <h2 class="listing-section-title">Description</h2>
-                <div class="listing-description"></head>
-<body>
-    <nav class="navbar scrolled" id="navbar">
-        <a href="../index.html" class="logo">
-            <img src="../../images/logos/logo-black.png" alt="SXM Dream Investments" class="logo-black">
-        </a>
-        <ul class="nav-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../properties.html">Properties</a></li>
-            <li><a href="../st-martin.html">St. Martin</a></li>
-            <li><a href="../sell.html">Sell</a></li>
-            <li><a href="../contact.html" class="nav-cta">Contact Us</a></li>
-        </ul>
-    </nav>
-    <section class="property-hero">
-        <div class="property-hero-content">
-            <a href="../properties.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to properties</a>
-            <h1>Elevated Island Living - Fourteen Mullet Bay</h1>
-            <div class="property-hero-meta">
-                <span class="property-hero-price">$650,000</span>
-                <span class="property-hero-location"><i class="fas fa-map-marker-alt"></i> Cupecoy</span></div>
+                <div class="listing-description"><p>Within the prestigious <strong>Fourteen at Mullet Bay</strong> in <strong>Cupecoy</strong>, this immaculate <strong>one-bedroom</strong> residence presents an excellent opportunity in the <strong>St. Martin</strong> real estate market. Positioned on the <strong>5th floor</strong> of one of the island's most desirable modern developments, the condo enjoys sweeping views of <strong>Mullet Bay Golf Course</strong> and the <strong>Caribbean Sea</strong>. Just steps from <strong>Mullet Bay Beach</strong> and minutes from <strong>Porto Cupecoy</strong> marina, this residence offers the perfect balance of modern living, lifestyle convenience, and strong investment potential.</p>
+<p>The residence spans approximately <strong>90 m² (968 sq ft)</strong> and features a bright, contemporary interior designed for comfort and functionality. Ceramic tile flooring and <strong>air conditioning</strong> throughout ensure year-round comfort, while the open-concept living and dining areas create a spacious and welcoming environment. Large <strong>sliding doors</strong> open onto a <strong>private furnished balcony</strong> with elevated ocean and golf course views, enhancing the indoor-outdoor Caribbean living experience.</p>
+<p>Sold <strong>fully furnished</strong> and turnkey, this residence is ready for immediate occupancy or rental use. <strong>Fourteen at Mullet Bay</strong> is widely recognized as one of the most sought-after new condominium developments in St. Martin, with modern construction, premium shared amenities, a full backup generator, and on-site security within a well-managed environment.</p>
+<p>Located directly next to <strong>Mullet Bay Beach</strong> and the island's only golf course, the development consistently attracts strong demand from both long-term residents and luxury vacation renters. With estimated long-term rental potential of approximately <strong>$2,800 per month</strong>, this residence represents a compelling investment combining lifestyle enjoyment with reliable income potential.</p></div>
 
                 <h2 class="listing-section-title">Details</h2>
                 <div class="listing-info-grid">
@@ -144,10 +130,7 @@
                     <div class="listing-info-item"><span class="label">Bathrooms</span><span class="value">1</span></div>
                     <div class="listing-info-item"><span class="label">Surface</span><span class="value">90 sqft</span></div>
                     <div class="listing-info-item"><span class="label">Type</span><span class="value">-</span></div>
-                    <div class="listing-info-item"><span class="label">Location</span><span class="value">Back to properties</a>
-            <h1>Elevated Island Living - Fourteen Mullet Bay</h1>
-            <div class="property-hero-meta">
-                <span class="property-hero-price">$650,000</span></div>
+                    <div class="listing-info-item"><span class="label">Location</span><span class="value">Cupecoy</span></div>
                     <div class="listing-info-item"><span class="label">Status</span><span class="value">Active</span></div>
                 </div>
 
@@ -200,18 +183,15 @@
         <button class="lightbox-prev" onclick="prevSlide(event)">&#10094;</button>
         <button class="lightbox-next" onclick="nextSlide(event)">&#10095;</button>
         <div class="lightbox-container">
-            <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/01.jpg" alt="Photo 1"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/02.jpg" alt="Photo 2"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/03.jpg" alt="Photo 3"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/04.jpg" alt="Photo 4"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/05.jpg" alt="Photo 5"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/06.jpg" alt="Photo 6"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/07.jpg" alt="Photo 7"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/08.jpg" alt="Photo 8"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/09.jpg" alt="Photo 9"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/10.jpg" alt="Photo 10"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/11.jpg" alt="Photo 11"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/12.jpg" alt="Photo 12"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/13.jpg" alt="Photo 13"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/14.jpg" alt="Photo 14"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/15.jpg" alt="Photo 15"></div>
@@ -222,11 +202,9 @@
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/20.jpg" alt="Photo 20"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/21.jpg" alt="Photo 21"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/22.jpg" alt="Photo 22"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/23.jpg" alt="Photo 23"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/24.jpg" alt="Photo 24"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/25.jpg" alt="Photo 25"></div>
-        </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 25</div>
+            </div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 20</div>
     </div>
 
     <footer>
@@ -241,7 +219,7 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../properties.html">Our Properties</a></li>
                     <li><a href="../st-martin.html">St. Martin</a></li>
-                    <li><a href="../sell.html">Sell Your Property</a></li>
+                    <li><a href="../sell.html">Sell your property</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -254,9 +232,9 @@
             <div class="footer-column">
                 <h4 class="footer-title">Languages</h4>
                 <ul class="footer-links">
-                    <li><a href="../../index.html">Français</a></li>
+                    <li><a href="../../index.html">French</a></li>
                     <li><a href="../index.html">English</a></li>
-                    <li><a href="../../nl/index.html">Nederlands</a></li>
+                    <li><a href="../../nl/index.html">Dutch</a></li>
                 </ul>
             </div>
         </div>
@@ -270,7 +248,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = ['../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/01.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/02.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/03.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/04.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/05.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/06.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/07.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/08.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/09.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/10.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/11.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/12.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/13.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/14.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/15.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/16.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/17.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/18.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/19.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/20.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/21.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/22.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/23.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/24.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/25.jpg'];
+        var heroImages = ['../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/02.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/03.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/04.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/05.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/06.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/08.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/09.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/10.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/11.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/13.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/14.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/15.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/16.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/17.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/18.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/19.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/20.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/21.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/22.jpg','../../images/properties_clean/elevated-island-living-fourteen-mullet-bay/24.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

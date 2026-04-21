@@ -246,10 +246,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 18; i++) {
-            heroImages.push('../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/01.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/02.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/03.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/04.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/05.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/06.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/07.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/08.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/09.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/10.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/11.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/12.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/13.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/14.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/15.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/16.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/17.jpg','../images/properties_clean/infinity-villas-by-elie-saab-highline-villas/18.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

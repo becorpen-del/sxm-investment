@@ -246,10 +246,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 19; i++) {
-            heroImages.push('../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/01.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/02.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/03.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/04.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/05.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/06.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/07.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/08.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/09.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/10.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/11.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/12.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/13.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/14.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/15.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/16.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/17.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/18.jpg','../images/properties_clean/turnkey-condo-at-the-hills-residence-simpson-bay/19.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

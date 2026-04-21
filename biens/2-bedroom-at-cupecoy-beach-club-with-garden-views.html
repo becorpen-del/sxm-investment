@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/01.jpg" alt="2 chambres au Cupecoy Beach Club avec vue jardin">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 23</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 22</div>
         </div>
 
         <div class="listing-grid">
@@ -200,14 +200,13 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/15.jpg" alt="Photo 15"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/16.jpg" alt="Photo 16"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/17.jpg" alt="Photo 17"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/18.jpg" alt="Photo 18"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/19.jpg" alt="Photo 19"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/20.jpg" alt="Photo 20"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/21.jpg" alt="Photo 21"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/22.jpg" alt="Photo 22"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/23.jpg" alt="Photo 23"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 23</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 22</div>
     </div>
 
     <footer>
@@ -251,10 +250,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 23; i++) {
-            heroImages.push('../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/01.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/02.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/03.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/04.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/05.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/06.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/07.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/08.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/09.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/10.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/11.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/12.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/13.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/14.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/15.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/16.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/17.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/19.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/20.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/21.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/22.jpg','../images/properties_clean/2-bedroom-at-cupecoy-beach-club-with-garden-views/23.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

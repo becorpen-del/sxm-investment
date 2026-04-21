@@ -239,10 +239,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 11; i++) {
-            heroImages.push('../images/properties_clean/pre-construction-condo-in-cay-hill-belair-plaza/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/pre-construction-condo-in-cay-hill-belair-plaza/01.jpg','../images/properties_clean/pre-construction-condo-in-cay-hill-belair-plaza/02.jpg','../images/properties_clean/pre-construction-condo-in-cay-hill-belair-plaza/03.jpg','../images/properties_clean/pre-construction-condo-in-cay-hill-belair-plaza/04.jpg','../images/properties_clean/pre-construction-condo-in-cay-hill-belair-plaza/05.jpg','../images/properties_clean/pre-construction-condo-in-cay-hill-belair-plaza/06.jpg','../images/properties_clean/pre-construction-condo-in-cay-hill-belair-plaza/07.jpg','../images/properties_clean/pre-construction-condo-in-cay-hill-belair-plaza/08.jpg','../images/properties_clean/pre-construction-condo-in-cay-hill-belair-plaza/09.jpg','../images/properties_clean/pre-construction-condo-in-cay-hill-belair-plaza/10.jpg','../images/properties_clean/pre-construction-condo-in-cay-hill-belair-plaza/11.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

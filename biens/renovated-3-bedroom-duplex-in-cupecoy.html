@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/01.jpg" alt="Duplex rénové 3 chambres à Cupecoy">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 25</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 21</div>
         </div>
 
         <div class="listing-grid">
@@ -184,18 +184,14 @@
         <button class="lightbox-next" onclick="nextSlide(event)">&#10095;</button>
         <div class="lightbox-container">
             <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/01.jpg" alt="Photo 1"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/02.jpg" alt="Photo 2"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/03.jpg" alt="Photo 3"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/04.jpg" alt="Photo 4"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/05.jpg" alt="Photo 5"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/06.jpg" alt="Photo 6"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/07.jpg" alt="Photo 7"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/08.jpg" alt="Photo 8"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/09.jpg" alt="Photo 9"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/10.jpg" alt="Photo 10"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/11.jpg" alt="Photo 11"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/12.jpg" alt="Photo 12"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/13.jpg" alt="Photo 13"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/14.jpg" alt="Photo 14"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/15.jpg" alt="Photo 15"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/16.jpg" alt="Photo 16"></div>
@@ -209,7 +205,7 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/24.jpg" alt="Photo 24"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/25.jpg" alt="Photo 25"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 25</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 21</div>
     </div>
 
     <footer>
@@ -253,10 +249,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 25; i++) {
-            heroImages.push('../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/01.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/03.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/04.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/05.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/06.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/07.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/10.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/11.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/12.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/14.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/15.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/16.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/17.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/18.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/19.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/20.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/21.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/22.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/23.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/24.jpg','../images/properties_clean/renovated-3-bedroom-duplex-in-cupecoy/25.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

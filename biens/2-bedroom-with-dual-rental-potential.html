@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/2-bedroom-with-dual-rental-potential/01.jpg" alt="2 chambres avec double potentiel locatif">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 30</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 29</div>
         </div>
 
         <div class="listing-grid">
@@ -215,9 +215,8 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/2-bedroom-with-dual-rental-potential/27.jpg" alt="Photo 27"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/2-bedroom-with-dual-rental-potential/28.jpg" alt="Photo 28"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/2-bedroom-with-dual-rental-potential/29.jpg" alt="Photo 29"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/2-bedroom-with-dual-rental-potential/30.jpg" alt="Photo 30"></div>
-        </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 30</div>
+            </div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 29</div>
     </div>
 
     <footer>
@@ -261,10 +260,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 30; i++) {
-            heroImages.push('../images/properties_clean/2-bedroom-with-dual-rental-potential/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/2-bedroom-with-dual-rental-potential/01.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/02.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/03.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/04.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/05.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/06.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/07.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/08.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/09.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/10.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/11.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/12.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/13.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/14.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/15.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/16.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/17.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/18.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/19.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/20.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/21.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/22.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/23.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/24.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/25.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/26.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/27.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/28.jpg','../images/properties_clean/2-bedroom-with-dual-rental-potential/29.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

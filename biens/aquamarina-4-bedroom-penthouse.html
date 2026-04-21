@@ -252,10 +252,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 25; i++) {
-            heroImages.push('../images/properties_clean/aquamarina-4-bedroom-penthouse/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/aquamarina-4-bedroom-penthouse/01.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/02.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/03.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/04.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/05.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/06.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/07.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/08.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/09.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/10.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/11.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/12.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/13.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/14.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/15.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/16.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/17.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/18.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/19.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/20.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/21.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/22.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/23.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/24.jpg','../images/properties_clean/aquamarina-4-bedroom-penthouse/25.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

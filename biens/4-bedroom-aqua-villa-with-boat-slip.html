@@ -99,7 +99,7 @@
                 <div class="listing-badges">
                     <span class="listing-badge">4 Chambres</span>
                     <span class="listing-badge">4.5 Sdb.</span>
-                    <span class="listing-badge">6182.6 m²</span>
+                    <span class="listing-badge">574 m²</span>
                 </div>
             </div>
             <div class="listing-header-right">
@@ -129,7 +129,7 @@
                     <div class="listing-info-item"><span class="label">Prix</span><span class="value">$1,950,000</span></div>
                     <div class="listing-info-item"><span class="label">Chambres</span><span class="value">4</span></div>
                     <div class="listing-info-item"><span class="label">Salles de bain</span><span class="value">4.5</span></div>
-                    <div class="listing-info-item"><span class="label">Surface</span><span class="value">6182.6 m²</span></div>
+                    <div class="listing-info-item"><span class="label">Surface</span><span class="value">574 m²</span></div>
                     <div class="listing-info-item"><span class="label">Type</span><span class="value">Villa</span></div>
                     <div class="listing-info-item"><span class="label">Localisation</span><span class="value">Cupecoy, Saint-Martin</span></div>
                     <div class="listing-info-item"><span class="label">Année</span><span class="value">2025</span></div>
@@ -244,10 +244,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 11; i++) {
-            heroImages.push('../images/properties_clean/4-bedroom-aqua-villa-with-boat-slip/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/4-bedroom-aqua-villa-with-boat-slip/01.jpg','../images/properties_clean/4-bedroom-aqua-villa-with-boat-slip/02.jpg','../images/properties_clean/4-bedroom-aqua-villa-with-boat-slip/03.jpg','../images/properties_clean/4-bedroom-aqua-villa-with-boat-slip/04.jpg','../images/properties_clean/4-bedroom-aqua-villa-with-boat-slip/05.jpg','../images/properties_clean/4-bedroom-aqua-villa-with-boat-slip/06.jpg','../images/properties_clean/4-bedroom-aqua-villa-with-boat-slip/07.jpg','../images/properties_clean/4-bedroom-aqua-villa-with-boat-slip/08.jpg','../images/properties_clean/4-bedroom-aqua-villa-with-boat-slip/09.jpg','../images/properties_clean/4-bedroom-aqua-villa-with-boat-slip/10.jpg','../images/properties_clean/4-bedroom-aqua-villa-with-boat-slip/11.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

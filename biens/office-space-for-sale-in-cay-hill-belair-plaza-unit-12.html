@@ -243,10 +243,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 16; i++) {
-            heroImages.push('../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/01.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/02.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/03.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/04.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/05.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/06.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/07.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/08.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/09.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/10.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/11.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/12.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/13.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/14.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/15.jpg','../images/properties_clean/office-space-for-sale-in-cay-hill-belair-plaza-unit-12/16.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

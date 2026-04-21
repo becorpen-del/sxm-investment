@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/01.jpg" alt="Condo à vendre à Maho Village – La Terrasse Royal Islander Club">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 16</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 15</div>
         </div>
 
         <div class="listing-grid">
@@ -191,7 +191,6 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/06.jpg" alt="Photo 6"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/07.jpg" alt="Photo 7"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/08.jpg" alt="Photo 8"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/09.jpg" alt="Photo 9"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/10.jpg" alt="Photo 10"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/11.jpg" alt="Photo 11"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/12.jpg" alt="Photo 12"></div>
@@ -200,7 +199,7 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/15.jpg" alt="Photo 15"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/16.jpg" alt="Photo 16"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 16</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 15</div>
     </div>
 
     <footer>
@@ -244,10 +243,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 16; i++) {
-            heroImages.push('../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/01.jpg','../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/02.jpg','../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/03.jpg','../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/04.jpg','../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/05.jpg','../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/06.jpg','../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/07.jpg','../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/08.jpg','../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/10.jpg','../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/11.jpg','../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/12.jpg','../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/13.jpg','../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/14.jpg','../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/15.jpg','../images/properties_clean/condo-for-sale-in-maho-village-la-terrasse-royal-islander-club/16.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

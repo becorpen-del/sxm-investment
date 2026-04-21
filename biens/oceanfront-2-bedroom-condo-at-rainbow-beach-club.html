@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/01.jpg" alt="Condo 2 chambres face à l&#x27;océan au Rainbow Beach Club">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 25</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 23</div>
         </div>
 
         <div class="listing-grid">
@@ -186,11 +186,9 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/02.jpg" alt="Photo 2"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/03.jpg" alt="Photo 3"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/04.jpg" alt="Photo 4"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/05.jpg" alt="Photo 5"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/06.jpg" alt="Photo 6"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/07.jpg" alt="Photo 7"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/08.jpg" alt="Photo 8"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/09.jpg" alt="Photo 9"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/10.jpg" alt="Photo 10"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/11.jpg" alt="Photo 11"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/12.jpg" alt="Photo 12"></div>
@@ -208,7 +206,7 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/24.jpg" alt="Photo 24"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/25.jpg" alt="Photo 25"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 25</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 23</div>
     </div>
 
     <footer>
@@ -252,10 +250,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 25; i++) {
-            heroImages.push('../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/01.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/02.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/03.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/04.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/06.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/07.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/08.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/10.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/11.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/12.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/13.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/14.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/15.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/16.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/17.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/18.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/19.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/20.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/21.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/22.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/23.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/24.jpg','../images/properties_clean/oceanfront-2-bedroom-condo-at-rainbow-beach-club/25.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

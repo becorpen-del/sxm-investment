@@ -273,10 +273,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 28; i++) {
-            heroImages.push('../images/properties_clean/sapphire-penthouse/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/sapphire-penthouse/01.jpg','../images/properties_clean/sapphire-penthouse/02.jpg','../images/properties_clean/sapphire-penthouse/03.jpg','../images/properties_clean/sapphire-penthouse/04.jpg','../images/properties_clean/sapphire-penthouse/05.jpg','../images/properties_clean/sapphire-penthouse/06.jpg','../images/properties_clean/sapphire-penthouse/07.jpg','../images/properties_clean/sapphire-penthouse/08.jpg','../images/properties_clean/sapphire-penthouse/09.jpg','../images/properties_clean/sapphire-penthouse/10.jpg','../images/properties_clean/sapphire-penthouse/11.jpg','../images/properties_clean/sapphire-penthouse/12.jpg','../images/properties_clean/sapphire-penthouse/13.jpg','../images/properties_clean/sapphire-penthouse/14.jpg','../images/properties_clean/sapphire-penthouse/15.jpg','../images/properties_clean/sapphire-penthouse/16.jpg','../images/properties_clean/sapphire-penthouse/17.jpg','../images/properties_clean/sapphire-penthouse/18.jpg','../images/properties_clean/sapphire-penthouse/19.jpg','../images/properties_clean/sapphire-penthouse/20.jpg','../images/properties_clean/sapphire-penthouse/21.jpg','../images/properties_clean/sapphire-penthouse/22.jpg','../images/properties_clean/sapphire-penthouse/23.jpg','../images/properties_clean/sapphire-penthouse/24.jpg','../images/properties_clean/sapphire-penthouse/25.jpg','../images/properties_clean/sapphire-penthouse/26.jpg','../images/properties_clean/sapphire-penthouse/27.jpg','../images/properties_clean/sapphire-penthouse/28.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

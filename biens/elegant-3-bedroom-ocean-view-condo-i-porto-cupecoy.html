@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/01.jpg" alt="Élégant condo 3 chambres vue mer | Porto Cupecoy">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 25</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 21</div>
         </div>
 
         <div class="listing-grid">
@@ -249,11 +249,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        var removed = [3, 4, 20, 25];
-        for (var i = 1; i <= 25; i++) {
-            if (removed.indexOf(i) === -1) heroImages.push('../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/01.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/02.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/05.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/06.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/07.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/08.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/09.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/10.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/11.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/12.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/13.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/14.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/15.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/16.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/17.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/18.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/19.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/21.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/22.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/23.jpg','../images/properties_clean/elegant-3-bedroom-ocean-view-condo-i-porto-cupecoy/24.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

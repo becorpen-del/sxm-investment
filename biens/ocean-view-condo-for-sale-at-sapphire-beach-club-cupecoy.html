@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/01.jpg" alt="Condo vue mer à vendre au Sapphire Beach Club Cupecoy">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 12</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 10</div>
         </div>
 
         <div class="listing-grid">
@@ -186,16 +186,14 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/02.jpg" alt="Photo 2"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/03.jpg" alt="Photo 3"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/04.jpg" alt="Photo 4"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/05.jpg" alt="Photo 5"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/06.jpg" alt="Photo 6"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/07.jpg" alt="Photo 7"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/08.jpg" alt="Photo 8"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/09.jpg" alt="Photo 9"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/10.jpg" alt="Photo 10"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/11.jpg" alt="Photo 11"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/12.jpg" alt="Photo 12"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 12</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 10</div>
     </div>
 
     <footer>
@@ -239,10 +237,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 12; i++) {
-            heroImages.push('../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/01.jpg','../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/02.jpg','../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/03.jpg','../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/04.jpg','../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/06.jpg','../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/08.jpg','../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/09.jpg','../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/10.jpg','../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/11.jpg','../images/properties_clean/ocean-view-condo-for-sale-at-sapphire-beach-club-cupecoy/12.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

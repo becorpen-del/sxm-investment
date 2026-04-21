@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/01.jpg" alt="Condo 2 chambres impeccable avec place de bateau | AquaMarina">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 25</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 22</div>
         </div>
 
         <div class="listing-grid">
@@ -188,7 +188,6 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/03.jpg" alt="Photo 3"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/04.jpg" alt="Photo 4"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/05.jpg" alt="Photo 5"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/06.jpg" alt="Photo 6"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/07.jpg" alt="Photo 7"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/08.jpg" alt="Photo 8"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/09.jpg" alt="Photo 9"></div>
@@ -204,12 +203,10 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/19.jpg" alt="Photo 19"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/20.jpg" alt="Photo 20"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/21.jpg" alt="Photo 21"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/22.jpg" alt="Photo 22"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/23.jpg" alt="Photo 23"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/24.jpg" alt="Photo 24"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/25.jpg" alt="Photo 25"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 25</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 22</div>
     </div>
 
     <footer>
@@ -253,10 +250,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 25; i++) {
-            heroImages.push('../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/01.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/02.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/03.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/04.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/05.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/07.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/08.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/09.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/10.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/11.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/12.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/13.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/14.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/15.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/16.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/17.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/18.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/19.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/20.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/21.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/24.jpg','../images/properties_clean/pristine-2-bedroom-condo-with-boat-slip-aquamarina/25.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

@@ -251,10 +251,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 18; i++) {
-            heroImages.push('../images/properties_clean/windgate-luxury-condo/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/windgate-luxury-condo/01.jpg','../images/properties_clean/windgate-luxury-condo/02.jpg','../images/properties_clean/windgate-luxury-condo/03.jpg','../images/properties_clean/windgate-luxury-condo/04.jpg','../images/properties_clean/windgate-luxury-condo/05.jpg','../images/properties_clean/windgate-luxury-condo/06.jpg','../images/properties_clean/windgate-luxury-condo/07.jpg','../images/properties_clean/windgate-luxury-condo/08.jpg','../images/properties_clean/windgate-luxury-condo/09.jpg','../images/properties_clean/windgate-luxury-condo/10.jpg','../images/properties_clean/windgate-luxury-condo/11.jpg','../images/properties_clean/windgate-luxury-condo/12.jpg','../images/properties_clean/windgate-luxury-condo/13.jpg','../images/properties_clean/windgate-luxury-condo/14.jpg','../images/properties_clean/windgate-luxury-condo/15.jpg','../images/properties_clean/windgate-luxury-condo/16.jpg','../images/properties_clean/windgate-luxury-condo/17.jpg','../images/properties_clean/windgate-luxury-condo/18.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

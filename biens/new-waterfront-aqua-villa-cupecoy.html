@@ -238,10 +238,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 11; i++) {
-            heroImages.push('../images/properties_clean/new-waterfront-aqua-villa-cupecoy/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/new-waterfront-aqua-villa-cupecoy/01.jpg','../images/properties_clean/new-waterfront-aqua-villa-cupecoy/02.jpg','../images/properties_clean/new-waterfront-aqua-villa-cupecoy/03.jpg','../images/properties_clean/new-waterfront-aqua-villa-cupecoy/04.jpg','../images/properties_clean/new-waterfront-aqua-villa-cupecoy/05.jpg','../images/properties_clean/new-waterfront-aqua-villa-cupecoy/06.jpg','../images/properties_clean/new-waterfront-aqua-villa-cupecoy/07.jpg','../images/properties_clean/new-waterfront-aqua-villa-cupecoy/08.jpg','../images/properties_clean/new-waterfront-aqua-villa-cupecoy/09.jpg','../images/properties_clean/new-waterfront-aqua-villa-cupecoy/10.jpg','../images/properties_clean/new-waterfront-aqua-villa-cupecoy/11.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

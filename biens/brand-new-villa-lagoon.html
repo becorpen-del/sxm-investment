@@ -252,10 +252,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 25; i++) {
-            heroImages.push('../images/properties_clean/brand-new-villa-lagoon/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/brand-new-villa-lagoon/01.jpg','../images/properties_clean/brand-new-villa-lagoon/02.jpg','../images/properties_clean/brand-new-villa-lagoon/03.jpg','../images/properties_clean/brand-new-villa-lagoon/04.jpg','../images/properties_clean/brand-new-villa-lagoon/05.jpg','../images/properties_clean/brand-new-villa-lagoon/06.jpg','../images/properties_clean/brand-new-villa-lagoon/07.jpg','../images/properties_clean/brand-new-villa-lagoon/08.jpg','../images/properties_clean/brand-new-villa-lagoon/09.jpg','../images/properties_clean/brand-new-villa-lagoon/10.jpg','../images/properties_clean/brand-new-villa-lagoon/11.jpg','../images/properties_clean/brand-new-villa-lagoon/12.jpg','../images/properties_clean/brand-new-villa-lagoon/13.jpg','../images/properties_clean/brand-new-villa-lagoon/14.jpg','../images/properties_clean/brand-new-villa-lagoon/15.jpg','../images/properties_clean/brand-new-villa-lagoon/16.jpg','../images/properties_clean/brand-new-villa-lagoon/17.jpg','../images/properties_clean/brand-new-villa-lagoon/18.jpg','../images/properties_clean/brand-new-villa-lagoon/19.jpg','../images/properties_clean/brand-new-villa-lagoon/20.jpg','../images/properties_clean/brand-new-villa-lagoon/21.jpg','../images/properties_clean/brand-new-villa-lagoon/22.jpg','../images/properties_clean/brand-new-villa-lagoon/23.jpg','../images/properties_clean/brand-new-villa-lagoon/24.jpg','../images/properties_clean/brand-new-villa-lagoon/25.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

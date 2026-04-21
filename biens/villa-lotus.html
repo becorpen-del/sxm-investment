@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/villa-lotus/01.jpg" alt="Villa Lotus">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 14</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 11</div>
         </div>
 
         <div class="listing-grid">
@@ -224,7 +224,7 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/villa-lotus/12.jpg" alt="Photo 12"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/villa-lotus/13.jpg" alt="Photo 13"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 14</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 11</div>
     </div>
 
     <footer>
@@ -268,10 +268,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 19; i++) {
-            heroImages.push('../images/properties_clean/villa-lotus/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/villa-lotus/01.jpg','../images/properties_clean/villa-lotus/02.jpg','../images/properties_clean/villa-lotus/03.jpg','../images/properties_clean/villa-lotus/04.jpg','../images/properties_clean/villa-lotus/05.jpg','../images/properties_clean/villa-lotus/06.jpg','../images/properties_clean/villa-lotus/07.jpg','../images/properties_clean/villa-lotus/08.jpg','../images/properties_clean/villa-lotus/09.jpg','../images/properties_clean/villa-lotus/12.jpg','../images/properties_clean/villa-lotus/13.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

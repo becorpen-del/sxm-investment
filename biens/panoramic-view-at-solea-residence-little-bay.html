@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/01.jpg" alt="Vue panoramique à Solea Residence, Little Bay">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 25</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 21</div>
         </div>
 
         <div class="listing-grid">
@@ -194,7 +194,6 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/10.jpg" alt="Photo 10"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/11.jpg" alt="Photo 11"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/12.jpg" alt="Photo 12"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/13.jpg" alt="Photo 13"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/14.jpg" alt="Photo 14"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/15.jpg" alt="Photo 15"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/16.jpg" alt="Photo 16"></div>
@@ -203,12 +202,9 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/19.jpg" alt="Photo 19"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/20.jpg" alt="Photo 20"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/21.jpg" alt="Photo 21"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/22.jpg" alt="Photo 22"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/23.jpg" alt="Photo 23"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/24.jpg" alt="Photo 24"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/panoramic-view-at-solea-residence-little-bay/25.jpg" alt="Photo 25"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 25</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 21</div>
     </div>
 
     <footer>
@@ -252,10 +248,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 25; i++) {
-            heroImages.push('../images/properties_clean/panoramic-view-at-solea-residence-little-bay/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/panoramic-view-at-solea-residence-little-bay/01.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/02.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/03.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/04.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/05.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/06.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/07.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/08.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/09.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/10.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/11.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/12.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/14.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/15.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/16.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/17.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/18.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/19.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/20.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/21.jpg','../images/properties_clean/panoramic-view-at-solea-residence-little-bay/25.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

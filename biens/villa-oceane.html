@@ -263,10 +263,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 30; i++) {
-            heroImages.push('../images/properties_clean/villa-oceane/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/villa-oceane/01.jpg','../images/properties_clean/villa-oceane/02.jpg','../images/properties_clean/villa-oceane/03.jpg','../images/properties_clean/villa-oceane/04.jpg','../images/properties_clean/villa-oceane/05.jpg','../images/properties_clean/villa-oceane/06.jpg','../images/properties_clean/villa-oceane/07.jpg','../images/properties_clean/villa-oceane/08.jpg','../images/properties_clean/villa-oceane/09.jpg','../images/properties_clean/villa-oceane/10.jpg','../images/properties_clean/villa-oceane/11.jpg','../images/properties_clean/villa-oceane/12.jpg','../images/properties_clean/villa-oceane/13.jpg','../images/properties_clean/villa-oceane/14.jpg','../images/properties_clean/villa-oceane/15.jpg','../images/properties_clean/villa-oceane/16.jpg','../images/properties_clean/villa-oceane/17.jpg','../images/properties_clean/villa-oceane/18.jpg','../images/properties_clean/villa-oceane/19.jpg','../images/properties_clean/villa-oceane/20.jpg','../images/properties_clean/villa-oceane/21.jpg','../images/properties_clean/villa-oceane/22.jpg','../images/properties_clean/villa-oceane/23.jpg','../images/properties_clean/villa-oceane/24.jpg','../images/properties_clean/villa-oceane/25.jpg','../images/properties_clean/villa-oceane/26.jpg','../images/properties_clean/villa-oceane/27.jpg','../images/properties_clean/villa-oceane/28.jpg','../images/properties_clean/villa-oceane/29.jpg','../images/properties_clean/villa-oceane/30.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

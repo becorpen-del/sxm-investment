@@ -235,10 +235,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 7; i++) {
-            heroImages.push('../images/properties_clean/waterfront-condo-for-sale-with-marina-views-boat-slip/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/waterfront-condo-for-sale-with-marina-views-boat-slip/01.jpg','../images/properties_clean/waterfront-condo-for-sale-with-marina-views-boat-slip/02.jpg','../images/properties_clean/waterfront-condo-for-sale-with-marina-views-boat-slip/03.jpg','../images/properties_clean/waterfront-condo-for-sale-with-marina-views-boat-slip/04.jpg','../images/properties_clean/waterfront-condo-for-sale-with-marina-views-boat-slip/05.jpg','../images/properties_clean/waterfront-condo-for-sale-with-marina-views-boat-slip/06.jpg','../images/properties_clean/waterfront-condo-for-sale-with-marina-views-boat-slip/07.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

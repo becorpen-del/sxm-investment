@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/01.jpg" alt="Opportunité d&#x27;investissement à The Hills Residence – Condo 1 chambre">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 24</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 22</div>
         </div>
 
         <div class="listing-grid">
@@ -187,7 +187,6 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/02.jpg" alt="Photo 2"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/03.jpg" alt="Photo 3"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/04.jpg" alt="Photo 4"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/05.jpg" alt="Photo 5"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/06.jpg" alt="Photo 6"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/07.jpg" alt="Photo 7"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/08.jpg" alt="Photo 8"></div>
@@ -206,9 +205,8 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/21.jpg" alt="Photo 21"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/22.jpg" alt="Photo 22"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/23.jpg" alt="Photo 23"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/24.jpg" alt="Photo 24"></div>
-        </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 24</div>
+            </div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 22</div>
     </div>
 
     <footer>
@@ -252,10 +250,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 24; i++) {
-            heroImages.push('../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/01.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/02.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/03.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/04.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/06.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/07.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/08.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/09.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/10.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/11.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/12.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/13.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/14.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/15.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/16.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/17.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/18.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/19.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/20.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/21.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/22.jpg','../images/properties_clean/investment-opportunity-at-the-hills-residence-1-bedroom-condo/23.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

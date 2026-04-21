@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/01.jpg" alt="Condo dernier étage en bord de plage – Cupecoy Beach Club">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 19</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 13</div>
         </div>
 
         <div class="listing-grid">
@@ -184,25 +184,19 @@
         <div class="lightbox-container">
             <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/01.jpg" alt="Photo 1"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/02.jpg" alt="Photo 2"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/03.jpg" alt="Photo 3"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/04.jpg" alt="Photo 4"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/05.jpg" alt="Photo 5"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/06.jpg" alt="Photo 6"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/07.jpg" alt="Photo 7"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/08.jpg" alt="Photo 8"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/09.jpg" alt="Photo 9"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/10.jpg" alt="Photo 10"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/11.jpg" alt="Photo 11"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/12.jpg" alt="Photo 12"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/13.jpg" alt="Photo 13"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/14.jpg" alt="Photo 14"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/15.jpg" alt="Photo 15"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/16.jpg" alt="Photo 16"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/17.jpg" alt="Photo 17"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/18.jpg" alt="Photo 18"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/19.jpg" alt="Photo 19"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 19</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 13</div>
     </div>
 
     <footer>
@@ -246,10 +240,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 19; i++) {
-            heroImages.push('../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/01.jpg','../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/02.jpg','../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/04.jpg','../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/05.jpg','../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/07.jpg','../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/09.jpg','../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/10.jpg','../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/11.jpg','../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/12.jpg','../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/13.jpg','../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/14.jpg','../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/16.jpg','../images/properties_clean/top-floor-beachfront-condo-cupecoy-beach-club/19.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

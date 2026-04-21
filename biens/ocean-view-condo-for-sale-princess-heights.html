@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/ocean-view-condo-for-sale-princess-heights/01.jpg" alt="Condo vue mer à vendre – Princess Heights">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 9</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 8</div>
         </div>
 
         <div class="listing-grid">
@@ -186,13 +186,12 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-princess-heights/02.jpg" alt="Photo 2"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-princess-heights/03.jpg" alt="Photo 3"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-princess-heights/04.jpg" alt="Photo 4"></div>
-            <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-princess-heights/05.jpg" alt="Photo 5"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-princess-heights/06.jpg" alt="Photo 6"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-princess-heights/07.jpg" alt="Photo 7"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-princess-heights/08.jpg" alt="Photo 8"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/ocean-view-condo-for-sale-princess-heights/09.jpg" alt="Photo 9"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 9</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 8</div>
     </div>
 
     <footer>
@@ -236,10 +235,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 9; i++) {
-            heroImages.push('../images/properties_clean/ocean-view-condo-for-sale-princess-heights/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/ocean-view-condo-for-sale-princess-heights/01.jpg','../images/properties_clean/ocean-view-condo-for-sale-princess-heights/02.jpg','../images/properties_clean/ocean-view-condo-for-sale-princess-heights/03.jpg','../images/properties_clean/ocean-view-condo-for-sale-princess-heights/04.jpg','../images/properties_clean/ocean-view-condo-for-sale-princess-heights/06.jpg','../images/properties_clean/ocean-view-condo-for-sale-princess-heights/07.jpg','../images/properties_clean/ocean-view-condo-for-sale-princess-heights/08.jpg','../images/properties_clean/ocean-view-condo-for-sale-princess-heights/09.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

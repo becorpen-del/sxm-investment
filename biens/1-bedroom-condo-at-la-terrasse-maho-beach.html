@@ -244,10 +244,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 16; i++) {
-            heroImages.push('../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/01.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/02.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/03.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/04.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/05.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/06.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/07.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/08.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/09.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/10.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/11.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/12.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/13.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/14.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/15.jpg','../images/properties_clean/1-bedroom-condo-at-la-terrasse-maho-beach/16.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

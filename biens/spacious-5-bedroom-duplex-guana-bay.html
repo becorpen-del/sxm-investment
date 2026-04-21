@@ -252,10 +252,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 25; i++) {
-            heroImages.push('../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/01.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/02.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/03.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/04.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/05.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/06.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/07.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/08.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/09.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/10.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/11.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/12.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/13.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/14.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/15.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/16.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/17.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/18.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/19.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/20.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/21.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/22.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/23.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/24.jpg','../images/properties_clean/spacious-5-bedroom-duplex-guana-bay/25.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

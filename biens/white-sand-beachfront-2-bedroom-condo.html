@@ -234,10 +234,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 6; i++) {
-            heroImages.push('../images/properties_clean/white-sand-beachfront-2-bedroom-condo/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/white-sand-beachfront-2-bedroom-condo/01.jpg','../images/properties_clean/white-sand-beachfront-2-bedroom-condo/02.jpg','../images/properties_clean/white-sand-beachfront-2-bedroom-condo/03.jpg','../images/properties_clean/white-sand-beachfront-2-bedroom-condo/04.jpg','../images/properties_clean/white-sand-beachfront-2-bedroom-condo/05.jpg','../images/properties_clean/white-sand-beachfront-2-bedroom-condo/06.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

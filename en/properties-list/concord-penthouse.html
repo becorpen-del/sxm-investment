@@ -33,10 +33,13 @@
         .listing-section-title:first-child { margin-top:0; }
         .listing-description { line-height:1.8; color:#444; font-size:0.95rem; }
         .listing-description p { margin-bottom:1rem; }
+        .listing-description h3 { font-family:'Playfair Display',serif; font-style:italic; font-size:1.1rem; color:var(--navy); margin:1.5rem 0 0.5rem; }
         .listing-info-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; }
         .listing-info-item { display:flex; justify-content:space-between; padding:0.75rem 1rem; border-bottom:1px solid #eee; }
         .listing-info-item .label { color:var(--gray); font-size:0.9rem; }
         .listing-info-item .value { color:var(--navy); font-weight:600; font-size:0.9rem; }
+        .listing-features { display:flex; flex-wrap:wrap; gap:0.6rem; }
+        .feature-pill { border:1.5px solid var(--navy); color:var(--navy); padding:0.4rem 1rem; border-radius:20px; font-size:0.8rem; font-weight:500; }
         .listing-sidebar { position:sticky; top:100px; align-self:start; }
         .showing-card { background:white; border-radius:12px; padding:2rem; box-shadow:0 5px 30px rgba(0,0,0,0.08); border:1px solid #eee; }
         .showing-card h3 { font-family:'Playfair Display',serif; font-style:italic; font-size:1.3rem; color:var(--navy); margin-bottom:0.5rem; }
@@ -109,33 +112,15 @@
             <img id="heroImg" src="../../images/properties_clean/concord-penthouse/02.jpg" alt="Concord Penthouse">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 15</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 12</div>
         </div>
 
         <div class="listing-grid">
             <div class="listing-main">
                 <h2 class="listing-section-title">Description</h2>
-                <div class="listing-description"></head>
-<body>
-    <nav class="navbar scrolled" id="navbar">
-        <a href="../index.html" class="logo">
-            <img src="../../images/logos/logo-black.png" alt="SXM Dream Investments" class="logo-black">
-        </a>
-        <ul class="nav-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../properties.html">Properties</a></li>
-            <li><a href="../st-martin.html">St. Martin</a></li>
-            <li><a href="../sell.html">Sell</a></li>
-            <li><a href="../contact.html" class="nav-cta">Contact Us</a></li>
-        </ul>
-    </nav>
-    <section class="property-hero">
-        <div class="property-hero-content">
-            <a href="../properties.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to properties</a>
-            <h1>Concord Penthouse</h1>
-            <div class="property-hero-meta">
-                <span class="property-hero-price">$1,100,000</span>
-                <span class="property-hero-location"><i class="fas fa-map-marker-alt"></i> Cupecoy</span></div>
+                <div class="listing-description"><p>Discover a rare opportunity to own a <strong>new construction penthouse</strong> in <strong>Pelican Key</strong>, one of the most desirable hillside neighborhoods in the <strong>St. Martin</strong> real estate market. Located within the modern <strong>Concord Residence</strong>, this contemporary penthouse of <strong>2 bedrooms</strong>, <strong>5 bathrooms</strong>, and <strong>1,895 sq ft</strong> enjoys breathtaking <strong>180-degree views of the Caribbean Sea</strong> and surrounding coastline. Positioned in a peaceful residential area just minutes from Simpson Bay's beaches, marinas, restaurants, and nightlife.</p>
+<p>Perched high on the Pelican Key hillside, the residence is designed to capture natural light and <strong>panoramic ocean views</strong>. Large windows and spacious terraces allow residents to experience the vibrant colors of the Caribbean Sea throughout the day, while evenings offer spectacular <strong>sunset views</strong> across the horizon. The modern condominium design combines contemporary architecture with elegant finishes, creating a comfortable and sophisticated environment.</p>
+<p>With limited new developments in Pelican Key, Concord Residence represents an attractive opportunity within the St. Martin real estate market. <strong>Pre-construction pricing</strong> and strong demand for ocean-view penthouses make this property appealing for both homeowners and investors. Whether used as a primary residence, vacation home, or <strong>income-producing investment</strong>, this penthouse offers lasting value in one of the island's most established residential communities.</p></div>
 
                 <h2 class="listing-section-title">Details</h2>
                 <div class="listing-info-grid">
@@ -144,10 +129,7 @@
                     <div class="listing-info-item"><span class="label">Bathrooms</span><span class="value">5</span></div>
                     <div class="listing-info-item"><span class="label">Surface</span><span class="value">1895 sqft</span></div>
                     <div class="listing-info-item"><span class="label">Type</span><span class="value">Penthouse</span></div>
-                    <div class="listing-info-item"><span class="label">Location</span><span class="value">Back to properties</a>
-            <h1>Concord Penthouse</h1>
-            <div class="property-hero-meta">
-                <span class="property-hero-price">$1,100,000</span></div>
+                    <div class="listing-info-item"><span class="label">Location</span><span class="value">Cupecoy</span></div>
                     <div class="listing-info-item"><span class="label">Status</span><span class="value">Active</span></div>
                 </div>
 
@@ -200,20 +182,20 @@
         <button class="lightbox-prev" onclick="prevSlide(event)">&#10094;</button>
         <button class="lightbox-next" onclick="nextSlide(event)">&#10095;</button>
         <div class="lightbox-container">
-            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/02.jpg" alt="Photo 2"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/03.jpg" alt="Photo 3"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/04.jpg" alt="Photo 4"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/05.jpg" alt="Photo 5"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/07.jpg" alt="Photo 7"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/09.jpg" alt="Photo 9"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/11.jpg" alt="Photo 10"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/12.jpg" alt="Photo 11"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/13.jpg" alt="Photo 12"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/16.jpg" alt="Photo 15"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/17.jpg" alt="Photo 16"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/20.jpg" alt="Photo 19"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/02.jpg" alt="Photo 1"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/03.jpg" alt="Photo 2"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/04.jpg" alt="Photo 3"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/05.jpg" alt="Photo 4"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/07.jpg" alt="Photo 5"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/09.jpg" alt="Photo 6"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/11.jpg" alt="Photo 7"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/12.jpg" alt="Photo 8"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/13.jpg" alt="Photo 9"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/16.jpg" alt="Photo 10"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/17.jpg" alt="Photo 11"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/concord-penthouse/20.jpg" alt="Photo 12"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 15</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 12</div>
     </div>
 
     <footer>
@@ -228,7 +210,7 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../properties.html">Our Properties</a></li>
                     <li><a href="../st-martin.html">St. Martin</a></li>
-                    <li><a href="../sell.html">Sell Your Property</a></li>
+                    <li><a href="../sell.html">Sell your property</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -241,9 +223,9 @@
             <div class="footer-column">
                 <h4 class="footer-title">Languages</h4>
                 <ul class="footer-links">
-                    <li><a href="../../index.html">Français</a></li>
+                    <li><a href="../../index.html">French</a></li>
                     <li><a href="../index.html">English</a></li>
-                    <li><a href="../../nl/index.html">Nederlands</a></li>
+                    <li><a href="../../nl/index.html">Dutch</a></li>
                 </ul>
             </div>
         </div>

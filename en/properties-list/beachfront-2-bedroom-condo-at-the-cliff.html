@@ -33,10 +33,13 @@
         .listing-section-title:first-child { margin-top:0; }
         .listing-description { line-height:1.8; color:#444; font-size:0.95rem; }
         .listing-description p { margin-bottom:1rem; }
+        .listing-description h3 { font-family:'Playfair Display',serif; font-style:italic; font-size:1.1rem; color:var(--navy); margin:1.5rem 0 0.5rem; }
         .listing-info-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:0; }
         .listing-info-item { display:flex; justify-content:space-between; padding:0.75rem 1rem; border-bottom:1px solid #eee; }
         .listing-info-item .label { color:var(--gray); font-size:0.9rem; }
         .listing-info-item .value { color:var(--navy); font-weight:600; font-size:0.9rem; }
+        .listing-features { display:flex; flex-wrap:wrap; gap:0.6rem; }
+        .feature-pill { border:1.5px solid var(--navy); color:var(--navy); padding:0.4rem 1rem; border-radius:20px; font-size:0.8rem; font-weight:500; }
         .listing-sidebar { position:sticky; top:100px; align-self:start; }
         .showing-card { background:white; border-radius:12px; padding:2rem; box-shadow:0 5px 30px rgba(0,0,0,0.08); border:1px solid #eee; }
         .showing-card h3 { font-family:'Playfair Display',serif; font-style:italic; font-size:1.3rem; color:var(--navy); margin-bottom:0.5rem; }
@@ -109,33 +112,15 @@
             <img id="heroImg" src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/01.jpg" alt="Beachfront 2-Bedroom Condo at The Cliff">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 20</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 23</div>
         </div>
 
         <div class="listing-grid">
             <div class="listing-main">
                 <h2 class="listing-section-title">Description</h2>
-                <div class="listing-description"></head>
-<body>
-    <nav class="navbar scrolled" id="navbar">
-        <a href="../index.html" class="logo">
-            <img src="../../images/logos/logo-black.png" alt="SXM Dream Investments" class="logo-black">
-        </a>
-        <ul class="nav-links">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="../properties.html">Properties</a></li>
-            <li><a href="../st-martin.html">St. Martin</a></li>
-            <li><a href="../sell.html">Sell</a></li>
-            <li><a href="../contact.html" class="nav-cta">Contact Us</a></li>
-        </ul>
-    </nav>
-    <section class="property-hero">
-        <div class="property-hero-content">
-            <a href="../properties.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to properties</a>
-            <h1>Beachfront 2-Bedroom Condo at The Cliff</h1>
-            <div class="property-hero-meta">
-                <span class="property-hero-price">$899,000</span>
-                <span class="property-hero-location"><i class="fas fa-map-marker-alt"></i> Cupecoy</span></div>
+                <div class="listing-description"><p>Located within the prestigious <strong>The Cliff at Cupecoy</strong>, this elegant <strong>sixth-floor</strong> residence offers a rare opportunity in the <strong>St. Martin</strong> real estate market. Spanning approximately <strong>200 m²</strong> of interior living space, the property captures <strong>panoramic views of the Caribbean Sea</strong>, lagoon, golf course, and surrounding skyline. This <strong>2-bedroom</strong>, <strong>5-bathroom</strong> condo combines modern comfort with a prime waterfront setting.</p>
+<p>The open-concept living and dining areas flow seamlessly onto a spacious <strong>private terrace</strong>, creating an ideal setting for indoor-outdoor Caribbean living. Large openings invite natural light and tropical breezes while framing sweeping ocean and island views. The condo is <strong>fully furnished</strong> with ceramic tile flooring throughout, creating a refined and comfortable atmosphere. Two spacious bedrooms each feature <strong>en-suite bathrooms</strong>, complemented by an additional guest powder room. <strong>Central air conditioning</strong> ensures year-round comfort.</p>
+<p>Residents of The Cliff enjoy a full suite of resort-style amenities including <strong>indoor and outdoor swimming pools</strong>, a fully equipped <strong>fitness center</strong>, sauna, steam room, elevator access, full generator backup, and <strong>24/7 security</strong>. The property also includes one underground and one outdoor parking space. With estimated rental income of approximately <strong>$4,500 per month</strong>, this condo also represents an attractive investment within the island's thriving luxury vacation rental market.</p></div>
 
                 <h2 class="listing-section-title">Details</h2>
                 <div class="listing-info-grid">
@@ -144,10 +129,7 @@
                     <div class="listing-info-item"><span class="label">Bathrooms</span><span class="value">5</span></div>
                     <div class="listing-info-item"><span class="label">Surface</span><span class="value">2153 sqft</span></div>
                     <div class="listing-info-item"><span class="label">Type</span><span class="value">Condo</span></div>
-                    <div class="listing-info-item"><span class="label">Location</span><span class="value">Back to properties</a>
-            <h1>Beachfront 2-Bedroom Condo at The Cliff</h1>
-            <div class="property-hero-meta">
-                <span class="property-hero-price">$899,000</span></div>
+                    <div class="listing-info-item"><span class="label">Location</span><span class="value">Cupecoy</span></div>
                     <div class="listing-info-item"><span class="label">Status</span><span class="value">Active</span></div>
                 </div>
 
@@ -204,21 +186,27 @@
             <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/02.jpg" alt="Photo 2"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/03.jpg" alt="Photo 3"></div>
             <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/04.jpg" alt="Photo 4"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/05.jpg" alt="Photo 5"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/08.jpg" alt="Photo 7"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/10.jpg" alt="Photo 8"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/11.jpg" alt="Photo 9"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/14.jpg" alt="Photo 10"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/15.jpg" alt="Photo 11"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/16.jpg" alt="Photo 12"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/17.jpg" alt="Photo 13"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/19.jpg" alt="Photo 14"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/22.jpg" alt="Photo 15"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/23.jpg" alt="Photo 16"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/24.jpg" alt="Photo 17"></div>
-            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/25.jpg" alt="Photo 18"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/06.jpg" alt="Photo 6"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/07.jpg" alt="Photo 7"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/08.jpg" alt="Photo 8"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/09.jpg" alt="Photo 9"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/10.jpg" alt="Photo 10"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/11.jpg" alt="Photo 11"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/12.jpg" alt="Photo 12"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/13.jpg" alt="Photo 13"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/14.jpg" alt="Photo 14"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/15.jpg" alt="Photo 15"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/16.jpg" alt="Photo 16"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/17.jpg" alt="Photo 17"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/18.jpg" alt="Photo 18"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/20.jpg" alt="Photo 20"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/21.jpg" alt="Photo 21"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/22.jpg" alt="Photo 22"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/23.jpg" alt="Photo 23"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/24.jpg" alt="Photo 24"></div>
+            <div class="lightbox-slide"><img src="../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/25.jpg" alt="Photo 25"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 20</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 23</div>
     </div>
 
     <footer>
@@ -233,7 +221,7 @@
                     <li><a href="../index.html">Home</a></li>
                     <li><a href="../properties.html">Our Properties</a></li>
                     <li><a href="../st-martin.html">St. Martin</a></li>
-                    <li><a href="../sell.html">Sell Your Property</a></li>
+                    <li><a href="../sell.html">Sell your property</a></li>
                 </ul>
             </div>
             <div class="footer-column">
@@ -246,9 +234,9 @@
             <div class="footer-column">
                 <h4 class="footer-title">Languages</h4>
                 <ul class="footer-links">
-                    <li><a href="../../index.html">Français</a></li>
+                    <li><a href="../../index.html">French</a></li>
                     <li><a href="../index.html">English</a></li>
-                    <li><a href="../../nl/index.html">Nederlands</a></li>
+                    <li><a href="../../nl/index.html">Dutch</a></li>
                 </ul>
             </div>
         </div>
@@ -262,7 +250,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = ['../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/01.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/02.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/03.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/04.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/05.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/08.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/10.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/11.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/14.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/15.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/16.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/17.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/19.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/22.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/23.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/24.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/25.jpg'];
+        var heroImages = ['../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/01.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/02.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/03.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/04.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/06.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/07.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/08.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/09.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/10.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/11.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/12.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/13.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/14.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/15.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/16.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/17.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/18.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/20.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/21.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/22.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/23.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/24.jpg','../../images/properties_clean/beachfront-2-bedroom-condo-at-the-cliff/25.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

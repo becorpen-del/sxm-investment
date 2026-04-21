@@ -112,7 +112,7 @@
             <img id="heroImg" src="../images/properties_clean/beachfront-multi-unit-residence/01.jpg" alt="Résidence multi-unités en bord de plage">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 10</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 8</div>
         </div>
 
         <div class="listing-grid">
@@ -235,11 +235,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        var removed = [9, 10];
-        for (var i = 1; i <= 10; i++) {
-            if (removed.indexOf(i) === -1) heroImages.push('../images/properties_clean/beachfront-multi-unit-residence/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/beachfront-multi-unit-residence/01.jpg','../images/properties_clean/beachfront-multi-unit-residence/02.jpg','../images/properties_clean/beachfront-multi-unit-residence/03.jpg','../images/properties_clean/beachfront-multi-unit-residence/04.jpg','../images/properties_clean/beachfront-multi-unit-residence/05.jpg','../images/properties_clean/beachfront-multi-unit-residence/06.jpg','../images/properties_clean/beachfront-multi-unit-residence/07.jpg','../images/properties_clean/beachfront-multi-unit-residence/08.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;

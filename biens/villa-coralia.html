@@ -109,10 +109,10 @@
         </div>
 
         <div class="listing-hero">
-            <img id="heroImg" src="../images/properties_clean/villa-coralia/22.jpg" alt="Villa Coralia">
+            <img id="heroImg" src="../images/properties_clean/villa-coralia/02.jpg" alt="Villa Coralia">
             <button class="hero-nav hero-nav-prev" onclick="heroNav(-1)">&#10094;</button>
             <button class="hero-nav hero-nav-next" onclick="heroNav(1)">&#10095;</button>
-            <div class="hero-counter"><span id="heroCounter">1</span> / 25</div>
+            <div class="hero-counter"><span id="heroCounter">1</span> / 20</div>
         </div>
 
         <div class="listing-grid">
@@ -204,7 +204,7 @@
             <div class="lightbox-slide"><img src="../images/properties_clean/villa-coralia/24.jpg" alt="Photo 24"></div>
             <div class="lightbox-slide"><img src="../images/properties_clean/villa-coralia/25.jpg" alt="Photo 25"></div>
         </div>
-        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 21</div>
+        <div class="lightbox-counter"><span id="lightboxCounter">1</span> / 20</div>
     </div>
 
     <footer>
@@ -248,10 +248,7 @@
     nb.classList.add('scrolled');
     window.addEventListener('scroll', function() { nb.classList.add('scrolled'); });
     (function() {
-        var heroImages = [];
-        for (var i = 1; i <= 25; i++) {
-            heroImages.push('../images/properties_clean/villa-coralia/' + String(i).padStart(2,'0') + '.jpg');
-        }
+        var heroImages = ['../images/properties_clean/villa-coralia/02.jpg','../images/properties_clean/villa-coralia/03.jpg','../images/properties_clean/villa-coralia/04.jpg','../images/properties_clean/villa-coralia/05.jpg','../images/properties_clean/villa-coralia/06.jpg','../images/properties_clean/villa-coralia/07.jpg','../images/properties_clean/villa-coralia/08.jpg','../images/properties_clean/villa-coralia/09.jpg','../images/properties_clean/villa-coralia/10.jpg','../images/properties_clean/villa-coralia/11.jpg','../images/properties_clean/villa-coralia/12.jpg','../images/properties_clean/villa-coralia/13.jpg','../images/properties_clean/villa-coralia/14.jpg','../images/properties_clean/villa-coralia/15.jpg','../images/properties_clean/villa-coralia/16.jpg','../images/properties_clean/villa-coralia/20.jpg','../images/properties_clean/villa-coralia/21.jpg','../images/properties_clean/villa-coralia/22.jpg','../images/properties_clean/villa-coralia/24.jpg','../images/properties_clean/villa-coralia/25.jpg'];
         var heroIdx = 0;
         window.heroNav = function(dir) {
             heroIdx = (heroIdx + dir + heroImages.length) % heroImages.length;
